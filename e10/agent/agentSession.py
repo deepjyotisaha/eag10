@@ -3,6 +3,9 @@ from typing import Any, Literal, Optional
 import uuid
 import time
 import json
+from config.log_config import setup_logging
+
+logger = setup_logging(__name__)
 
 @dataclass
 class ToolCode:
@@ -76,6 +79,7 @@ class AgentSession:
         }
 
     def add_perception(self, snapshot: PerceptionSnapshot):
+        logger.info("\n📋 Perception Snapshot updated in AgentSession")
         self.perception = snapshot
 
     def add_plan_version(self, plan_texts: list[str], steps: list[Step]):

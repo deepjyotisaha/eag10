@@ -3,7 +3,9 @@ import json
 from pathlib import Path
 from typing import List, Dict
 from rapidfuzz import fuzz
+from config.log_config import setup_logging
 
+logger = setup_logging(__name__)
 
 class MemorySearch:
     def __init__(self, logs_path: str = "memory/session_logs"):
@@ -26,7 +28,7 @@ class MemorySearch:
     def _load_queries(self) -> List[Dict]:
         memory_entries = []
         all_json_files = list(self.logs_path.rglob("*.json"))
-        print(f"🔍 Found {len(all_json_files)} JSON file(s) in '{self.logs_path}'")
+        logger.info(f"🔍 Found {len(all_json_files)} JSON file(s) in '{self.logs_path}'")
 
         for file in all_json_files:
             count_before = len(memory_entries)
@@ -44,14 +46,14 @@ class MemorySearch:
                         self._extract_entry(turn, file.name, memory_entries)
 
             except Exception as e:
-                print(f"⚠️ Skipping '{file}': {e}")
+                logger.warning(f"⚠️ Skipping '{file}': {e}")
                 continue
 
             count_after = len(memory_entries)
             if count_after > count_before:
-                print(f"✅ {file.name}: {count_after - count_before} matching entries")
+                logger.info(f"✅ {file.name}: {count_after - count_before} matching entries")
 
-        print(f"📦 Total usable memory entries collected: {len(memory_entries)}\n")
+        logger.info(f"📦 Total usable memory entries collected: {len(memory_entries)}\n")
         return memory_entries
 
     def _extract_entry(self, obj: dict, file_name: str, memory_entries: List[Dict]):
@@ -96,7 +98,7 @@ class MemorySearch:
         try:
             match = recursive_find(obj)
             if match and match["query"]:
-                print(f"✅ Extracted: {match['query'][:40]} → {match['summary'][:40]}")
+                logger.info(f"✅ Extracted: {match['query'][:40]} → {match['summary'][:40]}")
                 memory_entries.append({
                     "file": file_name,
                     "query": match["query"],
@@ -104,7 +106,7 @@ class MemorySearch:
                     "solution_summary": match["summary"]
                 })
         except Exception as e:
-            print(f"❌ Error parsing {file_name}: {e}")
+            logger.error(f"❌ Error parsing {file_name}: {e}")
 
 
 if __name__ == "__main__":
@@ -113,8 +115,8 @@ if __name__ == "__main__":
     results = searcher.search_memory(query)
 
     if not results:
-        print("❌ No matching memory entries found.")
+        logger.info("❌ No matching memory entries found.")
     else:
-        print("\n🎯 Top Matches:\n")
+        logger.info("\n🎯 Top Matches:\n")
         for i, res in enumerate(results, 1):
-            print(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")
+            logger.info(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")

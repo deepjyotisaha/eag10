@@ -8,7 +8,9 @@ from agent.agentSession import AgentSession, PerceptionSnapshot, Step, ToolCode
 from memory.session_log import live_update_session
 from memory.memory_search import MemorySearch
 from mcp_servers.multiMCP import MultiMCP
+from config.log_config import setup_logging
 
+logger = setup_logging(__name__)
 
 GLOBAL_PREVIOUS_FAILURE_STEPS = 3
 
@@ -26,6 +28,7 @@ class AgentLoop:
 
         memory_results = self.search_memory(query)
         perception_result = self.run_perception(query, memory_results, memory_results)
+        logger.info("\n📋 [Perception Result]: \n%s", json.dumps(perception_result, indent=2, ensure_ascii=False))
         session.add_perception(PerceptionSnapshot(**perception_result))
 
         if perception_result.get("original_goal_achieved"):
@@ -33,35 +36,39 @@ class AgentLoop:
             return session
 
         decision_output = self.make_initial_decision(query, perception_result)
+        logger.info("\n📝 [Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
         step = session.add_plan_version(decision_output["plan_text"], [self.create_step(decision_output)])
         live_update_session(session)
-        print(f"\n[Decision Plan Text: V{len(session.plan_versions)}]:")
+        logger.info(f"\n📝 [Decision Plan Text: V{len(session.plan_versions)}]:")
         for line in session.plan_versions[-1]["plan_text"]:
-            print(f"  {line}")
+            logger.info(f"  {line}")
 
         while step:
             step_result = await self.execute_step(step, session, session_memory)
             if step_result is None:
+                logger.info("\n❌ No steps.")
                 break  # 🔐 protect against CONCLUDE/NOP cases
+            #logger.info("\n⚙️ [Evaluating Step]: \n%s", json.dumps(step_result, indent=2, ensure_ascii=False))
+            logger.info("\n⚙️ [Evaluating Step]: \n%s", json.dumps(step_result.to_dict(), indent=2, ensure_ascii=False))
             step = self.evaluate_step(step_result, session, query)
 
         return session
 
     def log_session_start(self, session, query):
-        print("\n=== LIVE AGENT SESSION TRACE ===")
-        print(f"Session ID: {session.session_id}")
-        print(f"Query: {query}")
+        logger.info("\n=== LIVE AGENT SESSION TRACE ===")
+        logger.info(f"Session ID: {session.session_id}")
+        logger.info(f"Query: {query}")
 
     def search_memory(self, query):
-        print("Searching Recent Conversation History")
+        logger.info("Searching Recent Conversation History")
         searcher = MemorySearch()
         results = searcher.search_memory(query)
         if not results:
-            print("❌ No matching memory entries found.\n")
+            logger.info("❌ No matching memory entries found.\n")
         else:
-            print("\n🎯 Top Matches:\n")
+            logger.info("\n🎯 Top Matches:\n")
             for i, res in enumerate(results, 1):
-                print(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")
+                logger.info(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")
         return results
 
     def run_perception(self, query, memory_results, session_memory=None, snapshot_type="user_query", current_plan=None):
@@ -72,13 +79,13 @@ class AgentLoop:
             current_plan=current_plan, 
             snapshot_type=snapshot_type
         )
+        logger.info("\n📋 [Perception Input]: \n%s", json.dumps(perception_input, indent=2, ensure_ascii=False))
         perception_result = self.perception.run(perception_input)
-        print("\n[Perception Result]:")
-        print(json.dumps(perception_result, indent=2, ensure_ascii=False))
+        #logger.info("\n📋 [Perception Result]: \n%s", json.dumps(perception_result, indent=2, ensure_ascii=False))
         return perception_result
 
     def handle_perception_completion(self, session, perception_result):
-        print("\n✅ Perception fully answered the query.")
+        logger.info("\n✅ Perception fully answered the query.")
         session.state.update({
             "original_goal_achieved": True,
             "final_answer": perception_result.get("solution_summary", "Answer ready."),
@@ -108,14 +115,16 @@ class AgentLoop:
         )
 
     async def execute_step(self, step, session, session_memory):
-        print(f"\n[Step {step.index}] {step.description}")
+        logger.info(f"\n[Step {step.index}] {step.description}")
 
         if step.type == "CODE":
-            print("-" * 50, "\n[EXECUTING CODE]\n", step.code.tool_arguments["code"])
+            logger.info("%s\n ⚙️  [EXECUTING CODE]\n%s", "-" * 50, step.code.tool_arguments["code"])
             executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
             step.execution_result = executor_response
             #import pdb; pdb.set_trace()
             step.status = "completed"
+
+            logger.info("\n⚙️ [Executor Response]: \n%s", json.dumps(executor_response, indent=2, ensure_ascii=False))
 
             perception_result = self.run_perception(
                 query=executor_response.get('result', 'Tool Failed'),
@@ -123,6 +132,8 @@ class AgentLoop:
                 current_plan=session.plan_versions[-1]["plan_text"],
                 snapshot_type="step_result"
             )
+
+            logger.info("\n📋 [Post-Execution Perception Result]: \n%s", json.dumps(perception_result, indent=2, ensure_ascii=False))
             step.perception = PerceptionSnapshot(**perception_result)
 
             if not step.perception or not step.perception.local_goal_achieved:
@@ -140,7 +151,7 @@ class AgentLoop:
             return step
 
         elif step.type == "CONCLUDE":
-            print(f"\n💡 Conclusion: {step.conclusion}")
+            logger.info(f"\n💡 Conclusion: {step.conclusion}")
             step.execution_result = step.conclusion
             step.status = "completed"
 
@@ -150,27 +161,29 @@ class AgentLoop:
                 current_plan=session.plan_versions[-1]["plan_text"],
                 snapshot_type="step_result"
             )
+            logger.info("\n📋 [Post-Conclusion Perception Result]: \n%s", json.dumps(perception_result, indent=2, ensure_ascii=False))
             step.perception = PerceptionSnapshot(**perception_result)
             session.mark_complete(step.perception, final_answer=step.conclusion)
             live_update_session(session)
             return None
 
         elif step.type == "NOP":
-            print(f"\n❓ Clarification needed: {step.description}")
+            logger.info(f"\n❓ Clarification needed: {step.description}")
             step.status = "clarification_needed"
             live_update_session(session)
             return None
 
     def evaluate_step(self, step, session, query):
         if step.perception.original_goal_achieved:
-            print("\n✅ Goal achieved.")
+            logger.info("\n✅ Goal achieved.")
             session.mark_complete(step.perception)
             live_update_session(session)
             return None
         elif step.perception.local_goal_achieved:
+            logger.info("\n✅ Local Goal achieved, planning next step.")
             return self.get_next_step(session, query, step)
         else:
-            print("\n🔁 Step unhelpful. Replanning.")
+            logger.info("\n🔁 Step unhelpful. Replanning.")
             decision_output = self.decision.run({
                 "plan_mode": "mid_session",
                 "planning_strategy": self.strategy,
@@ -180,11 +193,14 @@ class AgentLoop:
                 "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
                 "current_step": step.to_dict()
             })
+
+            logger.info("\n📝 [Post-Replanning Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
+
             step = session.add_plan_version(decision_output["plan_text"], [self.create_step(decision_output)])
 
-            print(f"\n[Decision Plan Text: V{len(session.plan_versions)}]:")
+            logger.info(f"\n📝 [Decision Plan Text: V{len(session.plan_versions)}]:")
             for line in session.plan_versions[-1]["plan_text"]:
-                print(f"  {line}")
+                logger.info(f"  {line}")
 
             return step
 
@@ -201,14 +217,17 @@ class AgentLoop:
                 "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
                 "current_step": step.to_dict()
             })
+
+            logger.info("\n📝 [Post-Next-Step-Planning Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
+
             step = session.add_plan_version(decision_output["plan_text"], [self.create_step(decision_output)])
 
-            print(f"\n[Decision Plan Text: V{len(session.plan_versions)}]:")
+            logger.info(f"\n📝 [Decision Plan Text: V{len(session.plan_versions)}]:")
             for line in session.plan_versions[-1]["plan_text"]:
-                print(f"  {line}")
+                logger.info(f"  {line}")
 
             return step
 
         else:
-            print("\n✅ No more steps.")
+            logger.info("\n✅ No more steps.")
             return None

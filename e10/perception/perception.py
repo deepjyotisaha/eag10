@@ -6,6 +6,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 from google.genai.errors import ServerError
+from config.log_config import setup_logging
+
+logger = setup_logging(__name__)
 
 load_dotenv()
 api_key = os.getenv("GOOGLE_API_KEY")
@@ -57,7 +60,7 @@ class Perception:
                 contents=full_prompt
             )
         except ServerError as e:
-            print(f"🚫 Perception LLM ServerError: {e}")
+            logger.error(f"🚫 Perception LLM ServerError: {e}")
             return {
                 "step_index": 0,
                 "description": "Perception model unavailable: server overload.",
@@ -98,7 +101,7 @@ class Perception:
             # Optional: log to disk for inspection
             import pdb; pdb.set_trace()
 
-            print("❌ EXCEPTION IN PERCEPTION:", e)
+            logger.error("❌ EXCEPTION IN PERCEPTION:", e)
             return {
                 "entities": [],
                 "result_requirement": "N/A",
