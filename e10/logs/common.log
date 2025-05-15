@@ -1,0 +1,358 @@
+2025-05-15 22:56:06,934 - INFO - agent_loop2:log_session_start:58 - 
+=== LIVE AGENT SESSION TRACE ===
+2025-05-15 22:56:06,935 - INFO - agent_loop2:log_session_start:59 - Session ID: 720f4adb-a26d-4c1a-8c59-e3f3328a5883
+2025-05-15 22:56:06,935 - INFO - agent_loop2:log_session_start:60 - Query: How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results
+2025-05-15 22:56:06,936 - INFO - agent_loop2:search_memory:63 - Searching Recent Conversation History
+2025-05-15 22:56:06,941 - INFO - memory_search:_load_queries:31 - 🔍 Found 23 JSON file(s) in 'memory\session_logs'
+2025-05-15 22:56:06,944 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
+2025-05-15 22:56:06,944 - INFO - memory_search:_load_queries:54 - ✅ 2ee15d43-5b6d-43d8-b114-573256720727.json: 1 matching entries
+2025-05-15 22:56:06,945 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
+2025-05-15 22:56:06,947 - INFO - memory_search:_load_queries:54 - ✅ 491cff25-6e65-4f63-ac3f-d2ccfde1a32a.json: 1 matching entries
+2025-05-15 22:56:06,957 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The latest stock price of Ather Energy i
+2025-05-15 22:56:06,959 - INFO - memory_search:_load_queries:54 - ✅ b54df97a-e774-4fd3-b852-f14ce9bca1d7.json: 1 matching entries
+2025-05-15 22:56:06,960 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Ather Electric stock  → The latest stock price of Ather Energy L
+2025-05-15 22:56:06,961 - INFO - memory_search:_load_queries:54 - ✅ b9ac6572-4a14-46ac-9631-0afe3d39dfbd.json: 1 matching entries
+2025-05-15 22:56:06,964 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The current price of ATHERENERG.NS is 30
+2025-05-15 22:56:06,965 - INFO - memory_search:_load_queries:54 - ✅ dab16fd6-2f71-45cd-8a45-99fe5f0abd50.json: 1 matching entries
+2025-05-15 22:56:06,968 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid between Rs 42.94 crore 
+2025-05-15 22:56:06,969 - INFO - memory_search:_load_queries:54 - ✅ 03d88810-946d-4135-a2e4-2f54e41d156c.json: 1 matching entries
+2025-05-15 22:56:06,973 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol in context of Anmol Singh → Gensol Engineering Limited, along with i
+2025-05-15 22:56:06,974 - INFO - memory_search:_load_queries:54 - ✅ 05fcd8eb-2c78-4ab9-9c0b-89a2f66be245.json: 1 matching entries
+2025-05-15 22:56:06,977 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-15 22:56:06,977 - INFO - memory_search:_load_queries:54 - ✅ 084c1c05-195e-4c85-9cc6-13afcced8e56.json: 1 matching entries
+2025-05-15 22:56:06,980 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol? → Gensol can refer to: 1. GenSol Diagnosti
+2025-05-15 22:56:06,980 - INFO - memory_search:_load_queries:54 - ✅ 0c1bad20-321b-4259-8039-33a08dcc4134.json: 1 matching entries
+2025-05-15 22:56:06,982 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-15 22:56:06,982 - INFO - memory_search:_load_queries:54 - ✅ 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json: 1 matching entries
+2025-05-15 22:56:07,018 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh Jaggi paid approximately Rs 
+2025-05-15 22:56:07,019 - INFO - memory_search:_load_queries:54 - ✅ 7361a3ff-6540-4e24-bae6-b470df1bd5ec.json: 1 matching entries
+2025-05-15 22:56:07,022 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-15 22:56:07,022 - INFO - memory_search:_load_queries:54 - ✅ c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json: 1 matching entries
+2025-05-15 22:56:07,025 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-15 22:56:07,027 - INFO - memory_search:_load_queries:54 - ✅ d6e88c7d-4b43-4e3d-a82b-68815d9860ac.json: 1 matching entries
+2025-05-15 22:56:07,029 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-15 22:56:07,029 - INFO - memory_search:_load_queries:54 - ✅ f0be461a-30c3-4a95-933a-1bd2bd7ba51b.json: 1 matching entries
+2025-05-15 22:56:07,030 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 14
+
+2025-05-15 22:56:07,032 - INFO - agent_loop2:search_memory:69 - 
+🎯 Top Matches:
+
+2025-05-15 22:56:07,032 - INFO - agent_loop2:search_memory:71 - [1] File: 084c1c05-195e-4c85-9cc6-13afcced8e56.json
+Query: How much Anmol singh paid for his DLF apartment via Capbridge?
+Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
+Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
+
+2025-05-15 22:56:07,033 - INFO - agent_loop2:search_memory:71 - [2] File: 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json
+Query: How much Anmol singh paid for his DLF apartment via Capbridge?
+Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
+Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
+
+2025-05-15 22:56:07,034 - INFO - agent_loop2:search_memory:71 - [3] File: c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json
+Query: How much Anmol singh paid for his DLF apartment via Capbridge?
+Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
+Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
+
+2025-05-15 22:56:07,035 - INFO - agent_loop2:run_perception:82 - 
+📋 [Perception Input]: 
+{
+  "run_id": "dbd53d9e-6d45-4a66-badc-ed5c0a6aae12",
+  "snapshot_type": "user_query",
+  "raw_input": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
+  "memory_excerpt": {
+    "memory_1": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_2": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_3": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_4": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_5": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_6": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    }
+  },
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-15T17:26:07Z",
+  "schema_version": 1,
+  "current_plan": "Inain Query Mode, plan not created"
+}
+2025-05-15 22:56:07,038 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-15 22:56:09,466 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-15 22:56:09,468 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-15 22:56:09,469 - INFO - agent_loop2:run:31 - 
+📋 [Perception Result]: 
+{
+  "entities": [
+    "Anmol Singh",
+    "DLF apartment",
+    "Capbridge"
+  ],
+  "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge, fetched from a fresh source.",
+  "original_goal_achieved": false,
+  "confidence": "0.5",
+  "reasoning": "The user is asking for a specific monetary value. Although the information might be present in memory, the user explicitly asked for fresh results. Therefore, I should not assume the answer is already known and should proceed to fetch the information.",
+  "local_goal_achieved": false,
+  "local_reasoning": "The goal is not achievable without consulting an external source as the user requested to ignore cached results.",
+  "last_tooluse_summary": "Not ready yet",
+  "solution_summary": "Not ready yet"
+}
+2025-05-15 22:56:09,470 - INFO - agentSession:add_perception:82 - 
+📋 Perception Snapshot updated in AgentSession
+2025-05-15 22:56:09,472 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-15 22:56:12,255 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-15 22:56:12,258 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-15 22:56:12,259 - INFO - agent_loop2:run:39 - 
+📝 [Decision Output]: 
+{
+  "plan_text": [
+    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
+    "Step 2: Summarize the findings and provide the final answer."
+  ],
+  "step_index": 0,
+  "description": "Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+  "type": "CODE",
+  "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge\", 5)\nreturn result",
+  "conclusion": ""
+}
+2025-05-15 22:56:12,264 - INFO - agent_loop2:run:42 - 
+📝 [Decision Plan Text: V1]:
+2025-05-15 22:56:12,264 - INFO - agent_loop2:run:44 -   Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
+2025-05-15 22:56:12,265 - INFO - agent_loop2:run:44 -   Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.
+2025-05-15 22:56:12,265 - INFO - agent_loop2:run:44 -   Step 2: Summarize the findings and provide the final answer.
+2025-05-15 22:56:12,265 - INFO - agent_loop2:execute_step:118 - 
+[Step 0] Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
+2025-05-15 22:56:12,266 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
+ ⚙️  [EXECUTING CODE]
+result = duckduckgo_search_results("Anmol Singh DLF apartment Capbridge", 5)
+return result
+2025-05-15 22:56:17,187 - INFO - agent_loop2:execute_step:127 - 
+⚙️ [Executor Response]: 
+{
+  "status": "success",
+  "result": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
+  "execution_time": "2025-05-15 22:56:12",
+  "total_time": "4.921"
+}
+2025-05-15 22:56:17,189 - INFO - agent_loop2:run_perception:82 - 
+📋 [Perception Input]: 
+{
+  "run_id": "1cf9c385-7977-4402-8d6e-99de4a72122a",
+  "snapshot_type": "step_result",
+  "raw_input": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-15T17:26:17Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
+    "Step 2: Summarize the findings and provide the final answer."
+  ]
+}
+2025-05-15 22:56:17,198 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-15 22:56:19,275 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-15 22:56:19,277 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-15 22:56:19,278 - INFO - agent_loop2:execute_step:136 - 
+📋 [Post-Execution Perception Result]: 
+{
+  "entities": [
+    "Anmol Singh Jaggi",
+    "DLF Camellias",
+    "Capbridge Ventures LLP",
+    "Rs 42.94 crore",
+    "Rs 50 crore"
+  ],
+  "result_requirement": "Extract the price Anmol Singh paid for the DLF apartment.",
+  "original_goal_achieved": false,
+  "confidence": "0.9",
+  "reasoning": "The search results provide information on the DLF apartment purchase, including the price paid (around Rs 42.94 crore to Rs 50 crore). This moves us closer to answering the user's query. The next step is to extract the specific price paid.",
+  "local_goal_achieved": true,
+  "local_reasoning": "The search step successfully retrieved relevant information about the DLF apartment purchase by Anmol Singh Jaggi, which is necessary for extracting the price. Several sources mention the price range.",
+  "last_tooluse_summary": "DuckDuckGo search - success",
+  "solution_summary": "Not ready yet"
+}
+2025-05-15 22:56:19,304 - INFO - agent_loop2:run:52 - 
+⚙️ [Evaluating Step]: 
+{
+  "index": 0,
+  "description": "Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+  "type": "CODE",
+  "code": {
+    "tool_name": "raw_code_block",
+    "tool_arguments": {
+      "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge\", 5)\nreturn result"
+    }
+  },
+  "conclusion": "",
+  "execution_result": {
+    "status": "success",
+    "result": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
+    "execution_time": "2025-05-15 22:56:12",
+    "total_time": "4.921"
+  },
+  "error": null,
+  "perception": {
+    "entities": [
+      "Anmol Singh Jaggi",
+      "DLF Camellias",
+      "Capbridge Ventures LLP",
+      "Rs 42.94 crore",
+      "Rs 50 crore"
+    ],
+    "result_requirement": "Extract the price Anmol Singh paid for the DLF apartment.",
+    "original_goal_achieved": false,
+    "reasoning": "The search results provide information on the DLF apartment purchase, including the price paid (around Rs 42.94 crore to Rs 50 crore). This moves us closer to answering the user's query. The next step is to extract the specific price paid.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The search step successfully retrieved relevant information about the DLF apartment purchase by Anmol Singh Jaggi, which is necessary for extracting the price. Several sources mention the price range.",
+    "last_tooluse_summary": "DuckDuckGo search - success",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9"
+  },
+  "status": "completed",
+  "attempts": 0,
+  "was_replanned": false,
+  "parent_index": null
+}
+2025-05-15 22:56:19,306 - INFO - agent_loop2:evaluate_step:183 - 
+✅ Local Goal achieved, planning next step.
+2025-05-15 22:56:19,308 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-15 22:56:22,122 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-15 22:56:22,123 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-15 22:56:22,124 - INFO - agent_loop2:get_next_step:221 - 
+📝 [Post-Next-Step-Planning Decision Output]: 
+{
+  "plan_text": [
+    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
+    "Step 2: Summarize the findings and provide the final answer."
+  ],
+  "step_index": 1,
+  "description": "Extract price from search results.",
+  "type": "CODE",
+  "code": "result = \"Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.\"\nreturn result",
+  "conclusion": ""
+}
+2025-05-15 22:56:22,124 - INFO - agent_loop2:get_next_step:225 - 
+📝 [Decision Plan Text: V2]:
+2025-05-15 22:56:22,125 - INFO - agent_loop2:get_next_step:227 -   Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
+2025-05-15 22:56:22,126 - INFO - agent_loop2:get_next_step:227 -   Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.
+2025-05-15 22:56:22,126 - INFO - agent_loop2:get_next_step:227 -   Step 2: Summarize the findings and provide the final answer.
+2025-05-15 22:56:22,127 - INFO - agent_loop2:execute_step:118 - 
+[Step 1] Extract price from search results.
+2025-05-15 22:56:22,127 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
+ ⚙️  [EXECUTING CODE]
+result = "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge."
+return result
+2025-05-15 22:56:22,128 - INFO - agent_loop2:execute_step:127 - 
+⚙️ [Executor Response]: 
+{
+  "status": "success",
+  "result": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
+  "execution_time": "2025-05-15 22:56:22",
+  "total_time": "0.001"
+}
+2025-05-15 22:56:22,129 - INFO - agent_loop2:run_perception:82 - 
+📋 [Perception Input]: 
+{
+  "run_id": "3c7f1989-9b56-492c-a64a-950fc8526ebe",
+  "snapshot_type": "step_result",
+  "raw_input": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-15T17:26:22Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
+    "Step 2: Summarize the findings and provide the final answer."
+  ]
+}
+2025-05-15 22:56:22,131 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-15 22:56:24,145 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-15 22:56:24,146 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-15 22:56:24,147 - INFO - agent_loop2:execute_step:136 - 
+📋 [Post-Execution Perception Result]: 
+{
+  "entities": [
+    "Anmol Singh Jaggi",
+    "DLF Camellias apartment",
+    "Rs 42.94 crore",
+    "Rs 50 crore",
+    "Capbridge"
+  ],
+  "result_requirement": "Confirmation of the price range Anmol Singh paid for the DLF apartment.",
+  "original_goal_achieved": true,
+  "confidence": "1.0",
+  "reasoning": "The search result directly provides the price range that Anmol Singh Jaggi paid for his DLF Camellias apartment via Capbridge, which directly answers the user's query. Therefore, the original goal is achieved.",
+  "local_goal_achieved": true,
+  "local_reasoning": "The step successfully extracted the relevant price range from the search results. This information is sufficient to answer the query.",
+  "last_tooluse_summary": "DuckDuckGo search successful in finding the price.",
+  "solution_summary": "Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge."
+}
+2025-05-15 22:56:24,175 - INFO - agent_loop2:run:52 - 
+⚙️ [Evaluating Step]: 
+{
+  "index": 1,
+  "description": "Extract price from search results.",
+  "type": "CODE",
+  "code": {
+    "tool_name": "raw_code_block",
+    "tool_arguments": {
+      "code": "result = \"Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.\"\nreturn result"
+    }
+  },
+  "conclusion": "",
+  "execution_result": {
+    "status": "success",
+    "result": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
+    "execution_time": "2025-05-15 22:56:22",
+    "total_time": "0.001"
+  },
+  "error": null,
+  "perception": {
+    "entities": [
+      "Anmol Singh Jaggi",
+      "DLF Camellias apartment",
+      "Rs 42.94 crore",
+      "Rs 50 crore",
+      "Capbridge"
+    ],
+    "result_requirement": "Confirmation of the price range Anmol Singh paid for the DLF apartment.",
+    "original_goal_achieved": true,
+    "reasoning": "The search result directly provides the price range that Anmol Singh Jaggi paid for his DLF Camellias apartment via Capbridge, which directly answers the user's query. Therefore, the original goal is achieved.",
+    "local_goal_achieved": true,
+    "local_reasoning": "The step successfully extracted the relevant price range from the search results. This information is sufficient to answer the query.",
+    "last_tooluse_summary": "DuckDuckGo search successful in finding the price.",
+    "solution_summary": "Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
+    "confidence": "1.0"
+  },
+  "status": "completed",
+  "attempts": 0,
+  "was_replanned": false,
+  "parent_index": null
+}
+2025-05-15 22:56:24,176 - INFO - agent_loop2:evaluate_step:178 - 
+✅ Goal achieved.

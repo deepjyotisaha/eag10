@@ -115,10 +115,10 @@ class AgentLoop:
         )
 
     async def execute_step(self, step, session, session_memory):
-        logger.info(f"\n[Step {step.index}] {step.description}")
+        logger.info(f"\n⚙️ [Step {step.index}] {step.description}")
 
         if step.type == "CODE":
-            logger.info("%s\n ⚙️  [EXECUTING CODE]\n%s", "-" * 50, step.code.tool_arguments["code"])
+            logger.info("%s\n⚙️  [EXECUTING CODE]\n%s", "-" * 50, step.code.tool_arguments["code"])
             executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
             step.execution_result = executor_response
             #import pdb; pdb.set_trace()
@@ -148,6 +148,7 @@ class AgentLoop:
                     session_memory.pop(0)
 
             live_update_session(session)
+            logger.info("\n🔁 [Post-Execution Step]: \n%s", json.dumps(step.to_dict(), indent=2, ensure_ascii=False))
             return step
 
         elif step.type == "CONCLUDE":
