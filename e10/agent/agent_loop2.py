@@ -43,13 +43,16 @@ class AgentLoop:
         for line in session.plan_versions[-1]["plan_text"]:
             logger.info(f"  {line}")
 
+        #First implementation the max steps and max retries
+        # If a plan fails, 
         while step:
             step_result = await self.execute_step(step, session, session_memory)
             if step_result is None:
                 logger.info("\n❌ No steps.")
                 break  # 🔐 protect against CONCLUDE/NOP cases
             #logger.info("\n⚙️ [Evaluating Step]: \n%s", json.dumps(step_result, indent=2, ensure_ascii=False))
-            logger.info("\n⚙️ [Evaluating Step]: \n%s", json.dumps(step_result.to_dict(), indent=2, ensure_ascii=False))
+            #Step result is step summary
+            logger.info("\n⚙️ [Evaluating Step Summary]: \n%s", json.dumps(step_result.to_dict(), indent=2, ensure_ascii=False))
             step = self.evaluate_step(step_result, session, query)
 
         return session
@@ -122,9 +125,12 @@ class AgentLoop:
             executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
             step.execution_result = executor_response
             #import pdb; pdb.set_trace()
+            ## Human in loop for tool execution needs to go here
             step.status = "completed"
 
             logger.info("\n⚙️ [Executor Response]: \n%s", json.dumps(executor_response, indent=2, ensure_ascii=False))
+
+            logger.info("\n⚙️ [Decoding executor response via perception]")
 
             perception_result = self.run_perception(
                 query=executor_response.get('result', 'Tool Failed'),
@@ -148,7 +154,7 @@ class AgentLoop:
                     session_memory.pop(0)
 
             live_update_session(session)
-            logger.info("\n🔁 [Post-Execution Step]: \n%s", json.dumps(step.to_dict(), indent=2, ensure_ascii=False))
+            logger.info("\n🔁 [Post-Execution Step Summary]: \n%s", json.dumps(step.to_dict(), indent=2, ensure_ascii=False))
             return step
 
         elif step.type == "CONCLUDE":
@@ -185,6 +191,7 @@ class AgentLoop:
             return self.get_next_step(session, query, step)
         else:
             logger.info("\n🔁 Step unhelpful. Replanning.")
+            #TODO: Add a check to see if the step has been tried too many times
             decision_output = self.decision.run({
                 "plan_mode": "mid_session",
                 "planning_strategy": self.strategy,
@@ -208,6 +215,8 @@ class AgentLoop:
     def get_next_step(self, session, query, step):
         next_index = step.index + 1
         total_steps = len(session.plan_versions[-1]["plan_text"])
+        logger.info(f"\n🔄 [Next Step Index: {next_index}]")
+        logger.info(f"🔄 [Total Steps: {total_steps}]")
         if next_index < total_steps:
             decision_output = self.decision.run({
                 "plan_mode": "mid_session",

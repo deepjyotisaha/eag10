@@ -7,6 +7,9 @@ from google.genai.errors import ServerError
 import re
 from mcp_servers.multiMCP import MultiMCP
 import ast
+from config.log_config import setup_logging
+
+logger = setup_logging(__name__)
 
 
 load_dotenv()
@@ -31,6 +34,8 @@ class Decision:
         tool_descriptions = "\n".join(f"- `{desc.strip()}`" for desc in function_list_text)
         tool_descriptions = "\n\n### The ONLY Available Tools\n\n---\n\n" + tool_descriptions
         full_prompt = f"{prompt_template.strip()}\n{tool_descriptions}\n\n```json\n{json.dumps(decision_input, indent=2)}\n```"
+
+        logger.info(f"🔍 Decision Prompt: {full_prompt}")
 
         try:
             response = self.client.models.generate_content(

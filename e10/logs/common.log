@@ -1,61 +1,63 @@
-2025-05-15 22:56:06,934 - INFO - agent_loop2:log_session_start:58 - 
+2025-05-16 23:51:17,977 - INFO - agent_loop2:log_session_start:58 - 
 === LIVE AGENT SESSION TRACE ===
-2025-05-15 22:56:06,935 - INFO - agent_loop2:log_session_start:59 - Session ID: 720f4adb-a26d-4c1a-8c59-e3f3328a5883
-2025-05-15 22:56:06,935 - INFO - agent_loop2:log_session_start:60 - Query: How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results
-2025-05-15 22:56:06,936 - INFO - agent_loop2:search_memory:63 - Searching Recent Conversation History
-2025-05-15 22:56:06,941 - INFO - memory_search:_load_queries:31 - 🔍 Found 23 JSON file(s) in 'memory\session_logs'
-2025-05-15 22:56:06,944 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
-2025-05-15 22:56:06,944 - INFO - memory_search:_load_queries:54 - ✅ 2ee15d43-5b6d-43d8-b114-573256720727.json: 1 matching entries
-2025-05-15 22:56:06,945 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
-2025-05-15 22:56:06,947 - INFO - memory_search:_load_queries:54 - ✅ 491cff25-6e65-4f63-ac3f-d2ccfde1a32a.json: 1 matching entries
-2025-05-15 22:56:06,957 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The latest stock price of Ather Energy i
-2025-05-15 22:56:06,959 - INFO - memory_search:_load_queries:54 - ✅ b54df97a-e774-4fd3-b852-f14ce9bca1d7.json: 1 matching entries
-2025-05-15 22:56:06,960 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Ather Electric stock  → The latest stock price of Ather Energy L
-2025-05-15 22:56:06,961 - INFO - memory_search:_load_queries:54 - ✅ b9ac6572-4a14-46ac-9631-0afe3d39dfbd.json: 1 matching entries
-2025-05-15 22:56:06,964 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The current price of ATHERENERG.NS is 30
-2025-05-15 22:56:06,965 - INFO - memory_search:_load_queries:54 - ✅ dab16fd6-2f71-45cd-8a45-99fe5f0abd50.json: 1 matching entries
-2025-05-15 22:56:06,968 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid between Rs 42.94 crore 
-2025-05-15 22:56:06,969 - INFO - memory_search:_load_queries:54 - ✅ 03d88810-946d-4135-a2e4-2f54e41d156c.json: 1 matching entries
-2025-05-15 22:56:06,973 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol in context of Anmol Singh → Gensol Engineering Limited, along with i
-2025-05-15 22:56:06,974 - INFO - memory_search:_load_queries:54 - ✅ 05fcd8eb-2c78-4ab9-9c0b-89a2f66be245.json: 1 matching entries
-2025-05-15 22:56:06,977 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
-2025-05-15 22:56:06,977 - INFO - memory_search:_load_queries:54 - ✅ 084c1c05-195e-4c85-9cc6-13afcced8e56.json: 1 matching entries
-2025-05-15 22:56:06,980 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol? → Gensol can refer to: 1. GenSol Diagnosti
-2025-05-15 22:56:06,980 - INFO - memory_search:_load_queries:54 - ✅ 0c1bad20-321b-4259-8039-33a08dcc4134.json: 1 matching entries
-2025-05-15 22:56:06,982 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
-2025-05-15 22:56:06,982 - INFO - memory_search:_load_queries:54 - ✅ 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json: 1 matching entries
-2025-05-15 22:56:07,018 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh Jaggi paid approximately Rs 
-2025-05-15 22:56:07,019 - INFO - memory_search:_load_queries:54 - ✅ 7361a3ff-6540-4e24-bae6-b470df1bd5ec.json: 1 matching entries
-2025-05-15 22:56:07,022 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
-2025-05-15 22:56:07,022 - INFO - memory_search:_load_queries:54 - ✅ c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json: 1 matching entries
-2025-05-15 22:56:07,025 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
-2025-05-15 22:56:07,027 - INFO - memory_search:_load_queries:54 - ✅ d6e88c7d-4b43-4e3d-a82b-68815d9860ac.json: 1 matching entries
-2025-05-15 22:56:07,029 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
-2025-05-15 22:56:07,029 - INFO - memory_search:_load_queries:54 - ✅ f0be461a-30c3-4a95-933a-1bd2bd7ba51b.json: 1 matching entries
-2025-05-15 22:56:07,030 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 14
+2025-05-16 23:51:17,978 - INFO - agent_loop2:log_session_start:59 - Session ID: b7188b18-72aa-4353-a1df-168576b4903a
+2025-05-16 23:51:17,980 - INFO - agent_loop2:log_session_start:60 - Query: How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results
+2025-05-16 23:51:17,980 - INFO - agent_loop2:search_memory:63 - Searching Recent Conversation History
+2025-05-16 23:51:17,984 - INFO - memory_search:_load_queries:31 - 🔍 Found 24 JSON file(s) in 'memory\session_logs'
+2025-05-16 23:51:18,034 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
+2025-05-16 23:51:18,035 - INFO - memory_search:_load_queries:54 - ✅ 2ee15d43-5b6d-43d8-b114-573256720727.json: 1 matching entries
+2025-05-16 23:51:18,073 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the log value of the amount that → The log value of the DLF apartment purch
+2025-05-16 23:51:18,074 - INFO - memory_search:_load_queries:54 - ✅ 491cff25-6e65-4f63-ac3f-d2ccfde1a32a.json: 1 matching entries
+2025-05-16 23:51:18,292 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The latest stock price of Ather Energy i
+2025-05-16 23:51:18,293 - INFO - memory_search:_load_queries:54 - ✅ b54df97a-e774-4fd3-b852-f14ce9bca1d7.json: 1 matching entries
+2025-05-16 23:51:18,331 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Ather Electric stock  → The latest stock price of Ather Energy L
+2025-05-16 23:51:18,332 - INFO - memory_search:_load_queries:54 - ✅ b9ac6572-4a14-46ac-9631-0afe3d39dfbd.json: 1 matching entries
+2025-05-16 23:51:18,413 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is the latest Stock Price ot Ather  → The current price of ATHERENERG.NS is 30
+2025-05-16 23:51:18,414 - INFO - memory_search:_load_queries:54 - ✅ dab16fd6-2f71-45cd-8a45-99fe5f0abd50.json: 1 matching entries
+2025-05-16 23:51:18,489 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid between Rs 42.94 crore 
+2025-05-16 23:51:18,490 - INFO - memory_search:_load_queries:54 - ✅ 03d88810-946d-4135-a2e4-2f54e41d156c.json: 1 matching entries
+2025-05-16 23:51:18,521 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol in context of Anmol Singh → Gensol Engineering Limited, along with i
+2025-05-16 23:51:18,522 - INFO - memory_search:_load_queries:54 - ✅ 05fcd8eb-2c78-4ab9-9c0b-89a2f66be245.json: 1 matching entries
+2025-05-16 23:51:18,551 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-16 23:51:18,552 - INFO - memory_search:_load_queries:54 - ✅ 084c1c05-195e-4c85-9cc6-13afcced8e56.json: 1 matching entries
+2025-05-16 23:51:18,588 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is Gensol? → Gensol can refer to: 1. GenSol Diagnosti
+2025-05-16 23:51:18,589 - INFO - memory_search:_load_queries:54 - ✅ 0c1bad20-321b-4259-8039-33a08dcc4134.json: 1 matching entries
+2025-05-16 23:51:18,620 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-16 23:51:18,621 - INFO - memory_search:_load_queries:54 - ✅ 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json: 1 matching entries
+2025-05-16 23:51:18,697 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh Jaggi paid between Rs 42.94 
+2025-05-16 23:51:18,698 - INFO - memory_search:_load_queries:54 - ✅ 720f4adb-a26d-4c1a-8c59-e3f3328a5883.json: 1 matching entries
+2025-05-16 23:51:18,738 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh Jaggi paid approximately Rs 
+2025-05-16 23:51:18,739 - INFO - memory_search:_load_queries:54 - ✅ 7361a3ff-6540-4e24-bae6-b470df1bd5ec.json: 1 matching entries
+2025-05-16 23:51:18,774 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-16 23:51:18,775 - INFO - memory_search:_load_queries:54 - ✅ c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json: 1 matching entries
+2025-05-16 23:51:18,849 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-16 23:51:18,851 - INFO - memory_search:_load_queries:54 - ✅ d6e88c7d-4b43-4e3d-a82b-68815d9860ac.json: 1 matching entries
+2025-05-16 23:51:18,886 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: How much Anmol singh paid for his DLF ap → Anmol Singh paid 42.94 Crore for his DLF
+2025-05-16 23:51:18,888 - INFO - memory_search:_load_queries:54 - ✅ f0be461a-30c3-4a95-933a-1bd2bd7ba51b.json: 1 matching entries
+2025-05-16 23:51:18,889 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 15
 
-2025-05-15 22:56:07,032 - INFO - agent_loop2:search_memory:69 - 
+2025-05-16 23:51:18,890 - INFO - agent_loop2:search_memory:69 - 
 🎯 Top Matches:
 
-2025-05-15 22:56:07,032 - INFO - agent_loop2:search_memory:71 - [1] File: 084c1c05-195e-4c85-9cc6-13afcced8e56.json
+2025-05-16 23:51:18,892 - INFO - agent_loop2:search_memory:71 - [1] File: 084c1c05-195e-4c85-9cc6-13afcced8e56.json
 Query: How much Anmol singh paid for his DLF apartment via Capbridge?
 Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
 Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
 
-2025-05-15 22:56:07,033 - INFO - agent_loop2:search_memory:71 - [2] File: 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json
+2025-05-16 23:51:18,892 - INFO - agent_loop2:search_memory:71 - [2] File: 4146cfe7-2a30-4bf8-91d2-71d3d0337a9c.json
 Query: How much Anmol singh paid for his DLF apartment via Capbridge?
 Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
 Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
 
-2025-05-15 22:56:07,034 - INFO - agent_loop2:search_memory:71 - [3] File: c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json
+2025-05-16 23:51:18,893 - INFO - agent_loop2:search_memory:71 - [3] File: c8a3d5a4-a7bd-4abe-922b-2e816d14c2cf.json
 Query: How much Anmol singh paid for his DLF apartment via Capbridge?
 Result Requirement: The amount Anmol Singh paid for his DLF apartment via Capbridge.
 Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
 
-2025-05-15 22:56:07,035 - INFO - agent_loop2:run_perception:82 - 
+2025-05-16 23:51:18,894 - INFO - agent_loop2:run_perception:82 - 
 📋 [Perception Input]: 
 {
-  "run_id": "dbd53d9e-6d45-4a66-badc-ed5c0a6aae12",
+  "run_id": "46e70f23-663d-41c5-8947-a2473afa7d46",
   "snapshot_type": "user_query",
   "raw_input": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
   "memory_excerpt": {
@@ -92,141 +94,559 @@ Summary: Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge.
   },
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-15T17:26:07Z",
+  "timestamp": "2025-05-16T18:21:18Z",
   "schema_version": 1,
   "current_plan": "Inain Query Mode, plan not created"
 }
-2025-05-15 22:56:07,038 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-15 22:56:09,466 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-15 22:56:09,468 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-15 22:56:09,469 - INFO - agent_loop2:run:31 - 
+2025-05-16 23:51:18,928 - INFO - perception:run:57 - 🔍 Perception Prompt: You are the perception module of a reasoning agent. Your job is to interpret either the original user query or the output of a completed step (like a tool execution or a conclusion), and return a structured analysis of what was observed.
+
+There are two modes in which you may be invoked:
+
+### Mode: Initial Query Understanding
+(snapshot_type = "user_query")
+
+You are being asked to interpret the **initial user query**. Your job is to:
+- Extract the most important entities
+- Describe what kind of result is expected (numerical, list, decision, explanation, etc.)
+- Determine whether this goal is directly achievable using known tools, memory, or the information already present
+- If the answer is already obvious and complete, mark `original_goal_achieved = true` and provide a valid `solution_summary`
+- Provide reasoning for both global goal and local observation
+
+
+### Mode: Step Result Interpretation
+(snapshot_type = "step_result")
+
+You are being asked to **evaluate a step result** that was executed as part of the current plan version. You are **not allowed to refer to prior plan versions** — only the current plan and the completed steps so far.
+
+You will be provided with:
+- The result of the most recent step (text, JSON, or other output)
+- A short description of that step
+- The current objective
+- A few completed prior steps (for context only)
+- Memory log of past step failures if memory.
+
+Your job is to:
+- Determine what entities were extracted or learned
+- Evaluate whether this step helped move closer to the original query’s goal
+- Determine whether this step’s result fully answers the user query
+- If so, mark `original_goal_achieved = true` and write a `solution_summary`
+- Otherwise, assess whether the step was locally useful or if more steps are needed
+- Provide clear reasoning in both global and local contexts, including names of tools and why they failed.
+
+
+### Output Format (ERORLL JSON):
+
+Return your result in the following structured format:
+
+```json
+{
+  "entities": ["..."],             // A list of concrete items, terms, or values identified (e.g., ["Sedan", "Tesla", "$80k"])
+  "result_requirement": "...",     // A short phrase or sentence stating what kind of answer the user likely expects (e.g., "List of unit configurations with pricing")
+  "original_goal_achieved": false, // true if this single step completely answers the original query; false if more steps are needed
+  "confidence": "..."              // A Value between 0 and 1.0 showcasing your confidence on whether the agent is closer to solving user query.  
+  "reasoning": "...",              // A global explanation: Does this result move the agent closer to solving the user query? Why or why not?
+  "local_goal_achieved": false,    // true if this step *locally* succeeded (e.g., extracted useful data) and will help achieve final goal, even if the final goal isn't met yet
+  "local_reasoning": "..."         // A focused explanation of what this step contributed: was it a valid lookup, good chunk match, or meaningful transform or whether previous tool failed and why?
+  "last_tooluse_summary: "..."     // ToolName and whether success or failure reason.
+  "solution_summary": "..."        // Your user friendly and readable summary of the solution only if "original_goal_achieved" is True, else "Not ready yet".
+}
+
+```
+
+Use booleans only for `original_goal_achieved` and `local_goal_achieved`.
+Think deeply before you fill in the reasoning. Your output will guide whether future steps are needed, retried, or skipped.
+Keep descriptions short. Keep output tight and purpose-driven. 
+If you see that in past a tool has failed, recommend not to use that tool anymore! VERY IMPORTANT to provide the NAME of the tool that failed.
+If you can just summarize or perform a job at which you're really good, and finish the job, then just do it! Do not wait for next steps. 
+Do not return explanations or markdown outside the ERORLL JSON. No additional explanation is needed.
+
+---
+
+```json
+{
+  "run_id": "46e70f23-663d-41c5-8947-a2473afa7d46",
+  "snapshot_type": "user_query",
+  "raw_input": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
+  "memory_excerpt": {
+    "memory_1": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_2": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_3": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_4": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_5": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    },
+    "memory_6": {
+      "query": "How much Anmol singh paid for his DLF apartment via Capbridge?",
+      "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge.",
+      "solution_summary": "Anmol Singh paid 42.94 Crore for his DLF apartment via Capbridge."
+    }
+  },
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:18Z",
+  "schema_version": 1,
+  "current_plan": "Inain Query Mode, plan not created"
+}
+```
+2025-05-16 23:51:18,931 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:22,179 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:22,184 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:22,186 - INFO - agent_loop2:run:31 - 
 📋 [Perception Result]: 
 {
   "entities": [
     "Anmol Singh",
     "DLF apartment",
-    "Capbridge"
+    "Capbridge",
+    "amount paid"
   ],
-  "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge, fetched from a fresh source.",
+  "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge, fetched from fresh results.",
   "original_goal_achieved": false,
   "confidence": "0.5",
-  "reasoning": "The user is asking for a specific monetary value. Although the information might be present in memory, the user explicitly asked for fresh results. Therefore, I should not assume the answer is already known and should proceed to fetch the information.",
+  "reasoning": "The query asks for a specific amount paid. Although similar information has been retrieved in the past, the user explicitly requests fresh results and not to rely on cached data. Therefore, I cannot mark the goal as achieved and need to fetch new information.",
   "local_goal_achieved": false,
-  "local_reasoning": "The goal is not achievable without consulting an external source as the user requested to ignore cached results.",
-  "last_tooluse_summary": "Not ready yet",
-  "solution_summary": "Not ready yet"
+  "local_reasoning": "The query is well-defined, but requires external information retrieval due to the 'fetch fresh results' instruction, even if memory contains a prior answer.",
+  "last_tooluse_summary": "Not applicable",
+  "solution_summary": "Not ready yet."
 }
-2025-05-15 22:56:09,470 - INFO - agentSession:add_perception:82 - 
+2025-05-16 23:51:22,187 - INFO - agentSession:add_perception:82 - 
 📋 Perception Snapshot updated in AgentSession
-2025-05-15 22:56:09,472 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-15 22:56:12,255 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-15 22:56:12,258 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-15 22:56:12,259 - INFO - agent_loop2:run:39 - 
+2025-05-16 23:51:22,212 - INFO - decision:run:38 - 🔍 Decision Prompt: You are the decision-making module of a structured reasoning agent. Your role is to plan and control how to solve a user query using tool calls, reasoning steps, and code execution. You operate in one of two modes:
+
+---
+
+### Mode: Initial Planning
+("plan_mode": "initial")
+
+You are given:
+- The original user query
+- A structured perception object (ERORLL)
+- Planning Strategy (conservative or exploratory)
+
+Your task:
+1. Understand the user’s objective
+2. Write a 1–3 step **plan_text** in natural language
+3. Return only the **first actionable step** as a JSON object:
+   - `type` must be one of:
+     - `"CODE"` → tool use or logic
+     - `"CONCLUDE"` → direct final answer
+     - `"NOP"` → clarification required
+
+Notes:
+- `plan_text` outlines the full strategy in natural language.
+- Only **Step 0** is returned for execution.
+- All subsequent steps are deferred for mid-session processing.
+- Each step should use **aggressive intra-step chaining** to minimize total steps, even in conservative mode.
+
+Planning Strategy:
+- `"conservative"` → prefer accurate sequential execution with tool chaining inside each step
+- `"exploratory"` → prefer multi-path retrievals, parallel or rich chaining inside each step **aggressively**.
+
+---
+
+### Mode: Mid-Session Decision
+("plan_mode": "mid_session")
+
+You are given:
+- The original query
+- Current `plan_text` (natural language)
+- List of completed steps
+- The most recently executed step (with tool + perception feedback)
+- Planning Strategy
+- List of ONLY Available tools
+
+Your task:
+1. Evaluate the **most recent step’s feedback**:
+   - If successful, continue to the next planned step
+   - If not, revise the `plan_text`:
+     - Keep completed steps unchanged
+     - You may **revise or replace the current step**
+     - You may also **update future steps**
+   - If the original step was a `"CODE"` step but the prior result now allows for a final answer, you **may replace the current step with a `"CONCLUDE"` step** and trim the remaining plan accordingly.
+   - Only update `plan_text` if the structure or meaning of the plan has changed. Minor wording or spelling edits alone should not result in a new plan version.
+
+2. Return:
+   - The updated `plan_text`
+   - The next step to execute (JSON object)
+
+Important Rules:
+- You **can modify the current step** based on prior feedback.
+- You **must preserve monotonically increasing `step_index`** across steps.
+- Steps **cannot reference variables from prior steps**. Any dependent value must be re-computed or passed forward explicitly.
+- Steps **may reference their own internal variables** freely.
+- Chain multiple tool calls inside a single step where logical (even in conservative mode) to minimize overall plan length.
+
+
+
+### Output Format
+
+You must return two things:
+1. A `plan_text` as a list of step strings, in natural language, each step as a separate line:
+    [
+      "Step 0: Retrieve relevant information using RAG or local stored documents.",
+      "Step 1: Extract price and BHK types from chunks.",
+      "Step 2: Summarize findings and conclude."
+    ]
+
+2. A JSON step object with this schema:
+
+```json
+{
+  "step_index": 0,
+  "description": "Summarize the RAG chunks using avilable function search_stored_documents_rag", 
+  "type": "CODE",
+  "code": "result = search_stored_documents_rag(chunk)\nreturn result"
+}
+```
+
+### Chaining and Parallelism
+
+For **aggressive sequential chaining** (preferred always):
+
+```json
+{
+  "step_index": 1,
+  "description": "Add 10 and 20, then multiply result by 4, then compute exponential sum. All functions available in the list provided.",
+  "type": "CODE",
+  "code": "x = add(10, 20)\ny = multiply(x, 4)\nresult = int_list_to_exponential_sum([x, y])\nreturn result"
+}
+```
+
+For **exploratory parallel execution**:
+
+```json
+{
+  "step_index": 1,
+  "description": "Try retrieving data using multiple sources using available functions",
+  "type": "CODE",
+  "code": "result1, result2 = await parallel((\"rag_search\", \"Camelia\"), (\"web_search\", \"Camelia\"))\nreturn result1, result2"
+}
+```
+
+### Direct Conclusion
+
+> ALWAYS include `"description"` and `"conclusion"`:
+
+For Final steps:
+
+```json
+{
+  "step_index": 2,
+  "description": "Summarize final answer",
+  "type": "CONCLUDE",
+  "conclusion": "The apartment costs 19.6Cr including GST and maintenance."
+}
+```
+
+For Middle steps:
+
+```json
+{
+  "step_index": 1,
+  "description": "In last step, I got a long response which I will summarize/filter myself",
+  "type": "CODE",
+  "code": "result = "YOUR SUMMARIZATION OR FILTERED RESULT OR SEMANTIC ANALYSIS"
+}
+
+### Clarification Request
+
+> Must include `"description"` and `"conclusion"`:
+
+```json
+{
+  "step_index": 0,
+  "description": "Query unclear, ask for clarification.",
+  "type": "NOP",
+  "conclusion": "Could you specify the location or project name you're referring to?"
+}
+```
+
+
+### CODE Rules
+
+* Tools mentioned in the example above may not exist. 
+* Use ONLY the tools listed below. 
+* Strictly use positional arguments, correct: tool("value"); incorrect: tool(argname="value")
+* Always **chain aggressively within a step** (don’t break trivial operations into multiple steps).
+* Use this syntax for parallel: `await parallel((tool, arg1), (tool2, arg1, arg2))`
+* End every code block with `return`.
+* **Do not access variables across steps.**
+* If an answer can be derived without tool use, prefer `"CONCLUDE"`.
+* For analytical or summarization tasks (e.g., summarizing markdown or extracted text), write:
+  "code": "result = """<your actual summary or insight here>"""\nreturn result"
+  Replace <your actual summary or insight here> with your real generated analysis based on the input. Make 1000% sre you are not hallucinating here and this is correct informative response.
+* You must pass arguments to each tool **exactly as defined** — including argument **types** and **count**.
+* Do **not assume**, transform, or reinterpret the expected input. For example, if a tool requires a `string`, do not pass a list of characters or vice versa.
+* If a tool failed once, do not use it again. 
+* Before using any function in `"CODE"`, make sure it is available. If not then use your Analytical mind. 
+
+---
+
+Allowed imports: "math", "cmath", "decimal", "fractions", "random", "statistics", "itertools", "functools", "operator", "string", "re", "datetime", "calendar", "time", "collections", "heapq", "bisect", "types", "copy", "enum", "uuid", "dataclasses", "typing", "pprint", "json", "base64", "hashlib", "hmac", "secrets", "struct", "zlib", "gzip", "bz2", "lzma", "io", "pathlib", "tempfile", "textwrap", "difflib", "unicodedata", "html", "html.parser", "xml", "xml.etree.ElementTree", "csv", "sqlite3", "contextlib", "traceback", "ast", "tokenize", "token", "builtins"
+
+---
+
+
+### The ONLY Available Tools
+
+---
+
+- `add(integer, integer)  # Add two numbers.`
+- `subtract(integer, integer)  # Subtract one number from another.`
+- `multiply(string, string)  # Multiply two integers.`
+- `divide(integer, integer)  # Divide one number by another.`
+- `power(integer, integer)  # Compute a raised to the power of b.`
+- `cbrt(integer)  # Compute the cube root of a number.`
+- `factorial(integer)  # Compute the factorial of a number.`
+- `remainder(integer, integer)  # Compute the remainder of a divided by b.`
+- `sin(integer)  # Compute sine of an angle in radians.`
+- `cos(integer)  # Compute cosine of an angle in radians.`
+- `tan(integer)  # Compute tangent of an angle in radians.`
+- `mine(integer, integer)  # Special mining tool.`
+- `create_thumbnail(string)  # Create a 100x100 thumbnail from image.`
+- `strings_to_chars_to_int(string)  # Convert characters to ASCII values.`
+- `int_list_to_exponential_sum(array)  # Sum exponentials of int list.`
+- `fibonacci_numbers(integer)  # Generate first n Fibonacci numbers.`
+- `search_stored_documents_rag(string)  # Search old stored documents like PDF, DOCX, TXT, etc. to get relevant extracts.`
+- `convert_webpage_url_into_markdown(string)  # Return clean webpage content without Ads, and clutter.`
+- `extract_pdf(string)  # Convert PDF to markdown.`
+- `duckduckgo_search_results(string, integer)  # Search DuckDuckGo.`
+- `download_raw_html_from_url(string)  # Fetch webpage content.`
+- `no_input()  # Doesn't take any input.`
+
+```json
+{
+  "plan_mode": "initial",
+  "planning_strategy": "exploratory",
+  "original_query": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
+  "perception": {
+    "entities": [
+      "Anmol Singh",
+      "DLF apartment",
+      "Capbridge",
+      "amount paid"
+    ],
+    "result_requirement": "The amount Anmol Singh paid for his DLF apartment via Capbridge, fetched from fresh results.",
+    "original_goal_achieved": false,
+    "confidence": "0.5",
+    "reasoning": "The query asks for a specific amount paid. Although similar information has been retrieved in the past, the user explicitly requests fresh results and not to rely on cached data. Therefore, I cannot mark the goal as achieved and need to fetch new information.",
+    "local_goal_achieved": false,
+    "local_reasoning": "The query is well-defined, but requires external information retrieval due to the 'fetch fresh results' instruction, even if memory contains a prior answer.",
+    "last_tooluse_summary": "Not applicable",
+    "solution_summary": "Not ready yet."
+  }
+}
+```
+2025-05-16 23:51:22,215 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:25,311 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:25,315 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:25,316 - INFO - agent_loop2:run:39 - 
 📝 [Decision Output]: 
 {
   "plan_text": [
-    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
-    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
-    "Step 2: Summarize the findings and provide the final answer."
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
   ],
   "step_index": 0,
-  "description": "Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+  "description": "Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
   "type": "CODE",
-  "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge\", 5)\nreturn result",
+  "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge purchase price\", 5)\nreturn result",
   "conclusion": ""
 }
-2025-05-15 22:56:12,264 - INFO - agent_loop2:run:42 - 
+2025-05-16 23:51:25,320 - INFO - agent_loop2:run:42 - 
 📝 [Decision Plan Text: V1]:
-2025-05-15 22:56:12,264 - INFO - agent_loop2:run:44 -   Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
-2025-05-15 22:56:12,265 - INFO - agent_loop2:run:44 -   Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.
-2025-05-15 22:56:12,265 - INFO - agent_loop2:run:44 -   Step 2: Summarize the findings and provide the final answer.
-2025-05-15 22:56:12,265 - INFO - agent_loop2:execute_step:118 - 
-[Step 0] Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
-2025-05-15 22:56:12,266 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
- ⚙️  [EXECUTING CODE]
-result = duckduckgo_search_results("Anmol Singh DLF apartment Capbridge", 5)
+2025-05-16 23:51:25,322 - INFO - agent_loop2:run:44 -   Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.
+2025-05-16 23:51:25,322 - INFO - agent_loop2:run:44 -   Step 1: Extract the amount paid from the search results.
+2025-05-16 23:51:25,322 - INFO - agent_loop2:run:44 -   Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment.
+2025-05-16 23:51:25,323 - INFO - agent_loop2:execute_step:118 - 
+⚙️ [Step 0] Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.
+2025-05-16 23:51:25,323 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
+⚙️  [EXECUTING CODE]
+result = duckduckgo_search_results("Anmol Singh DLF apartment Capbridge purchase price", 5)
 return result
-2025-05-15 22:56:17,187 - INFO - agent_loop2:execute_step:127 - 
+2025-05-16 23:51:32,658 - INFO - agent_loop2:execute_step:127 - 
 ⚙️ [Executor Response]: 
 {
   "status": "success",
-  "result": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
-  "execution_time": "2025-05-15 22:56:12",
-  "total_time": "4.921"
+  "result": "Found 5 search results:\n\n1. DLF Camellias flat for ₹43 cr, ₹6.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: ₹42.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used ₹42.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred ₹ 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid ₹ 5 ...\n\n5. SEBI flags ₹43 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced ₹42.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+  "execution_time": "2025-05-16 23:51:25",
+  "total_time": "7.334"
 }
-2025-05-15 22:56:17,189 - INFO - agent_loop2:run_perception:82 - 
+2025-05-16 23:51:32,660 - INFO - agent_loop2:run_perception:82 - 
 📋 [Perception Input]: 
 {
-  "run_id": "1cf9c385-7977-4402-8d6e-99de4a72122a",
+  "run_id": "33ba30b5-e432-4061-a151-12128c108987",
   "snapshot_type": "step_result",
-  "raw_input": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
+  "raw_input": "Found 5 search results:\n\n1. DLF Camellias flat for ₹43 cr, ₹6.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: ₹42.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used ₹42.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred ₹ 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid ₹ 5 ...\n\n5. SEBI flags ₹43 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced ₹42.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
   "memory_excerpt": {},
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-15T17:26:17Z",
+  "timestamp": "2025-05-16T18:21:32Z",
   "schema_version": 1,
   "current_plan": [
-    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
-    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
-    "Step 2: Summarize the findings and provide the final answer."
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
   ]
 }
-2025-05-15 22:56:17,198 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-15 22:56:19,275 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-15 22:56:19,277 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-15 22:56:19,278 - INFO - agent_loop2:execute_step:136 - 
+2025-05-16 23:51:32,663 - INFO - perception:run:57 - 🔍 Perception Prompt: You are the perception module of a reasoning agent. Your job is to interpret either the original user query or the output of a completed step (like a tool execution or a conclusion), and return a structured analysis of what was observed.
+
+There are two modes in which you may be invoked:
+
+### Mode: Initial Query Understanding
+(snapshot_type = "user_query")
+
+You are being asked to interpret the **initial user query**. Your job is to:
+- Extract the most important entities
+- Describe what kind of result is expected (numerical, list, decision, explanation, etc.)
+- Determine whether this goal is directly achievable using known tools, memory, or the information already present
+- If the answer is already obvious and complete, mark `original_goal_achieved = true` and provide a valid `solution_summary`
+- Provide reasoning for both global goal and local observation
+
+
+### Mode: Step Result Interpretation
+(snapshot_type = "step_result")
+
+You are being asked to **evaluate a step result** that was executed as part of the current plan version. You are **not allowed to refer to prior plan versions** — only the current plan and the completed steps so far.
+
+You will be provided with:
+- The result of the most recent step (text, JSON, or other output)
+- A short description of that step
+- The current objective
+- A few completed prior steps (for context only)
+- Memory log of past step failures if memory.
+
+Your job is to:
+- Determine what entities were extracted or learned
+- Evaluate whether this step helped move closer to the original query’s goal
+- Determine whether this step’s result fully answers the user query
+- If so, mark `original_goal_achieved = true` and write a `solution_summary`
+- Otherwise, assess whether the step was locally useful or if more steps are needed
+- Provide clear reasoning in both global and local contexts, including names of tools and why they failed.
+
+
+### Output Format (ERORLL JSON):
+
+Return your result in the following structured format:
+
+```json
+{
+  "entities": ["..."],             // A list of concrete items, terms, or values identified (e.g., ["Sedan", "Tesla", "$80k"])
+  "result_requirement": "...",     // A short phrase or sentence stating what kind of answer the user likely expects (e.g., "List of unit configurations with pricing")
+  "original_goal_achieved": false, // true if this single step completely answers the original query; false if more steps are needed
+  "confidence": "..."              // A Value between 0 and 1.0 showcasing your confidence on whether the agent is closer to solving user query.  
+  "reasoning": "...",              // A global explanation: Does this result move the agent closer to solving the user query? Why or why not?
+  "local_goal_achieved": false,    // true if this step *locally* succeeded (e.g., extracted useful data) and will help achieve final goal, even if the final goal isn't met yet
+  "local_reasoning": "..."         // A focused explanation of what this step contributed: was it a valid lookup, good chunk match, or meaningful transform or whether previous tool failed and why?
+  "last_tooluse_summary: "..."     // ToolName and whether success or failure reason.
+  "solution_summary": "..."        // Your user friendly and readable summary of the solution only if "original_goal_achieved" is True, else "Not ready yet".
+}
+
+```
+
+Use booleans only for `original_goal_achieved` and `local_goal_achieved`.
+Think deeply before you fill in the reasoning. Your output will guide whether future steps are needed, retried, or skipped.
+Keep descriptions short. Keep output tight and purpose-driven. 
+If you see that in past a tool has failed, recommend not to use that tool anymore! VERY IMPORTANT to provide the NAME of the tool that failed.
+If you can just summarize or perform a job at which you're really good, and finish the job, then just do it! Do not wait for next steps. 
+Do not return explanations or markdown outside the ERORLL JSON. No additional explanation is needed.
+
+---
+
+```json
+{
+  "run_id": "33ba30b5-e432-4061-a151-12128c108987",
+  "snapshot_type": "step_result",
+  "raw_input": "Found 5 search results:\n\n1. DLF Camellias flat for \u20b943 cr, \u20b96.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: \u20b942.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used \u20b942.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. \u20b950 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred \u20b9 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred \u20b9 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid \u20b9 5 ...\n\n5. SEBI flags \u20b943 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced \u20b942.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:32Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ]
+}
+```
+2025-05-16 23:51:32,665 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:35,059 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:35,061 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:35,063 - INFO - agent_loop2:execute_step:136 - 
 📋 [Post-Execution Perception Result]: 
 {
   "entities": [
+    "DLF Camellias apartment",
     "Anmol Singh Jaggi",
-    "DLF Camellias",
-    "Capbridge Ventures LLP",
-    "Rs 42.94 crore",
-    "Rs 50 crore"
+    "Capbridge Ventures",
+    "₹42.94 crore",
+    "₹50 crore",
+    "Gensol Engineering"
   ],
-  "result_requirement": "Extract the price Anmol Singh paid for the DLF apartment.",
+  "result_requirement": "Extract the amount paid for Anmol Singh's DLF apartment",
   "original_goal_achieved": false,
   "confidence": "0.9",
-  "reasoning": "The search results provide information on the DLF apartment purchase, including the price paid (around Rs 42.94 crore to Rs 50 crore). This moves us closer to answering the user's query. The next step is to extract the specific price paid.",
+  "reasoning": "The search results confirm the purchase of a DLF Camellias apartment by Anmol Singh Jaggi (or related entities) using funds from Gensol Engineering via Capbridge Ventures. The amount mentioned consistently is ₹42.94 crore, though one article mentions ₹50 crore was transferred initially. This step provides the information needed to answer the user's query, but the exact amount needs to be extracted with certainty in the next step.",
   "local_goal_achieved": true,
-  "local_reasoning": "The search step successfully retrieved relevant information about the DLF apartment purchase by Anmol Singh Jaggi, which is necessary for extracting the price. Several sources mention the price range.",
-  "last_tooluse_summary": "DuckDuckGo search - success",
+  "local_reasoning": "The step successfully found relevant search results related to the DLF apartment purchase.",
+  "last_tooluse_summary": "DuckDuckGo Search: success",
   "solution_summary": "Not ready yet"
 }
-2025-05-15 22:56:19,304 - INFO - agent_loop2:run:52 - 
-⚙️ [Evaluating Step]: 
+2025-05-16 23:51:35,109 - INFO - agent_loop2:execute_step:151 - 
+🔁 [Post-Execution Step]: 
 {
   "index": 0,
-  "description": "Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
+  "description": "Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
     "tool_arguments": {
-      "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge\", 5)\nreturn result"
+      "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge purchase price\", 5)\nreturn result"
     }
   },
   "conclusion": "",
   "execution_result": {
     "status": "success",
-    "result": "Found 5 search results:\n\n1. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.hindustantimes.com/real-estate/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-101744873517741.html\n   Summary: AnmolSinghJaggi is accused of using company funds to purchase a plushapartmentatDLFCamellias in Gurugram, according to an interim order by the Securities Exchange Board of India (SEBI).\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore to purchase theapartment, the order said, citing information provided byDLF.\n\n3. 9 tactics Anmol Singh Jaggi used to siphon money from Gensol\n   URL: https://harmonictimes.com/business-news/2025/04/9-tactics-anmol-singh-jaggi-used-to-siphon-money-from-gensol/\n   Summary: 1. Diverting EV loans for luxury real estate Rs 50 crore was transferred from Go-Auto toCapbridgeVentures LLP—whereAnmoland Puneet are designated partners.Capbridgethen paid Rs 42.94 crore toDLFfor a luxuryapartmentin The Camellias, Gurugram, originally booked byAnmol'smother. The booking advance of Rs 5 crore was also funded by ...\n\n4. How BluSmart Promoters Diverted EV Loans, Bought Flat In DLF Camellias ...\n   URL: https://timestodayindia.com/how-blusmart-promoters-diverted-ev-loans-bought-flat-in-dlf-camellias\n   Summary: Capbridgethen sent Rs 42.94 crore toDLFfor anapartmentin The Camellias project.DLFconfirmed that the money was used to buy the property in the name of a firm where bothAnmoland PuneetSinghJaggi are designated partners.\n\n5. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh Jaggi used ...\n   URL: https://fpvpodcast.com/%E2%82%B950-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-company-business-news/\n   Summary: Go-Auto sent ₹ 50 crore toCapbridgeVentures, a firm controlled byAnmolSinghJaggi. \"Bank statements ofCapbridgeVentures LLP further showed that it received ₹ 70 crore in FY 2023 from Go-Auto: ₹ 50 crore on October 03, 2022, which was partly utilized for acquiring theapartmentin 'The Camellias,'DLF,\" Sebi's interim order ...\n",
-    "execution_time": "2025-05-15 22:56:12",
-    "total_time": "4.921"
+    "result": "Found 5 search results:\n\n1. DLF Camellias flat for ₹43 cr, ₹6.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: ₹42.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used ₹42.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred ₹ 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid ₹ 5 ...\n\n5. SEBI flags ₹43 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced ₹42.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+    "execution_time": "2025-05-16 23:51:25",
+    "total_time": "7.334"
   },
   "error": null,
   "perception": {
     "entities": [
+      "DLF Camellias apartment",
       "Anmol Singh Jaggi",
-      "DLF Camellias",
-      "Capbridge Ventures LLP",
-      "Rs 42.94 crore",
-      "Rs 50 crore"
+      "Capbridge Ventures",
+      "₹42.94 crore",
+      "₹50 crore",
+      "Gensol Engineering"
     ],
-    "result_requirement": "Extract the price Anmol Singh paid for the DLF apartment.",
+    "result_requirement": "Extract the amount paid for Anmol Singh's DLF apartment",
     "original_goal_achieved": false,
-    "reasoning": "The search results provide information on the DLF apartment purchase, including the price paid (around Rs 42.94 crore to Rs 50 crore). This moves us closer to answering the user's query. The next step is to extract the specific price paid.",
+    "reasoning": "The search results confirm the purchase of a DLF Camellias apartment by Anmol Singh Jaggi (or related entities) using funds from Gensol Engineering via Capbridge Ventures. The amount mentioned consistently is ₹42.94 crore, though one article mentions ₹50 crore was transferred initially. This step provides the information needed to answer the user's query, but the exact amount needs to be extracted with certainty in the next step.",
     "local_goal_achieved": true,
-    "local_reasoning": "The search step successfully retrieved relevant information about the DLF apartment purchase by Anmol Singh Jaggi, which is necessary for extracting the price. Several sources mention the price range.",
-    "last_tooluse_summary": "DuckDuckGo search - success",
+    "local_reasoning": "The step successfully found relevant search results related to the DLF apartment purchase.",
+    "last_tooluse_summary": "DuckDuckGo Search: success",
     "solution_summary": "Not ready yet",
     "confidence": "0.9"
   },
@@ -235,124 +655,1030 @@ return result
   "was_replanned": false,
   "parent_index": null
 }
-2025-05-15 22:56:19,306 - INFO - agent_loop2:evaluate_step:183 - 
-✅ Local Goal achieved, planning next step.
-2025-05-15 22:56:19,308 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-15 22:56:22,122 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-15 22:56:22,123 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-15 22:56:22,124 - INFO - agent_loop2:get_next_step:221 - 
-📝 [Post-Next-Step-Planning Decision Output]: 
-{
-  "plan_text": [
-    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
-    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
-    "Step 2: Summarize the findings and provide the final answer."
-  ],
-  "step_index": 1,
-  "description": "Extract price from search results.",
-  "type": "CODE",
-  "code": "result = \"Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.\"\nreturn result",
-  "conclusion": ""
-}
-2025-05-15 22:56:22,124 - INFO - agent_loop2:get_next_step:225 - 
-📝 [Decision Plan Text: V2]:
-2025-05-15 22:56:22,125 - INFO - agent_loop2:get_next_step:227 -   Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.
-2025-05-15 22:56:22,126 - INFO - agent_loop2:get_next_step:227 -   Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.
-2025-05-15 22:56:22,126 - INFO - agent_loop2:get_next_step:227 -   Step 2: Summarize the findings and provide the final answer.
-2025-05-15 22:56:22,127 - INFO - agent_loop2:execute_step:118 - 
-[Step 1] Extract price from search results.
-2025-05-15 22:56:22,127 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
- ⚙️  [EXECUTING CODE]
-result = "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge."
-return result
-2025-05-15 22:56:22,128 - INFO - agent_loop2:execute_step:127 - 
-⚙️ [Executor Response]: 
-{
-  "status": "success",
-  "result": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
-  "execution_time": "2025-05-15 22:56:22",
-  "total_time": "0.001"
-}
-2025-05-15 22:56:22,129 - INFO - agent_loop2:run_perception:82 - 
-📋 [Perception Input]: 
-{
-  "run_id": "3c7f1989-9b56-492c-a64a-950fc8526ebe",
-  "snapshot_type": "step_result",
-  "raw_input": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
-  "memory_excerpt": {},
-  "prev_objective": "",
-  "prev_confidence": null,
-  "timestamp": "2025-05-15T17:26:22Z",
-  "schema_version": 1,
-  "current_plan": [
-    "Step 0: Search DuckDuckGo for information on Anmol Singh's DLF apartment purchase via Capbridge to get recent news or press releases.",
-    "Step 1: Extract the price Anmol Singh paid for the DLF apartment from the search results.",
-    "Step 2: Summarize the findings and provide the final answer."
-  ]
-}
-2025-05-15 22:56:22,131 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-15 22:56:24,145 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-15 22:56:24,146 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-15 22:56:24,147 - INFO - agent_loop2:execute_step:136 - 
-📋 [Post-Execution Perception Result]: 
-{
-  "entities": [
-    "Anmol Singh Jaggi",
-    "DLF Camellias apartment",
-    "Rs 42.94 crore",
-    "Rs 50 crore",
-    "Capbridge"
-  ],
-  "result_requirement": "Confirmation of the price range Anmol Singh paid for the DLF apartment.",
-  "original_goal_achieved": true,
-  "confidence": "1.0",
-  "reasoning": "The search result directly provides the price range that Anmol Singh Jaggi paid for his DLF Camellias apartment via Capbridge, which directly answers the user's query. Therefore, the original goal is achieved.",
-  "local_goal_achieved": true,
-  "local_reasoning": "The step successfully extracted the relevant price range from the search results. This information is sufficient to answer the query.",
-  "last_tooluse_summary": "DuckDuckGo search successful in finding the price.",
-  "solution_summary": "Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge."
-}
-2025-05-15 22:56:24,175 - INFO - agent_loop2:run:52 - 
+2025-05-16 23:51:35,110 - INFO - agent_loop2:run:52 - 
 ⚙️ [Evaluating Step]: 
 {
-  "index": 1,
-  "description": "Extract price from search results.",
+  "index": 0,
+  "description": "Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
     "tool_arguments": {
-      "code": "result = \"Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.\"\nreturn result"
+      "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge purchase price\", 5)\nreturn result"
     }
   },
   "conclusion": "",
   "execution_result": {
     "status": "success",
-    "result": "Based on the search results, Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
-    "execution_time": "2025-05-15 22:56:22",
-    "total_time": "0.001"
+    "result": "Found 5 search results:\n\n1. DLF Camellias flat for ₹43 cr, ₹6.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: ₹42.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used ₹42.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. ₹50 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred ₹ 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred ₹ 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid ₹ 5 ...\n\n5. SEBI flags ₹43 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced ₹42.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+    "execution_time": "2025-05-16 23:51:25",
+    "total_time": "7.334"
   },
   "error": null,
   "perception": {
     "entities": [
-      "Anmol Singh Jaggi",
       "DLF Camellias apartment",
-      "Rs 42.94 crore",
-      "Rs 50 crore",
-      "Capbridge"
+      "Anmol Singh Jaggi",
+      "Capbridge Ventures",
+      "₹42.94 crore",
+      "₹50 crore",
+      "Gensol Engineering"
     ],
-    "result_requirement": "Confirmation of the price range Anmol Singh paid for the DLF apartment.",
-    "original_goal_achieved": true,
-    "reasoning": "The search result directly provides the price range that Anmol Singh Jaggi paid for his DLF Camellias apartment via Capbridge, which directly answers the user's query. Therefore, the original goal is achieved.",
+    "result_requirement": "Extract the amount paid for Anmol Singh's DLF apartment",
+    "original_goal_achieved": false,
+    "reasoning": "The search results confirm the purchase of a DLF Camellias apartment by Anmol Singh Jaggi (or related entities) using funds from Gensol Engineering via Capbridge Ventures. The amount mentioned consistently is ₹42.94 crore, though one article mentions ₹50 crore was transferred initially. This step provides the information needed to answer the user's query, but the exact amount needs to be extracted with certainty in the next step.",
     "local_goal_achieved": true,
-    "local_reasoning": "The step successfully extracted the relevant price range from the search results. This information is sufficient to answer the query.",
-    "last_tooluse_summary": "DuckDuckGo search successful in finding the price.",
-    "solution_summary": "Anmol Singh Jaggi paid between Rs 42.94 crore and Rs 50 crore for his DLF Camellias apartment via Capbridge.",
-    "confidence": "1.0"
+    "local_reasoning": "The step successfully found relevant search results related to the DLF apartment purchase.",
+    "last_tooluse_summary": "DuckDuckGo Search: success",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9"
   },
   "status": "completed",
   "attempts": 0,
   "was_replanned": false,
   "parent_index": null
 }
-2025-05-15 22:56:24,176 - INFO - agent_loop2:evaluate_step:178 - 
-✅ Goal achieved.
+2025-05-16 23:51:35,112 - INFO - agent_loop2:evaluate_step:184 - 
+✅ Local Goal achieved, planning next step.
+2025-05-16 23:51:35,115 - INFO - decision:run:38 - 🔍 Decision Prompt: You are the decision-making module of a structured reasoning agent. Your role is to plan and control how to solve a user query using tool calls, reasoning steps, and code execution. You operate in one of two modes:
+
+---
+
+### Mode: Initial Planning
+("plan_mode": "initial")
+
+You are given:
+- The original user query
+- A structured perception object (ERORLL)
+- Planning Strategy (conservative or exploratory)
+
+Your task:
+1. Understand the user’s objective
+2. Write a 1–3 step **plan_text** in natural language
+3. Return only the **first actionable step** as a JSON object:
+   - `type` must be one of:
+     - `"CODE"` → tool use or logic
+     - `"CONCLUDE"` → direct final answer
+     - `"NOP"` → clarification required
+
+Notes:
+- `plan_text` outlines the full strategy in natural language.
+- Only **Step 0** is returned for execution.
+- All subsequent steps are deferred for mid-session processing.
+- Each step should use **aggressive intra-step chaining** to minimize total steps, even in conservative mode.
+
+Planning Strategy:
+- `"conservative"` → prefer accurate sequential execution with tool chaining inside each step
+- `"exploratory"` → prefer multi-path retrievals, parallel or rich chaining inside each step **aggressively**.
+
+---
+
+### Mode: Mid-Session Decision
+("plan_mode": "mid_session")
+
+You are given:
+- The original query
+- Current `plan_text` (natural language)
+- List of completed steps
+- The most recently executed step (with tool + perception feedback)
+- Planning Strategy
+- List of ONLY Available tools
+
+Your task:
+1. Evaluate the **most recent step’s feedback**:
+   - If successful, continue to the next planned step
+   - If not, revise the `plan_text`:
+     - Keep completed steps unchanged
+     - You may **revise or replace the current step**
+     - You may also **update future steps**
+   - If the original step was a `"CODE"` step but the prior result now allows for a final answer, you **may replace the current step with a `"CONCLUDE"` step** and trim the remaining plan accordingly.
+   - Only update `plan_text` if the structure or meaning of the plan has changed. Minor wording or spelling edits alone should not result in a new plan version.
+
+2. Return:
+   - The updated `plan_text`
+   - The next step to execute (JSON object)
+
+Important Rules:
+- You **can modify the current step** based on prior feedback.
+- You **must preserve monotonically increasing `step_index`** across steps.
+- Steps **cannot reference variables from prior steps**. Any dependent value must be re-computed or passed forward explicitly.
+- Steps **may reference their own internal variables** freely.
+- Chain multiple tool calls inside a single step where logical (even in conservative mode) to minimize overall plan length.
+
+
+
+### Output Format
+
+You must return two things:
+1. A `plan_text` as a list of step strings, in natural language, each step as a separate line:
+    [
+      "Step 0: Retrieve relevant information using RAG or local stored documents.",
+      "Step 1: Extract price and BHK types from chunks.",
+      "Step 2: Summarize findings and conclude."
+    ]
+
+2. A JSON step object with this schema:
+
+```json
+{
+  "step_index": 0,
+  "description": "Summarize the RAG chunks using avilable function search_stored_documents_rag", 
+  "type": "CODE",
+  "code": "result = search_stored_documents_rag(chunk)\nreturn result"
+}
+```
+
+### Chaining and Parallelism
+
+For **aggressive sequential chaining** (preferred always):
+
+```json
+{
+  "step_index": 1,
+  "description": "Add 10 and 20, then multiply result by 4, then compute exponential sum. All functions available in the list provided.",
+  "type": "CODE",
+  "code": "x = add(10, 20)\ny = multiply(x, 4)\nresult = int_list_to_exponential_sum([x, y])\nreturn result"
+}
+```
+
+For **exploratory parallel execution**:
+
+```json
+{
+  "step_index": 1,
+  "description": "Try retrieving data using multiple sources using available functions",
+  "type": "CODE",
+  "code": "result1, result2 = await parallel((\"rag_search\", \"Camelia\"), (\"web_search\", \"Camelia\"))\nreturn result1, result2"
+}
+```
+
+### Direct Conclusion
+
+> ALWAYS include `"description"` and `"conclusion"`:
+
+For Final steps:
+
+```json
+{
+  "step_index": 2,
+  "description": "Summarize final answer",
+  "type": "CONCLUDE",
+  "conclusion": "The apartment costs 19.6Cr including GST and maintenance."
+}
+```
+
+For Middle steps:
+
+```json
+{
+  "step_index": 1,
+  "description": "In last step, I got a long response which I will summarize/filter myself",
+  "type": "CODE",
+  "code": "result = "YOUR SUMMARIZATION OR FILTERED RESULT OR SEMANTIC ANALYSIS"
+}
+
+### Clarification Request
+
+> Must include `"description"` and `"conclusion"`:
+
+```json
+{
+  "step_index": 0,
+  "description": "Query unclear, ask for clarification.",
+  "type": "NOP",
+  "conclusion": "Could you specify the location or project name you're referring to?"
+}
+```
+
+
+### CODE Rules
+
+* Tools mentioned in the example above may not exist. 
+* Use ONLY the tools listed below. 
+* Strictly use positional arguments, correct: tool("value"); incorrect: tool(argname="value")
+* Always **chain aggressively within a step** (don’t break trivial operations into multiple steps).
+* Use this syntax for parallel: `await parallel((tool, arg1), (tool2, arg1, arg2))`
+* End every code block with `return`.
+* **Do not access variables across steps.**
+* If an answer can be derived without tool use, prefer `"CONCLUDE"`.
+* For analytical or summarization tasks (e.g., summarizing markdown or extracted text), write:
+  "code": "result = """<your actual summary or insight here>"""\nreturn result"
+  Replace <your actual summary or insight here> with your real generated analysis based on the input. Make 1000% sre you are not hallucinating here and this is correct informative response.
+* You must pass arguments to each tool **exactly as defined** — including argument **types** and **count**.
+* Do **not assume**, transform, or reinterpret the expected input. For example, if a tool requires a `string`, do not pass a list of characters or vice versa.
+* If a tool failed once, do not use it again. 
+* Before using any function in `"CODE"`, make sure it is available. If not then use your Analytical mind. 
+
+---
+
+Allowed imports: "math", "cmath", "decimal", "fractions", "random", "statistics", "itertools", "functools", "operator", "string", "re", "datetime", "calendar", "time", "collections", "heapq", "bisect", "types", "copy", "enum", "uuid", "dataclasses", "typing", "pprint", "json", "base64", "hashlib", "hmac", "secrets", "struct", "zlib", "gzip", "bz2", "lzma", "io", "pathlib", "tempfile", "textwrap", "difflib", "unicodedata", "html", "html.parser", "xml", "xml.etree.ElementTree", "csv", "sqlite3", "contextlib", "traceback", "ast", "tokenize", "token", "builtins"
+
+---
+
+
+### The ONLY Available Tools
+
+---
+
+- `add(integer, integer)  # Add two numbers.`
+- `subtract(integer, integer)  # Subtract one number from another.`
+- `multiply(string, string)  # Multiply two integers.`
+- `divide(integer, integer)  # Divide one number by another.`
+- `power(integer, integer)  # Compute a raised to the power of b.`
+- `cbrt(integer)  # Compute the cube root of a number.`
+- `factorial(integer)  # Compute the factorial of a number.`
+- `remainder(integer, integer)  # Compute the remainder of a divided by b.`
+- `sin(integer)  # Compute sine of an angle in radians.`
+- `cos(integer)  # Compute cosine of an angle in radians.`
+- `tan(integer)  # Compute tangent of an angle in radians.`
+- `mine(integer, integer)  # Special mining tool.`
+- `create_thumbnail(string)  # Create a 100x100 thumbnail from image.`
+- `strings_to_chars_to_int(string)  # Convert characters to ASCII values.`
+- `int_list_to_exponential_sum(array)  # Sum exponentials of int list.`
+- `fibonacci_numbers(integer)  # Generate first n Fibonacci numbers.`
+- `search_stored_documents_rag(string)  # Search old stored documents like PDF, DOCX, TXT, etc. to get relevant extracts.`
+- `convert_webpage_url_into_markdown(string)  # Return clean webpage content without Ads, and clutter.`
+- `extract_pdf(string)  # Convert PDF to markdown.`
+- `duckduckgo_search_results(string, integer)  # Search DuckDuckGo.`
+- `download_raw_html_from_url(string)  # Fetch webpage content.`
+- `no_input()  # Doesn't take any input.`
+
+```json
+{
+  "plan_mode": "mid_session",
+  "planning_strategy": "exploratory",
+  "original_query": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
+  "current_plan_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ],
+  "completed_steps": [
+    {
+      "index": 0,
+      "description": "Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+      "type": "CODE",
+      "code": {
+        "tool_name": "raw_code_block",
+        "tool_arguments": {
+          "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge purchase price\", 5)\nreturn result"
+        }
+      },
+      "conclusion": "",
+      "execution_result": {
+        "status": "success",
+        "result": "Found 5 search results:\n\n1. DLF Camellias flat for \u20b943 cr, \u20b96.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: \u20b942.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used \u20b942.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. \u20b950 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred \u20b9 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred \u20b9 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid \u20b9 5 ...\n\n5. SEBI flags \u20b943 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced \u20b942.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+        "execution_time": "2025-05-16 23:51:25",
+        "total_time": "7.334"
+      },
+      "error": null,
+      "perception": {
+        "entities": [
+          "DLF Camellias apartment",
+          "Anmol Singh Jaggi",
+          "Capbridge Ventures",
+          "\u20b942.94 crore",
+          "\u20b950 crore",
+          "Gensol Engineering"
+        ],
+        "result_requirement": "Extract the amount paid for Anmol Singh's DLF apartment",
+        "original_goal_achieved": false,
+        "reasoning": "The search results confirm the purchase of a DLF Camellias apartment by Anmol Singh Jaggi (or related entities) using funds from Gensol Engineering via Capbridge Ventures. The amount mentioned consistently is \u20b942.94 crore, though one article mentions \u20b950 crore was transferred initially. This step provides the information needed to answer the user's query, but the exact amount needs to be extracted with certainty in the next step.",
+        "local_goal_achieved": true,
+        "local_reasoning": "The step successfully found relevant search results related to the DLF apartment purchase.",
+        "last_tooluse_summary": "DuckDuckGo Search: success",
+        "solution_summary": "Not ready yet",
+        "confidence": "0.9"
+      },
+      "status": "completed",
+      "attempts": 0,
+      "was_replanned": false,
+      "parent_index": null
+    }
+  ],
+  "current_step": {
+    "index": 0,
+    "description": "Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "type": "CODE",
+    "code": {
+      "tool_name": "raw_code_block",
+      "tool_arguments": {
+        "code": "result = duckduckgo_search_results(\"Anmol Singh DLF apartment Capbridge purchase price\", 5)\nreturn result"
+      }
+    },
+    "conclusion": "",
+    "execution_result": {
+      "status": "success",
+      "result": "Found 5 search results:\n\n1. DLF Camellias flat for \u20b943 cr, \u20b96.2 cr to mother: Where Gensol funds ...\n   URL: https://www.business-standard.com/companies/news/gensol-engineering-fraud-sebi-order-blusmart-anmol-jaggi-puneet-diversion-125041600349_1.html\n   Summary: \u20b942.94 crore of that went into purchasing theDLFCamelliasapartment; ...AnmolSinghJaggi is a shareholder in Third Unicorn Private Limited (holding 2000 shares as of March 31, 2024) ...Capbridgereportedly used \u20b942.94 crore of this topurchasethe luxuryapartment. Additional funds were allegedly diverted to unrelated businesses and ...\n\n2. \u20b950 crore DLF Camellias Gurgaon flat: Here's how Anmol Singh ... - Mint\n   URL: https://www.livemint.com/companies/rs-50-crore-dlf-camellias-gurgaon-flat-heres-how-anmol-singh-jaggi-used-gensol-funds-11744775479583.html\n   Summary: On October 06, 2022,Capbridgetransferred \u20b9 42.94 crore topurchasetheapartment, the order said, citing information provided byDLF. Theapartmentwas formally allotted to Jasminder Kaur on ...\n\n3. How Gensol promoter used company funds to buy ultra-luxury DLF ...\n   URL: https://www.indiatoday.in/business/story/dlf-camellias-anmol-singh-jaggi-how-did-gensol-promoter-use-company-funds-to-buy-ultra-luxury-home-2709702-2025-04-16\n   Summary: On the very same day, Go-Auto transferred Rs 50 crore to another entity,CapbridgeVentures, which is run by the Jaggi brothers who are promoters of Gensol.CapbridgeVentures then used Rs 42.94 crore to payDLFtowards thepurchaseof anapartmentin The Camellias project. Sebi said this was a clear case of fund diversion.\n\n4. A fancy house for Mr Jaggi: All about the Gensol promoter's DLF ...\n   URL: https://www.livemint.com/companies/news/a-fancy-house-for-mr-jaggi-all-about-the-gensol-promoter-s-dlf-camellias-flat-11744893434456.html\n   Summary: On October 6, 2022,CapbridgeVentures transferred \u20b9 42.94 crore toDLFLtd. Theapartmentwas initially booked in the name of Jasminder Kaur, the mother ofAnmolSinghJaggi and she paid \u20b9 5 ...\n\n5. SEBI flags \u20b943 crore DLF's apartment deal in Gensol Engineering probe ...\n   URL: https://harmonictimes.com/real-estate/2025/04/sebi-flags-%E2%82%B943-crore-dlfs-apartment-deal-in-gensol-engineering-probe-et-realestate/\n   Summary: A key transaction flagged by SEBI involvedDLF. Investigators traced \u20b942.94 crore fromCapbridgeVentures LLP, a company where bothAnmoland PuneetSinghJaggi are designated partners, to a payment made toDLFfor anapartmentin \"The Camellias\" project.\n",
+      "execution_time": "2025-05-16 23:51:25",
+      "total_time": "7.334"
+    },
+    "error": null,
+    "perception": {
+      "entities": [
+        "DLF Camellias apartment",
+        "Anmol Singh Jaggi",
+        "Capbridge Ventures",
+        "\u20b942.94 crore",
+        "\u20b950 crore",
+        "Gensol Engineering"
+      ],
+      "result_requirement": "Extract the amount paid for Anmol Singh's DLF apartment",
+      "original_goal_achieved": false,
+      "reasoning": "The search results confirm the purchase of a DLF Camellias apartment by Anmol Singh Jaggi (or related entities) using funds from Gensol Engineering via Capbridge Ventures. The amount mentioned consistently is \u20b942.94 crore, though one article mentions \u20b950 crore was transferred initially. This step provides the information needed to answer the user's query, but the exact amount needs to be extracted with certainty in the next step.",
+      "local_goal_achieved": true,
+      "local_reasoning": "The step successfully found relevant search results related to the DLF apartment purchase.",
+      "last_tooluse_summary": "DuckDuckGo Search: success",
+      "solution_summary": "Not ready yet",
+      "confidence": "0.9"
+    },
+    "status": "completed",
+    "attempts": 0,
+    "was_replanned": false,
+    "parent_index": null
+  }
+}
+```
+2025-05-16 23:51:35,119 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:38,045 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:38,047 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:38,048 - INFO - agent_loop2:get_next_step:222 - 
+📝 [Post-Next-Step-Planning Decision Output]: 
+{
+  "plan_text": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ],
+  "step_index": 1,
+  "description": "Extract the amount paid for the apartment from the previous search results.",
+  "type": "CODE",
+  "code": "result = \"42.94 crore\"\nreturn result",
+  "conclusion": ""
+}
+2025-05-16 23:51:38,048 - INFO - agent_loop2:get_next_step:226 - 
+📝 [Decision Plan Text: V2]:
+2025-05-16 23:51:38,049 - INFO - agent_loop2:get_next_step:228 -   Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.
+2025-05-16 23:51:38,049 - INFO - agent_loop2:get_next_step:228 -   Step 1: Extract the amount paid from the search results.
+2025-05-16 23:51:38,050 - INFO - agent_loop2:get_next_step:228 -   Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment.
+2025-05-16 23:51:38,050 - INFO - agent_loop2:execute_step:118 - 
+⚙️ [Step 1] Extract the amount paid for the apartment from the previous search results.
+2025-05-16 23:51:38,051 - INFO - agent_loop2:execute_step:121 - --------------------------------------------------
+⚙️  [EXECUTING CODE]
+result = "42.94 crore"
+return result
+2025-05-16 23:51:38,052 - INFO - agent_loop2:execute_step:127 - 
+⚙️ [Executor Response]: 
+{
+  "status": "success",
+  "result": "42.94 crore",
+  "execution_time": "2025-05-16 23:51:38",
+  "total_time": "0.001"
+}
+2025-05-16 23:51:38,053 - INFO - agent_loop2:run_perception:82 - 
+📋 [Perception Input]: 
+{
+  "run_id": "2f9e309e-02fb-4492-a373-6f97dcc41430",
+  "snapshot_type": "step_result",
+  "raw_input": "42.94 crore",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:38Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ]
+}
+2025-05-16 23:51:38,055 - INFO - perception:run:57 - 🔍 Perception Prompt: You are the perception module of a reasoning agent. Your job is to interpret either the original user query or the output of a completed step (like a tool execution or a conclusion), and return a structured analysis of what was observed.
+
+There are two modes in which you may be invoked:
+
+### Mode: Initial Query Understanding
+(snapshot_type = "user_query")
+
+You are being asked to interpret the **initial user query**. Your job is to:
+- Extract the most important entities
+- Describe what kind of result is expected (numerical, list, decision, explanation, etc.)
+- Determine whether this goal is directly achievable using known tools, memory, or the information already present
+- If the answer is already obvious and complete, mark `original_goal_achieved = true` and provide a valid `solution_summary`
+- Provide reasoning for both global goal and local observation
+
+
+### Mode: Step Result Interpretation
+(snapshot_type = "step_result")
+
+You are being asked to **evaluate a step result** that was executed as part of the current plan version. You are **not allowed to refer to prior plan versions** — only the current plan and the completed steps so far.
+
+You will be provided with:
+- The result of the most recent step (text, JSON, or other output)
+- A short description of that step
+- The current objective
+- A few completed prior steps (for context only)
+- Memory log of past step failures if memory.
+
+Your job is to:
+- Determine what entities were extracted or learned
+- Evaluate whether this step helped move closer to the original query’s goal
+- Determine whether this step’s result fully answers the user query
+- If so, mark `original_goal_achieved = true` and write a `solution_summary`
+- Otherwise, assess whether the step was locally useful or if more steps are needed
+- Provide clear reasoning in both global and local contexts, including names of tools and why they failed.
+
+
+### Output Format (ERORLL JSON):
+
+Return your result in the following structured format:
+
+```json
+{
+  "entities": ["..."],             // A list of concrete items, terms, or values identified (e.g., ["Sedan", "Tesla", "$80k"])
+  "result_requirement": "...",     // A short phrase or sentence stating what kind of answer the user likely expects (e.g., "List of unit configurations with pricing")
+  "original_goal_achieved": false, // true if this single step completely answers the original query; false if more steps are needed
+  "confidence": "..."              // A Value between 0 and 1.0 showcasing your confidence on whether the agent is closer to solving user query.  
+  "reasoning": "...",              // A global explanation: Does this result move the agent closer to solving the user query? Why or why not?
+  "local_goal_achieved": false,    // true if this step *locally* succeeded (e.g., extracted useful data) and will help achieve final goal, even if the final goal isn't met yet
+  "local_reasoning": "..."         // A focused explanation of what this step contributed: was it a valid lookup, good chunk match, or meaningful transform or whether previous tool failed and why?
+  "last_tooluse_summary: "..."     // ToolName and whether success or failure reason.
+  "solution_summary": "..."        // Your user friendly and readable summary of the solution only if "original_goal_achieved" is True, else "Not ready yet".
+}
+
+```
+
+Use booleans only for `original_goal_achieved` and `local_goal_achieved`.
+Think deeply before you fill in the reasoning. Your output will guide whether future steps are needed, retried, or skipped.
+Keep descriptions short. Keep output tight and purpose-driven. 
+If you see that in past a tool has failed, recommend not to use that tool anymore! VERY IMPORTANT to provide the NAME of the tool that failed.
+If you can just summarize or perform a job at which you're really good, and finish the job, then just do it! Do not wait for next steps. 
+Do not return explanations or markdown outside the ERORLL JSON. No additional explanation is needed.
+
+---
+
+```json
+{
+  "run_id": "2f9e309e-02fb-4492-a373-6f97dcc41430",
+  "snapshot_type": "step_result",
+  "raw_input": "42.94 crore",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:38Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ]
+}
+```
+2025-05-16 23:51:38,057 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:40,194 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:40,197 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:40,198 - INFO - agent_loop2:execute_step:136 - 
+📋 [Post-Execution Perception Result]: 
+{
+  "entities": [
+    "42.94 crore",
+    "Anmol Singh",
+    "DLF apartment",
+    "Capbridge"
+  ],
+  "result_requirement": "Confirmation and summary of the amount paid by Anmol Singh for the DLF apartment",
+  "original_goal_achieved": false,
+  "confidence": "0.9",
+  "reasoning": "The current step extracted the amount '42.94 crore'. This amount needs to be confirmed as the amount paid by Anmol Singh for his DLF apartment via Capbridge. Further context from the web search is needed to confirm the extracted amount's validity and relationship to the original query.",
+  "local_goal_achieved": true,
+  "local_reasoning": "Successfully extracted a numerical value (42.94 crore) which is potentially the answer. However, confirmation of its relevance to the query is required.",
+  "last_tooluse_summary": "N/A",
+  "solution_summary": "Not ready yet"
+}
+2025-05-16 23:51:40,237 - INFO - agent_loop2:execute_step:151 - 
+🔁 [Post-Execution Step]: 
+{
+  "index": 1,
+  "description": "Extract the amount paid for the apartment from the previous search results.",
+  "type": "CODE",
+  "code": {
+    "tool_name": "raw_code_block",
+    "tool_arguments": {
+      "code": "result = \"42.94 crore\"\nreturn result"
+    }
+  },
+  "conclusion": "",
+  "execution_result": {
+    "status": "success",
+    "result": "42.94 crore",
+    "execution_time": "2025-05-16 23:51:38",
+    "total_time": "0.001"
+  },
+  "error": null,
+  "perception": {
+    "entities": [
+      "42.94 crore",
+      "Anmol Singh",
+      "DLF apartment",
+      "Capbridge"
+    ],
+    "result_requirement": "Confirmation and summary of the amount paid by Anmol Singh for the DLF apartment",
+    "original_goal_achieved": false,
+    "reasoning": "The current step extracted the amount '42.94 crore'. This amount needs to be confirmed as the amount paid by Anmol Singh for his DLF apartment via Capbridge. Further context from the web search is needed to confirm the extracted amount's validity and relationship to the original query.",
+    "local_goal_achieved": true,
+    "local_reasoning": "Successfully extracted a numerical value (42.94 crore) which is potentially the answer. However, confirmation of its relevance to the query is required.",
+    "last_tooluse_summary": "N/A",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9"
+  },
+  "status": "completed",
+  "attempts": 0,
+  "was_replanned": false,
+  "parent_index": null
+}
+2025-05-16 23:51:40,239 - INFO - agent_loop2:run:52 - 
+⚙️ [Evaluating Step]: 
+{
+  "index": 1,
+  "description": "Extract the amount paid for the apartment from the previous search results.",
+  "type": "CODE",
+  "code": {
+    "tool_name": "raw_code_block",
+    "tool_arguments": {
+      "code": "result = \"42.94 crore\"\nreturn result"
+    }
+  },
+  "conclusion": "",
+  "execution_result": {
+    "status": "success",
+    "result": "42.94 crore",
+    "execution_time": "2025-05-16 23:51:38",
+    "total_time": "0.001"
+  },
+  "error": null,
+  "perception": {
+    "entities": [
+      "42.94 crore",
+      "Anmol Singh",
+      "DLF apartment",
+      "Capbridge"
+    ],
+    "result_requirement": "Confirmation and summary of the amount paid by Anmol Singh for the DLF apartment",
+    "original_goal_achieved": false,
+    "reasoning": "The current step extracted the amount '42.94 crore'. This amount needs to be confirmed as the amount paid by Anmol Singh for his DLF apartment via Capbridge. Further context from the web search is needed to confirm the extracted amount's validity and relationship to the original query.",
+    "local_goal_achieved": true,
+    "local_reasoning": "Successfully extracted a numerical value (42.94 crore) which is potentially the answer. However, confirmation of its relevance to the query is required.",
+    "last_tooluse_summary": "N/A",
+    "solution_summary": "Not ready yet",
+    "confidence": "0.9"
+  },
+  "status": "completed",
+  "attempts": 0,
+  "was_replanned": false,
+  "parent_index": null
+}
+2025-05-16 23:51:40,240 - INFO - agent_loop2:evaluate_step:184 - 
+✅ Local Goal achieved, planning next step.
+2025-05-16 23:51:40,244 - INFO - decision:run:38 - 🔍 Decision Prompt: You are the decision-making module of a structured reasoning agent. Your role is to plan and control how to solve a user query using tool calls, reasoning steps, and code execution. You operate in one of two modes:
+
+---
+
+### Mode: Initial Planning
+("plan_mode": "initial")
+
+You are given:
+- The original user query
+- A structured perception object (ERORLL)
+- Planning Strategy (conservative or exploratory)
+
+Your task:
+1. Understand the user’s objective
+2. Write a 1–3 step **plan_text** in natural language
+3. Return only the **first actionable step** as a JSON object:
+   - `type` must be one of:
+     - `"CODE"` → tool use or logic
+     - `"CONCLUDE"` → direct final answer
+     - `"NOP"` → clarification required
+
+Notes:
+- `plan_text` outlines the full strategy in natural language.
+- Only **Step 0** is returned for execution.
+- All subsequent steps are deferred for mid-session processing.
+- Each step should use **aggressive intra-step chaining** to minimize total steps, even in conservative mode.
+
+Planning Strategy:
+- `"conservative"` → prefer accurate sequential execution with tool chaining inside each step
+- `"exploratory"` → prefer multi-path retrievals, parallel or rich chaining inside each step **aggressively**.
+
+---
+
+### Mode: Mid-Session Decision
+("plan_mode": "mid_session")
+
+You are given:
+- The original query
+- Current `plan_text` (natural language)
+- List of completed steps
+- The most recently executed step (with tool + perception feedback)
+- Planning Strategy
+- List of ONLY Available tools
+
+Your task:
+1. Evaluate the **most recent step’s feedback**:
+   - If successful, continue to the next planned step
+   - If not, revise the `plan_text`:
+     - Keep completed steps unchanged
+     - You may **revise or replace the current step**
+     - You may also **update future steps**
+   - If the original step was a `"CODE"` step but the prior result now allows for a final answer, you **may replace the current step with a `"CONCLUDE"` step** and trim the remaining plan accordingly.
+   - Only update `plan_text` if the structure or meaning of the plan has changed. Minor wording or spelling edits alone should not result in a new plan version.
+
+2. Return:
+   - The updated `plan_text`
+   - The next step to execute (JSON object)
+
+Important Rules:
+- You **can modify the current step** based on prior feedback.
+- You **must preserve monotonically increasing `step_index`** across steps.
+- Steps **cannot reference variables from prior steps**. Any dependent value must be re-computed or passed forward explicitly.
+- Steps **may reference their own internal variables** freely.
+- Chain multiple tool calls inside a single step where logical (even in conservative mode) to minimize overall plan length.
+
+
+
+### Output Format
+
+You must return two things:
+1. A `plan_text` as a list of step strings, in natural language, each step as a separate line:
+    [
+      "Step 0: Retrieve relevant information using RAG or local stored documents.",
+      "Step 1: Extract price and BHK types from chunks.",
+      "Step 2: Summarize findings and conclude."
+    ]
+
+2. A JSON step object with this schema:
+
+```json
+{
+  "step_index": 0,
+  "description": "Summarize the RAG chunks using avilable function search_stored_documents_rag", 
+  "type": "CODE",
+  "code": "result = search_stored_documents_rag(chunk)\nreturn result"
+}
+```
+
+### Chaining and Parallelism
+
+For **aggressive sequential chaining** (preferred always):
+
+```json
+{
+  "step_index": 1,
+  "description": "Add 10 and 20, then multiply result by 4, then compute exponential sum. All functions available in the list provided.",
+  "type": "CODE",
+  "code": "x = add(10, 20)\ny = multiply(x, 4)\nresult = int_list_to_exponential_sum([x, y])\nreturn result"
+}
+```
+
+For **exploratory parallel execution**:
+
+```json
+{
+  "step_index": 1,
+  "description": "Try retrieving data using multiple sources using available functions",
+  "type": "CODE",
+  "code": "result1, result2 = await parallel((\"rag_search\", \"Camelia\"), (\"web_search\", \"Camelia\"))\nreturn result1, result2"
+}
+```
+
+### Direct Conclusion
+
+> ALWAYS include `"description"` and `"conclusion"`:
+
+For Final steps:
+
+```json
+{
+  "step_index": 2,
+  "description": "Summarize final answer",
+  "type": "CONCLUDE",
+  "conclusion": "The apartment costs 19.6Cr including GST and maintenance."
+}
+```
+
+For Middle steps:
+
+```json
+{
+  "step_index": 1,
+  "description": "In last step, I got a long response which I will summarize/filter myself",
+  "type": "CODE",
+  "code": "result = "YOUR SUMMARIZATION OR FILTERED RESULT OR SEMANTIC ANALYSIS"
+}
+
+### Clarification Request
+
+> Must include `"description"` and `"conclusion"`:
+
+```json
+{
+  "step_index": 0,
+  "description": "Query unclear, ask for clarification.",
+  "type": "NOP",
+  "conclusion": "Could you specify the location or project name you're referring to?"
+}
+```
+
+
+### CODE Rules
+
+* Tools mentioned in the example above may not exist. 
+* Use ONLY the tools listed below. 
+* Strictly use positional arguments, correct: tool("value"); incorrect: tool(argname="value")
+* Always **chain aggressively within a step** (don’t break trivial operations into multiple steps).
+* Use this syntax for parallel: `await parallel((tool, arg1), (tool2, arg1, arg2))`
+* End every code block with `return`.
+* **Do not access variables across steps.**
+* If an answer can be derived without tool use, prefer `"CONCLUDE"`.
+* For analytical or summarization tasks (e.g., summarizing markdown or extracted text), write:
+  "code": "result = """<your actual summary or insight here>"""\nreturn result"
+  Replace <your actual summary or insight here> with your real generated analysis based on the input. Make 1000% sre you are not hallucinating here and this is correct informative response.
+* You must pass arguments to each tool **exactly as defined** — including argument **types** and **count**.
+* Do **not assume**, transform, or reinterpret the expected input. For example, if a tool requires a `string`, do not pass a list of characters or vice versa.
+* If a tool failed once, do not use it again. 
+* Before using any function in `"CODE"`, make sure it is available. If not then use your Analytical mind. 
+
+---
+
+Allowed imports: "math", "cmath", "decimal", "fractions", "random", "statistics", "itertools", "functools", "operator", "string", "re", "datetime", "calendar", "time", "collections", "heapq", "bisect", "types", "copy", "enum", "uuid", "dataclasses", "typing", "pprint", "json", "base64", "hashlib", "hmac", "secrets", "struct", "zlib", "gzip", "bz2", "lzma", "io", "pathlib", "tempfile", "textwrap", "difflib", "unicodedata", "html", "html.parser", "xml", "xml.etree.ElementTree", "csv", "sqlite3", "contextlib", "traceback", "ast", "tokenize", "token", "builtins"
+
+---
+
+
+### The ONLY Available Tools
+
+---
+
+- `add(integer, integer)  # Add two numbers.`
+- `subtract(integer, integer)  # Subtract one number from another.`
+- `multiply(string, string)  # Multiply two integers.`
+- `divide(integer, integer)  # Divide one number by another.`
+- `power(integer, integer)  # Compute a raised to the power of b.`
+- `cbrt(integer)  # Compute the cube root of a number.`
+- `factorial(integer)  # Compute the factorial of a number.`
+- `remainder(integer, integer)  # Compute the remainder of a divided by b.`
+- `sin(integer)  # Compute sine of an angle in radians.`
+- `cos(integer)  # Compute cosine of an angle in radians.`
+- `tan(integer)  # Compute tangent of an angle in radians.`
+- `mine(integer, integer)  # Special mining tool.`
+- `create_thumbnail(string)  # Create a 100x100 thumbnail from image.`
+- `strings_to_chars_to_int(string)  # Convert characters to ASCII values.`
+- `int_list_to_exponential_sum(array)  # Sum exponentials of int list.`
+- `fibonacci_numbers(integer)  # Generate first n Fibonacci numbers.`
+- `search_stored_documents_rag(string)  # Search old stored documents like PDF, DOCX, TXT, etc. to get relevant extracts.`
+- `convert_webpage_url_into_markdown(string)  # Return clean webpage content without Ads, and clutter.`
+- `extract_pdf(string)  # Convert PDF to markdown.`
+- `duckduckgo_search_results(string, integer)  # Search DuckDuckGo.`
+- `download_raw_html_from_url(string)  # Fetch webpage content.`
+- `no_input()  # Doesn't take any input.`
+
+```json
+{
+  "plan_mode": "mid_session",
+  "planning_strategy": "exploratory",
+  "original_query": "How much Anmol singh paid for his DLF apartment via Capbridge? Dont rely on cached results, fetch fresh results",
+  "current_plan_version": 2,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ],
+  "completed_steps": [
+    {
+      "index": 1,
+      "description": "Extract the amount paid for the apartment from the previous search results.",
+      "type": "CODE",
+      "code": {
+        "tool_name": "raw_code_block",
+        "tool_arguments": {
+          "code": "result = \"42.94 crore\"\nreturn result"
+        }
+      },
+      "conclusion": "",
+      "execution_result": {
+        "status": "success",
+        "result": "42.94 crore",
+        "execution_time": "2025-05-16 23:51:38",
+        "total_time": "0.001"
+      },
+      "error": null,
+      "perception": {
+        "entities": [
+          "42.94 crore",
+          "Anmol Singh",
+          "DLF apartment",
+          "Capbridge"
+        ],
+        "result_requirement": "Confirmation and summary of the amount paid by Anmol Singh for the DLF apartment",
+        "original_goal_achieved": false,
+        "reasoning": "The current step extracted the amount '42.94 crore'. This amount needs to be confirmed as the amount paid by Anmol Singh for his DLF apartment via Capbridge. Further context from the web search is needed to confirm the extracted amount's validity and relationship to the original query.",
+        "local_goal_achieved": true,
+        "local_reasoning": "Successfully extracted a numerical value (42.94 crore) which is potentially the answer. However, confirmation of its relevance to the query is required.",
+        "last_tooluse_summary": "N/A",
+        "solution_summary": "Not ready yet",
+        "confidence": "0.9"
+      },
+      "status": "completed",
+      "attempts": 0,
+      "was_replanned": false,
+      "parent_index": null
+    }
+  ],
+  "current_step": {
+    "index": 1,
+    "description": "Extract the amount paid for the apartment from the previous search results.",
+    "type": "CODE",
+    "code": {
+      "tool_name": "raw_code_block",
+      "tool_arguments": {
+        "code": "result = \"42.94 crore\"\nreturn result"
+      }
+    },
+    "conclusion": "",
+    "execution_result": {
+      "status": "success",
+      "result": "42.94 crore",
+      "execution_time": "2025-05-16 23:51:38",
+      "total_time": "0.001"
+    },
+    "error": null,
+    "perception": {
+      "entities": [
+        "42.94 crore",
+        "Anmol Singh",
+        "DLF apartment",
+        "Capbridge"
+      ],
+      "result_requirement": "Confirmation and summary of the amount paid by Anmol Singh for the DLF apartment",
+      "original_goal_achieved": false,
+      "reasoning": "The current step extracted the amount '42.94 crore'. This amount needs to be confirmed as the amount paid by Anmol Singh for his DLF apartment via Capbridge. Further context from the web search is needed to confirm the extracted amount's validity and relationship to the original query.",
+      "local_goal_achieved": true,
+      "local_reasoning": "Successfully extracted a numerical value (42.94 crore) which is potentially the answer. However, confirmation of its relevance to the query is required.",
+      "last_tooluse_summary": "N/A",
+      "solution_summary": "Not ready yet",
+      "confidence": "0.9"
+    },
+    "status": "completed",
+    "attempts": 0,
+    "was_replanned": false,
+    "parent_index": null
+  }
+}
+```
+2025-05-16 23:51:40,247 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:41,834 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:41,837 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:41,838 - INFO - agent_loop2:get_next_step:222 - 
+📝 [Post-Next-Step-Planning Decision Output]: 
+{
+  "plan_text": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ],
+  "step_index": 2,
+  "description": "Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment.",
+  "type": "CONCLUDE",
+  "conclusion": "Anmol Singh paid 42.94 crore for his DLF apartment via Capbridge.",
+  "code": ""
+}
+2025-05-16 23:51:41,839 - INFO - agent_loop2:get_next_step:226 - 
+📝 [Decision Plan Text: V3]:
+2025-05-16 23:51:41,840 - INFO - agent_loop2:get_next_step:228 -   Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.
+2025-05-16 23:51:41,841 - INFO - agent_loop2:get_next_step:228 -   Step 1: Extract the amount paid from the search results.
+2025-05-16 23:51:41,841 - INFO - agent_loop2:get_next_step:228 -   Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment.
+2025-05-16 23:51:41,842 - INFO - agent_loop2:execute_step:118 - 
+⚙️ [Step 2] Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment.
+2025-05-16 23:51:41,843 - INFO - agent_loop2:execute_step:155 - 
+💡 Conclusion: Anmol Singh paid 42.94 crore for his DLF apartment via Capbridge.
+2025-05-16 23:51:41,843 - INFO - agent_loop2:run_perception:82 - 
+📋 [Perception Input]: 
+{
+  "run_id": "ca3d9784-5eb0-497a-8aff-0aa0d6e319b5",
+  "snapshot_type": "step_result",
+  "raw_input": "Anmol Singh paid 42.94 crore for his DLF apartment via Capbridge.",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:41Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ]
+}
+2025-05-16 23:51:41,846 - INFO - perception:run:57 - 🔍 Perception Prompt: You are the perception module of a reasoning agent. Your job is to interpret either the original user query or the output of a completed step (like a tool execution or a conclusion), and return a structured analysis of what was observed.
+
+There are two modes in which you may be invoked:
+
+### Mode: Initial Query Understanding
+(snapshot_type = "user_query")
+
+You are being asked to interpret the **initial user query**. Your job is to:
+- Extract the most important entities
+- Describe what kind of result is expected (numerical, list, decision, explanation, etc.)
+- Determine whether this goal is directly achievable using known tools, memory, or the information already present
+- If the answer is already obvious and complete, mark `original_goal_achieved = true` and provide a valid `solution_summary`
+- Provide reasoning for both global goal and local observation
+
+
+### Mode: Step Result Interpretation
+(snapshot_type = "step_result")
+
+You are being asked to **evaluate a step result** that was executed as part of the current plan version. You are **not allowed to refer to prior plan versions** — only the current plan and the completed steps so far.
+
+You will be provided with:
+- The result of the most recent step (text, JSON, or other output)
+- A short description of that step
+- The current objective
+- A few completed prior steps (for context only)
+- Memory log of past step failures if memory.
+
+Your job is to:
+- Determine what entities were extracted or learned
+- Evaluate whether this step helped move closer to the original query’s goal
+- Determine whether this step’s result fully answers the user query
+- If so, mark `original_goal_achieved = true` and write a `solution_summary`
+- Otherwise, assess whether the step was locally useful or if more steps are needed
+- Provide clear reasoning in both global and local contexts, including names of tools and why they failed.
+
+
+### Output Format (ERORLL JSON):
+
+Return your result in the following structured format:
+
+```json
+{
+  "entities": ["..."],             // A list of concrete items, terms, or values identified (e.g., ["Sedan", "Tesla", "$80k"])
+  "result_requirement": "...",     // A short phrase or sentence stating what kind of answer the user likely expects (e.g., "List of unit configurations with pricing")
+  "original_goal_achieved": false, // true if this single step completely answers the original query; false if more steps are needed
+  "confidence": "..."              // A Value between 0 and 1.0 showcasing your confidence on whether the agent is closer to solving user query.  
+  "reasoning": "...",              // A global explanation: Does this result move the agent closer to solving the user query? Why or why not?
+  "local_goal_achieved": false,    // true if this step *locally* succeeded (e.g., extracted useful data) and will help achieve final goal, even if the final goal isn't met yet
+  "local_reasoning": "..."         // A focused explanation of what this step contributed: was it a valid lookup, good chunk match, or meaningful transform or whether previous tool failed and why?
+  "last_tooluse_summary: "..."     // ToolName and whether success or failure reason.
+  "solution_summary": "..."        // Your user friendly and readable summary of the solution only if "original_goal_achieved" is True, else "Not ready yet".
+}
+
+```
+
+Use booleans only for `original_goal_achieved` and `local_goal_achieved`.
+Think deeply before you fill in the reasoning. Your output will guide whether future steps are needed, retried, or skipped.
+Keep descriptions short. Keep output tight and purpose-driven. 
+If you see that in past a tool has failed, recommend not to use that tool anymore! VERY IMPORTANT to provide the NAME of the tool that failed.
+If you can just summarize or perform a job at which you're really good, and finish the job, then just do it! Do not wait for next steps. 
+Do not return explanations or markdown outside the ERORLL JSON. No additional explanation is needed.
+
+---
+
+```json
+{
+  "run_id": "ca3d9784-5eb0-497a-8aff-0aa0d6e319b5",
+  "snapshot_type": "step_result",
+  "raw_input": "Anmol Singh paid 42.94 crore for his DLF apartment via Capbridge.",
+  "memory_excerpt": {},
+  "prev_objective": "",
+  "prev_confidence": null,
+  "timestamp": "2025-05-16T18:21:41Z",
+  "schema_version": 1,
+  "current_plan": [
+    "Step 0: Search the web for information about Anmol Singh's DLF apartment purchase via Capbridge using DuckDuckGo.",
+    "Step 1: Extract the amount paid from the search results.",
+    "Step 2: Summarize the findings and provide the amount Anmol Singh paid for his DLF apartment."
+  ]
+}
+```
+2025-05-16 23:51:41,848 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-16 23:51:43,640 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-16 23:51:43,643 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-16 23:51:43,644 - INFO - agent_loop2:execute_step:165 - 
+📋 [Post-Conclusion Perception Result]: 
+{
+  "entities": [
+    "Anmol Singh",
+    "42.94 crore",
+    "DLF apartment",
+    "Capbridge"
+  ],
+  "result_requirement": "Confirmation of the amount Anmol Singh paid for the DLF apartment.",
+  "original_goal_achieved": true,
+  "confidence": "1.0",
+  "reasoning": "The provided information directly answers the question. The step result confirms the amount Anmol Singh paid for the DLF apartment.",
+  "local_goal_achieved": true,
+  "local_reasoning": "The step successfully extracted and provided the relevant information, which aligns perfectly with the user's query and the plan's objectives.",
+  "last_tooluse_summary": "N/A",
+  "solution_summary": "Anmol Singh paid 42.94 crore for his DLF apartment via Capbridge."
+}
+2025-05-16 23:51:43,680 - INFO - agent_loop2:run:49 - 
+❌ No steps.
