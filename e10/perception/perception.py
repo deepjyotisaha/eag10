@@ -54,7 +54,7 @@ class Perception:
         prompt_template = Path(self.perception_prompt_path).read_text(encoding="utf-8")
         full_prompt = f"{prompt_template.strip()}\n\n```json\n{json.dumps(perception_input, indent=2)}\n```"
 
-        logger.info(f"🔍 Perception Prompt: {full_prompt}")
+        #logger.info(f"🔍 Perception Prompt: {full_prompt}")
 
         try:
             response = self.client.models.generate_content(

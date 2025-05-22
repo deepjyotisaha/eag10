@@ -35,7 +35,7 @@ class Decision:
         tool_descriptions = "\n\n### The ONLY Available Tools\n\n---\n\n" + tool_descriptions
         full_prompt = f"{prompt_template.strip()}\n{tool_descriptions}\n\n```json\n{json.dumps(decision_input, indent=2)}\n```"
 
-        logger.info(f"🔍 Decision Prompt: {full_prompt}")
+        #logger.info(f"🔍 Decision Prompt: {full_prompt}")
 
         try:
             response = self.client.models.generate_content(

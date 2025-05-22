@@ -1,6 +1,7 @@
 import uuid
 import json
 import datetime
+import yaml
 from perception.perception import Perception
 from decision.decision import Decision
 from action.executor import run_user_code
@@ -20,11 +21,25 @@ class AgentLoop:
         self.decision = Decision(decision_prompt_path, multi_mcp)
         self.multi_mcp = multi_mcp
         self.strategy = strategy
+        
+        # Load configuration from profiles.yaml
+        with open("config/profiles.yaml", "r") as f:
+            config = yaml.safe_load(f)
+            self.max_steps = config["strategy"]["max_steps"]
+            self.max_lifelines = config["strategy"]["max_lifelines_per_step"]
+        
+        self.total_steps_executed = 0
+        self.step_retries = {}  # Track retries per step
 
     async def run(self, query: str):
-        session = AgentSession(session_id=str(uuid.uuid4()), original_query=query)
-        session_memory= []
+        session = AgentSession(
+            session_id=str(uuid.uuid4()), 
+            original_query=query
+        )
+        session_memory = []
         self.log_session_start(session, query)
+        self.total_steps_executed = 0  # Reset step counter for new session
+        self.step_retries = {}  # Reset retries
 
         memory_results = self.search_memory(query)
         perception_result = self.run_perception(query, memory_results, memory_results)
@@ -46,12 +61,36 @@ class AgentLoop:
         #First implementation the max steps and max retries
         # If a plan fails, 
         while step:
+            # Check max steps before executing
+            logger.info(f"\n⚙️ [Out of {self.max_steps} steps, trying to execute step number {self.total_steps_executed + 1}]")
+            if self.total_steps_executed >= self.max_steps:
+                logger.info(f"\n⚠️ Maximum steps ({self.max_steps}) reached. Stopping execution.")
+                conclusion_step = self.create_conclusion_step(
+                    "Maximum steps reached",
+                    f"Execution stopped after {self.total_steps_executed} steps due to step limit."
+                )
+                session.add_plan_version(
+                    [f"Step {self.total_steps_executed + 1}: Maximum steps reached"],
+                    [conclusion_step]
+                )
+                session.state.update({
+                    "original_goal_achieved": False,
+                    "final_answer": f"Execution stopped after {self.total_steps_executed} steps. Please try a more specific query or break down your request into smaller parts.",
+                    "confidence": 0.8,
+                    "reasoning_note": "Step limit reached",
+                    "solution_summary": f"Maximum steps ({self.max_steps}) reached. Please refine your query."
+                })
+                live_update_session(session)
+                break
+
             step_result = await self.execute_step(step, session, session_memory)
             if step_result is None:
                 logger.info("\n❌ No steps.")
-                break  # 🔐 protect against CONCLUDE/NOP cases
-            #logger.info("\n⚙️ [Evaluating Step]: \n%s", json.dumps(step_result, indent=2, ensure_ascii=False))
-            #Step result is step summary
+                break
+
+            # Track step execution
+            self.total_steps_executed += 1
+
             logger.info("\n⚙️ [Evaluating Step Summary]: \n%s", json.dumps(step_result.to_dict(), indent=2, ensure_ascii=False))
             step = self.evaluate_step(step_result, session, query)
 
@@ -115,6 +154,9 @@ class AgentLoop:
             type=decision_output["type"],
             code=ToolCode(tool_name="raw_code_block", tool_arguments={"code": decision_output["code"]}) if decision_output["type"] == "CODE" else None,
             conclusion=decision_output.get("conclusion"),
+            attempts=0,  # Initialize attempts counter
+            was_replanned=False,  # Initialize replan flag
+            parent_index=None  # Initialize parent index
         )
 
     async def execute_step(self, step, session, session_memory):
@@ -191,7 +233,33 @@ class AgentLoop:
             return self.get_next_step(session, query, step)
         else:
             logger.info("\n🔁 Step unhelpful. Replanning.")
-            #TODO: Add a check to see if the step has been tried too many times
+            
+            # Check if we've exceeded max retries for this step
+            if step.attempts >= self.max_lifelines:
+                logger.info(f"\n⚠️ Maximum retries ({self.max_lifelines}) reached for step {step.index}.")
+                conclusion_step = self.create_conclusion_step(
+                    "Maximum retries reached",
+                    f"Step {step.index} failed after {step.attempts} attempts. Please try a different approach."
+                )
+                session.add_plan_version(
+                    [f"Step {step.index}: Maximum retries reached"],
+                    [conclusion_step]
+                )
+                session.state.update({
+                    "original_goal_achieved": False,
+                    "final_answer": f"Step {step.index} failed after {step.attempts} attempts. Please try a different approach.",
+                    "confidence": 0.8,
+                    "reasoning_note": "Step retry limit reached",
+                    "solution_summary": f"Maximum retries ({self.max_lifelines}) reached for step {step.index}. Please try a different approach."
+                })
+                live_update_session(session)
+                return None
+
+            # Increment attempts counter
+            step.attempts += 1
+            logger.info(f"\n🔄 Attempt {step.attempts} of {self.max_lifelines} for step {step.index}")
+
+            # Replan the step
             decision_output = self.decision.run({
                 "plan_mode": "mid_session",
                 "planning_strategy": self.strategy,
@@ -204,7 +272,13 @@ class AgentLoop:
 
             logger.info("\n📝 [Post-Replanning Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
 
-            step = session.add_plan_version(decision_output["plan_text"], [self.create_step(decision_output)])
+            # Create new step with incremented attempts
+            new_step = self.create_step(decision_output)
+            new_step.attempts = step.attempts  # Carry over the attempts count
+            new_step.was_replanned = True     # Mark as replanned
+            new_step.parent_index = step.index # Track original step
+
+            step = session.add_plan_version(decision_output["plan_text"], [new_step])
 
             logger.info(f"\n📝 [Decision Plan Text: V{len(session.plan_versions)}]:")
             for line in session.plan_versions[-1]["plan_text"]:
@@ -241,3 +315,13 @@ class AgentLoop:
         else:
             logger.info("\n✅ No more steps.")
             return None
+
+    def create_conclusion_step(self, title: str, message: str) -> Step:
+        """Create a conclusion step when max steps is reached."""
+        return Step(
+            index=self.total_steps_executed + 1,
+            description=title,
+            type="CONCLUDE",
+            conclusion=message,
+            status="completed"
+        )
