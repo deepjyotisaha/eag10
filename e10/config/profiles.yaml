@@ -11,6 +11,25 @@ strategy:
   memory_fallback_enabled: true # after tool exploration failure
   max_steps: 3                  # max sequential agent steps
   max_lifelines_per_step: 3      # retries for each step (after primary failure)
+  human_intervention:
+    enabled: true
+    prompt: "Tool execution failed. Please provide the expected output:"
+    timeout_seconds: 300  # 5 minutes timeout for human input
+  tool_simulation:
+    enabled: true  # Start with simulation disabled
+    failure_types:
+      - type: "timeout"
+        message: "Tool execution timed out after 30 seconds"
+        probability: 0.4
+      - type: "connection"
+        message: "Failed to connect to the service"
+        probability: 0.3
+      - type: "validation"
+        message: "Invalid input parameters provided"
+        probability: 0.2
+      - type: "permission"
+        message: "Insufficient permissions to execute the tool"
+        probability: 0.1
 
 memory:
   memory_service: true

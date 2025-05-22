@@ -10,6 +10,12 @@ from memory.session_log import live_update_session
 from memory.memory_search import MemorySearch
 from mcp_servers.multiMCP import MultiMCP
 from config.log_config import setup_logging
+from datetime import datetime
+from agent.human_intervention import HumanIntervention, HumanInterventionError
+import asyncio
+from typing import Optional
+from .tool_simulation import ToolSimulation
+from .utlis import show_input_dialog  # Add this import at the top
 
 logger = setup_logging(__name__)
 
@@ -27,9 +33,13 @@ class AgentLoop:
             config = yaml.safe_load(f)
             self.max_steps = config["strategy"]["max_steps"]
             self.max_lifelines = config["strategy"]["max_lifelines_per_step"]
+            self.human_intervention = config["strategy"]["human_intervention"]
+            self.tool_simulation = ToolSimulation(config["strategy"]["tool_simulation"])
         
         self.total_steps_executed = 0
         self.step_retries = {}  # Track retries per step
+        self.human_input_queue = asyncio.Queue()
+        self.human_input_event = asyncio.Event()
 
     async def run(self, query: str):
         session = AgentSession(
@@ -85,7 +95,12 @@ class AgentLoop:
 
             step_result = await self.execute_step(step, session, session_memory)
             if step_result is None:
-                logger.info("\n❌ No steps.")
+                if step.type == "CONCLUDE":
+                    logger.info("\n✅ Execution completed with conclusion.")
+                elif step.type == "NOP":
+                    logger.info("\n❓ Execution paused for clarification.")
+                else:
+                    logger.info("\n❌ No steps.")
                 break
 
             # Track step execution
@@ -159,16 +174,113 @@ class AgentLoop:
             parent_index=None  # Initialize parent index
         )
 
+    async def get_human_input(self, step: Step, tool_name: str, tool_args: dict, error: str) -> HumanIntervention:
+        """Get input from human when tool fails"""
+        if not self.human_intervention["enabled"]:
+            raise HumanInterventionError("Human intervention is disabled", "disabled")
+
+        # Calculate remaining lifelines
+        remaining_lifelines = self.max_lifelines - step.attempts
+
+        prompt = (
+            f"\n🤖 Tool Execution Failed - Human Intervention Required\n"
+            f"Step {step.index}: {step.description}\n"
+            f"Tool: {tool_name}\n"
+            f"Arguments: {tool_args}\n"
+            f"Error: {error}\n"
+            f"Attempt: {step.attempts + 1} of {self.max_lifelines}\n"
+            f"Lifelines remaining: {remaining_lifelines}\n"
+            f"Please provide the expected output:"
+        )
+        logger.info(prompt)
+        
+        try:
+            # Use the show_input_dialog function from main.py
+            human_input = await show_input_dialog(prompt)
+            
+            # Create and return the intervention record
+            return HumanIntervention(
+                timestamp=datetime.now(),
+                step_index=step.index,
+                tool_name=tool_name,
+                tool_arguments=tool_args,
+                error_message=error,
+                human_input=human_input,
+                attempt_number=step.attempts + 1,
+                lifelines_remaining=remaining_lifelines,
+                was_successful=True
+            )
+            
+        except Exception as e:
+            raise HumanInterventionError(f"Error getting human input: {str(e)}", "general")
+
     async def execute_step(self, step, session, session_memory):
+        # Check max steps
+        if self.total_steps_executed >= self.max_steps:
+            logger.info(f"\n⚠️ Maximum steps ({self.max_steps}) reached. Stopping execution.")
+            return self.create_conclusion_step(
+                "Maximum steps reached",
+                f"Execution stopped after {self.total_steps_executed} steps due to step limit."
+            )
+
+        # Check max lifelines
+        if step.attempts >= self.max_lifelines:
+            logger.info(f"\n⚠️ Maximum retries ({self.max_lifelines}) reached for step {step.index}.")
+            return self.create_conclusion_step(
+                "Maximum retries reached",
+                f"Step {step.index} failed after {step.attempts} attempts. Please try a different approach."
+            )
+
         logger.info(f"\n⚙️ [Step {step.index}] {step.description}")
 
         if step.type == "CODE":
             logger.info("%s\n⚙️  [EXECUTING CODE]\n%s", "-" * 50, step.code.tool_arguments["code"])
-            executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
-            step.execution_result = executor_response
-            #import pdb; pdb.set_trace()
-            ## Human in loop for tool execution needs to go here
-            step.status = "completed"
+            
+            try:
+                # Add simulation check here
+                if self.tool_simulation.enabled:
+                    # Simulate tool failure
+                    failure = self.tool_simulation.get_failure()
+                    raise Exception(f"Simulated failure: {failure.message}")
+                    
+                executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
+                step.execution_result = executor_response
+                step.status = "completed"
+
+            except Exception as e:
+                if self.human_intervention["enabled"]:
+                    logger.info(f"\n⚠️ Tool execution failed, requesting human intervention...")
+                    try:
+                        # Get human input
+                        intervention = await self.get_human_input(
+                            step=step,
+                            tool_name=step.code.tool_name,
+                            tool_args=step.code.tool_arguments,
+                            error=str(e)
+                        )
+                        
+                        # Add the intervention to the step
+                        step.add_human_intervention(intervention)
+                        
+                        # Create a mock tool result with human input
+                        executor_response = {
+                            "status": "success",
+                            "result": intervention.human_input,
+                            "source": "human_intervention"
+                        }
+                        step.execution_result = executor_response
+                        step.status = "completed"
+                        
+                        logger.info(f"\n✅ Human provided input: {intervention.human_input[:100]}...")
+                        
+                    except HumanInterventionError as he:
+                        logger.error(f"\n❌ Human intervention failed: {str(he)}")
+                        step.attempts += 1
+                        if step.attempts < self.max_lifelines:
+                            return self.evaluate_step(step, session, session.original_query)
+                        raise e
+                else:
+                    raise e
 
             logger.info("\n⚙️ [Executor Response]: \n%s", json.dumps(executor_response, indent=2, ensure_ascii=False))
 
@@ -325,3 +437,7 @@ class AgentLoop:
             conclusion=message,
             status="completed"
         )
+
+    def set_human_input(self, input_text: str):
+        """Method to be called by the UI/interface to provide human input"""
+        asyncio.create_task(self.human_input_queue.put(input_text))

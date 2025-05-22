@@ -1,9 +1,10 @@
-from dataclasses import dataclass, asdict
-from typing import Any, Literal, Optional
+from dataclasses import dataclass, asdict, field
+from typing import Any, Literal, Optional, List
 import uuid
 import time
 import json
 from config.log_config import setup_logging
+from .human_intervention import HumanIntervention
 
 logger = setup_logging(__name__)
 
@@ -45,6 +46,15 @@ class Step:
     attempts: int = 0
     was_replanned: bool = False
     parent_index: Optional[int] = None
+    human_interventions: List[HumanIntervention] = field(default_factory=list)
+
+    def add_human_intervention(self, intervention: HumanIntervention):
+        """Add a human intervention to this step"""
+        self.human_interventions.append(intervention)
+        if intervention.was_successful:
+            self.status = "completed"
+        else:
+            self.status = "failed"
 
     def to_dict(self):
         return {
@@ -59,7 +69,8 @@ class Step:
             "status": self.status,
             "attempts": self.attempts,
             "was_replanned": self.was_replanned,
-            "parent_index": self.parent_index
+            "parent_index": self.parent_index,
+            "human_interventions": [hi.to_dict() for hi in self.human_interventions]
         }
 
 
