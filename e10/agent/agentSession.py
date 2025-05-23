@@ -5,6 +5,7 @@ import time
 import json
 from config.log_config import setup_logging
 from .human_intervention import HumanIntervention
+from datetime import datetime
 
 logger = setup_logging(__name__)
 
@@ -106,6 +107,11 @@ class AgentSession:
 
 
     def to_json(self):
+        def datetime_handler(obj):
+            if isinstance(obj, datetime):
+                return obj.isoformat()
+            raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+
         return {
             "session_id": self.session_id,
             "original_query": self.original_query,

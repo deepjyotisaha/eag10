@@ -27,6 +27,11 @@ def append_session_to_store(session_obj, base_dir: str = "memory/session_logs") 
     Save the session object as a standalone file. If a file already exists and is corrupt,
     it will be overwritten with fresh data.
     """
+    def datetime_handler(obj):
+        if isinstance(obj, datetime):
+            return obj.isoformat()
+        raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
+
     session_data = session_obj.to_json()
     session_data["_session_id_short"] = simplify_session_id(session_data["session_id"])
 
@@ -42,7 +47,7 @@ def append_session_to_store(session_obj, base_dir: str = "memory/session_logs") 
             print(f"⚠️ Warning: Corrupt JSON detected in {store_path}. Overwriting.")
 
     with open(store_path, "w", encoding="utf-8") as f:
-        json.dump(session_data, f, indent=2)
+        json.dump(session_data, f, indent=2, default=datetime_handler)
 
     print(f"✅ Session stored: {store_path}")
 
