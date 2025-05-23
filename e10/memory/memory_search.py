@@ -53,7 +53,7 @@ class MemorySearch:
             if count_after > count_before:
                 logger.info(f"✅ {file.name}: {count_after - count_before} matching entries")
 
-        logger.info(f"📦 Total usable memory entries collected: {len(memory_entries)}\n")
+        print(f"📦 Total usable memory entries collected: {len(memory_entries)}\n")
         return memory_entries
 
     def _extract_entry(self, obj: dict, file_name: str, memory_entries: List[Dict]):

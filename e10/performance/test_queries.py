@@ -128,8 +128,8 @@ class QueryTester:
             # Extract session state using the new function
             session_state = extract_session_state(session)
 
-            logger.info(f"Session: {session}")
-            logger.info(f"Session State: {session_state}")
+            logger.debug(f"Session: {session}")
+            logger.debug(f"Session State: {session_state}")
             
             # Format the final plan - handle both list and string cases
             final_plan = session_state["final_plan"]
@@ -142,13 +142,13 @@ class QueryTester:
             # Log the tool usage for analysis
             tool_usage = session_state["tool_usage"]
             if tool_usage:
-                logger.info(f"Tool usage for query '{query}':")
+                logger.debug(f"Tool usage for query '{query}':")
                 for tool in tool_usage:
-                    logger.info(f"- {tool['tool_name']}: {tool['status']} (Step {tool['step_index']})")
+                    logger.debug(f"- {tool['tool_name']}: {tool['status']} (Step {tool['step_index']})")
             
-            logger.info(f"Final Plan: {final_plan}")
-            logger.info(f"Final Answer: {final_answer}")    
-            logger.info(f"Tool Usage: {tool_usage}")
+            logger.debug(f"Final Plan: {final_plan}")
+            logger.debug(f"Final Answer: {final_answer}")    
+            logger.debug(f"Tool Usage: {tool_usage}")
 
             # Log tool statistics for this query
             self.log_tool_stats(session_state["tool_usage"])
@@ -195,7 +195,7 @@ async def main():
                 tools = row['Tools Needed']
                 complexity = row['Complexity']
                 
-                logger.info(f"Processing query {i+1}/{NUM_QUERIES}: {query}")
+                print(f"🔍 Processing query {i+1}/{NUM_QUERIES}: {query}\n")
                 
                 # Execute query
                 result = await tester.execute_query(query, tools, complexity)
@@ -213,13 +213,13 @@ async def main():
                 
                 # Sleep between queries
                 if i < NUM_QUERIES - 1:
-                    logger.info(f"Sleeping for {SLEEP_TIME} seconds...")
+                    print(f"\n⌛ Sleeping for {SLEEP_TIME} seconds...\n")
                     await asyncio.sleep(SLEEP_TIME)
         
         # Write tool performance report
         tester.write_tool_performance_report()
         
-        logger.info(f"All queries processed. Results written to {OUTPUT_FILE}")
+        print(f"All queries processed. Results written to {OUTPUT_FILE}")
         
     except Exception as e:
         logger.error(f"Error in main: {str(e)}")

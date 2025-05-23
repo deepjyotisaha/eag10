@@ -19,7 +19,7 @@ def setup_logging(module_name: str):
     log_format = '%(asctime)s - %(levelname)s - %(module)s:%(funcName)s:%(lineno)d - %(message)s'
     
     logging.basicConfig(
-        level=logging.INFO,
+        level=logging.ERROR,
         format=log_format,
         handlers=[
             logging.FileHandler(log_file, mode='w', encoding='utf-8'),

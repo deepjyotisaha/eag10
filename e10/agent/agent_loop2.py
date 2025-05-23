@@ -126,9 +126,9 @@ class AgentLoop:
         if not results:
             logger.info("❌ No matching memory entries found.\n")
         else:
-            logger.info("\n🎯 Top Matches:\n")
+            print("\n🎯 Top Matches:\n")
             for i, res in enumerate(results, 1):
-                logger.info(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")
+                print(f"[{i}] File: {res['file']}\nQuery: {res['query']}\nResult Requirement: {res['result_requirement']}\nSummary: {res['solution_summary']}\n")
         return results
 
     def run_perception(self, query, memory_results, session_memory=None, snapshot_type="user_query", current_plan=None):
@@ -149,7 +149,7 @@ class AgentLoop:
         return perception_result
 
     def handle_perception_completion(self, session, perception_result):
-        logger.info("\n✅ Perception fully answered the query.")
+        print("\n✅ Perception fully answered the query.")
         session.state.update({
             "original_goal_achieved": True,
             "final_answer": perception_result.get("solution_summary", "Answer ready."),
@@ -325,7 +325,7 @@ class AgentLoop:
 
     async def evaluate_step(self, step, session, query):
         if step.perception.original_goal_achieved:
-            logger.info("\n✅ Goal achieved.")
+            print("\n✅ Goal achieved.")
             session.mark_complete(step.perception)
             live_update_session(session)
             return None
