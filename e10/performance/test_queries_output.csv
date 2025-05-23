@@ -1,5 +1,5 @@
 Query,Tools Needed,Complexity,Final Plan,Output
-"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using the available tools.
-Step 1: Return the calculated result.",The value of 7 factorial is 5040.
-"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using the calculator tool.
-Step 1: Return the result.","The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5."
+"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate the factorial of 7 using the available calculator tool.
+Step 1: Present the calculated result as the final answer.",The factorial of 7 is 5040.
+"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using a code block.
+Step 1: Return the result.",The cube root of 125 is approximately 4.999999999999999.

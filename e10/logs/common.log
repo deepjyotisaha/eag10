@@ -1,113 +1,117 @@
-2025-05-23 22:53:23,888 - INFO - test_queries:main:132 - Processing query 1/2: "What is 7 factorial?"
-2025-05-23 22:53:23,889 - INFO - agent_loop2:log_session_start:118 - 
+2025-05-23 23:07:14,206 - INFO - test_queries:main:132 - Processing query 1/2: "What is 7 factorial?"
+2025-05-23 23:07:14,207 - INFO - agent_loop2:log_session_start:118 - 
 === LIVE AGENT SESSION TRACE ===
-2025-05-23 22:53:23,889 - INFO - agent_loop2:log_session_start:119 - Session ID: 53915aec-f2fa-453d-8c0b-9005623c0879
-2025-05-23 22:53:23,890 - INFO - agent_loop2:log_session_start:120 - Query: "What is 7 factorial?"
-2025-05-23 22:53:23,890 - INFO - agent_loop2:search_memory:123 - Searching Recent Conversation History
-2025-05-23 22:53:23,893 - INFO - memory_search:_load_queries:31 - 🔍 Found 47 JSON file(s) in 'memory\session_logs'
-2025-05-23 22:53:23,898 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The result of 7 factorial is 5040.
-2025-05-23 22:53:23,898 - INFO - memory_search:_load_queries:54 - ✅ 07587f16-ea37-4eda-a180-6686c5b6551a.json: 1 matching entries
-2025-05-23 22:53:23,900 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:23,901 - INFO - memory_search:_load_queries:54 - ✅ 1175e5bd-3ce0-4bc3-b444-737640b7d503.json: 1 matching entries
-2025-05-23 22:53:23,906 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
-2025-05-23 22:53:23,906 - INFO - memory_search:_load_queries:54 - ✅ 245f7a69-aa85-4b9a-9235-306d83a5b164.json: 1 matching entries
-2025-05-23 22:53:23,908 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial (7!) is 5040.
-2025-05-23 22:53:23,908 - INFO - memory_search:_load_queries:54 - ✅ 358c3a13-be49-4ab1-9836-60b915a572be.json: 1 matching entries
-2025-05-23 22:53:23,910 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:23,911 - INFO - memory_search:_load_queries:54 - ✅ 41e3f8c4-5c39-4722-8b43-1d1c9022981b.json: 1 matching entries
-2025-05-23 22:53:23,913 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
-2025-05-23 22:53:23,913 - INFO - memory_search:_load_queries:54 - ✅ 48e582bf-cbf3-497d-a19a-69d37e28c592.json: 1 matching entries
-2025-05-23 22:53:23,915 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
-2025-05-23 22:53:23,916 - INFO - memory_search:_load_queries:54 - ✅ 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json: 1 matching entries
-2025-05-23 22:53:23,917 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
-2025-05-23 22:53:23,917 - INFO - memory_search:_load_queries:54 - ✅ 4e05b1dd-4402-49e6-bd3e-00e9256f55b0.json: 1 matching entries
-2025-05-23 22:53:23,920 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Divide 144 by 12? Fetch fresh results u → The result of 144 divided by 12 is 12.0.
-2025-05-23 22:53:23,921 - INFO - memory_search:_load_queries:54 - ✅ 4f308bde-a704-489e-bdbb-f4553d8ebd11.json: 1 matching entries
-2025-05-23 22:53:23,924 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is approximately 4.
-2025-05-23 22:53:23,924 - INFO - memory_search:_load_queries:54 - ✅ 4f6ccc29-5359-4617-acf7-678f6683efc3.json: 1 matching entries
-2025-05-23 22:53:23,928 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:23,929 - INFO - memory_search:_load_queries:54 - ✅ 4f793389-efa5-437b-9b5b-1f83cdbce87f.json: 1 matching entries
-2025-05-23 22:53:23,933 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
-2025-05-23 22:53:23,934 - INFO - memory_search:_load_queries:54 - ✅ 5c081240-b0e7-4d27-8249-5109f8ae5e36.json: 1 matching entries
-2025-05-23 22:53:23,937 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The difference between 25 and 8 is 17.
-2025-05-23 22:53:23,938 - INFO - memory_search:_load_queries:54 - ✅ 5d15f431-7dd2-42cc-9b8a-14a221ad8688.json: 1 matching entries
-2025-05-23 22:53:23,941 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of subtracting 8 from 25 is 1
-2025-05-23 22:53:23,942 - INFO - memory_search:_load_queries:54 - ✅ 629324ba-f2d2-4e9d-92e5-b25f3019ce6d.json: 1 matching entries
-2025-05-23 22:53:23,945 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
-2025-05-23 22:53:23,945 - INFO - memory_search:_load_queries:54 - ✅ 632f8153-9c2e-4322-965e-be127ddd68ce.json: 1 matching entries
-2025-05-23 22:53:23,947 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
-2025-05-23 22:53:23,948 - INFO - memory_search:_load_queries:54 - ✅ 6aed4438-a034-4303-8dd4-267fa527d633.json: 1 matching entries
-2025-05-23 22:53:23,951 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
-2025-05-23 22:53:23,951 - INFO - memory_search:_load_queries:54 - ✅ 7693db68-0a3f-4219-8aba-e9608faff9f8.json: 1 matching entries
-2025-05-23 22:53:23,955 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder of 26 divided by 5 is 1.
-2025-05-23 22:53:23,955 - INFO - memory_search:_load_queries:54 - ✅ 7e3045fa-72e1-4a5d-baba-c8a3b72a01f8.json: 1 matching entries
-2025-05-23 22:53:23,957 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
-2025-05-23 22:53:23,957 - INFO - memory_search:_load_queries:54 - ✅ 894685ca-764b-4ca6-bff5-beb385368084.json: 1 matching entries
-2025-05-23 22:53:23,960 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
-2025-05-23 22:53:23,961 - INFO - memory_search:_load_queries:54 - ✅ 8c8c9fad-4b5e-4089-b453-ff124dc73afb.json: 1 matching entries
-2025-05-23 22:53:23,963 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:23,964 - INFO - memory_search:_load_queries:54 - ✅ 98b6fcd7-f26d-4ff8-97d4-96a5cf91295c.json: 1 matching entries
-2025-05-23 22:53:23,969 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
-2025-05-23 22:53:23,970 - INFO - memory_search:_load_queries:54 - ✅ 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json: 1 matching entries
-2025-05-23 22:53:23,971 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of the calculation 25 - 8 is 
-2025-05-23 22:53:23,972 - INFO - memory_search:_load_queries:54 - ✅ 9b100789-0a52-48d5-89fe-2c7288dfd762.json: 1 matching entries
-2025-05-23 22:53:23,974 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Add 78 and 89 then multiply by 67 → The result of adding 78 and 89, then mul
-2025-05-23 22:53:23,974 - INFO - memory_search:_load_queries:54 - ✅ 9ed2863f-9daf-4f84-b7a1-e5a919e3f00d.json: 1 matching entries
-2025-05-23 22:53:23,978 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The factorial of 7 is 5040.
-2025-05-23 22:53:23,979 - INFO - memory_search:_load_queries:54 - ✅ a2da4066-6caf-4ea7-8bbb-83ec921108a3.json: 1 matching entries
-2025-05-23 22:53:23,982 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder when 26 is divided by 5 is
-2025-05-23 22:53:23,983 - INFO - memory_search:_load_queries:54 - ✅ a423633a-28c8-4843-915d-3afdd3042dbd.json: 1 matching entries
-2025-05-23 22:53:23,987 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:23,987 - INFO - memory_search:_load_queries:54 - ✅ b6234fda-1a50-4c68-b7bd-243b8202b7ff.json: 1 matching entries
-2025-05-23 22:53:23,989 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:23,990 - INFO - memory_search:_load_queries:54 - ✅ bb28b747-8310-4046-b14d-3fd93243a8ab.json: 1 matching entries
-2025-05-23 22:53:23,993 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
-2025-05-23 22:53:23,993 - INFO - memory_search:_load_queries:54 - ✅ c22ca837-80cf-4850-8d03-99e38b0bc40c.json: 1 matching entries
-2025-05-23 22:53:23,997 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:23,997 - INFO - memory_search:_load_queries:54 - ✅ c9481cf2-8f3b-433a-bf47-1b48d85014ec.json: 1 matching entries
-2025-05-23 22:53:23,999 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:24,000 - INFO - memory_search:_load_queries:54 - ✅ d0d0daee-1b3b-4e65-969d-4f56f4ebbfe1.json: 1 matching entries
-2025-05-23 22:53:24,003 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
-2025-05-23 22:53:24,003 - INFO - memory_search:_load_queries:54 - ✅ d4f7550f-04ab-41ad-a25a-5271ed97e830.json: 1 matching entries
-2025-05-23 22:53:24,006 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Find the ASCII values of characters in I → The sum of exponentials of the ASCII val
-2025-05-23 22:53:24,007 - INFO - memory_search:_load_queries:54 - ✅ dc586bc7-5d55-42fa-be47-3db67f8f66d4.json: 1 matching entries
-2025-05-23 22:53:24,009 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → 15 to the power of 3 is 3375.
-2025-05-23 22:53:24,010 - INFO - memory_search:_load_queries:54 - ✅ e07613f5-53e3-4a3f-ae28-8baca65c202f.json: 1 matching entries
-2025-05-23 22:53:24,014 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → 7 factorial is 5040.
-2025-05-23 22:53:24,014 - INFO - memory_search:_load_queries:54 - ✅ e279f7ac-777a-4459-9275-50e60ca80e33.json: 1 matching entries
-2025-05-23 22:53:24,017 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:24,018 - INFO - memory_search:_load_queries:54 - ✅ e3e0ffc1-3a3c-427f-9423-bbe4adc351f1.json: 1 matching entries
-2025-05-23 22:53:24,020 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:24,020 - INFO - memory_search:_load_queries:54 - ✅ e570627e-d2fa-4531-a626-17f946f724b1.json: 1 matching entries
-2025-05-23 22:53:24,024 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
-2025-05-23 22:53:24,024 - INFO - memory_search:_load_queries:54 - ✅ edb1b622-0c07-48bb-9627-3cc378d54cea.json: 1 matching entries
-2025-05-23 22:53:24,027 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:24,028 - INFO - memory_search:_load_queries:54 - ✅ fe368185-7685-464a-9b25-8fdeb631990e.json: 1 matching entries
-2025-05-23 22:53:24,029 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 39
+2025-05-23 23:07:14,208 - INFO - agent_loop2:log_session_start:119 - Session ID: e3c3c415-83ff-445b-a535-3cb7bb47f296
+2025-05-23 23:07:14,208 - INFO - agent_loop2:log_session_start:120 - Query: "What is 7 factorial?"
+2025-05-23 23:07:14,208 - INFO - agent_loop2:search_memory:123 - Searching Recent Conversation History
+2025-05-23 23:07:14,213 - INFO - memory_search:_load_queries:31 - 🔍 Found 49 JSON file(s) in 'memory\session_logs'
+2025-05-23 23:07:14,290 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The result of 7 factorial is 5040.
+2025-05-23 23:07:14,291 - INFO - memory_search:_load_queries:54 - ✅ 07587f16-ea37-4eda-a180-6686c5b6551a.json: 1 matching entries
+2025-05-23 23:07:14,329 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:14,329 - INFO - memory_search:_load_queries:54 - ✅ 1175e5bd-3ce0-4bc3-b444-737640b7d503.json: 1 matching entries
+2025-05-23 23:07:14,440 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
+2025-05-23 23:07:14,441 - INFO - memory_search:_load_queries:54 - ✅ 245f7a69-aa85-4b9a-9235-306d83a5b164.json: 1 matching entries
+2025-05-23 23:07:14,482 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial (7!) is 5040.
+2025-05-23 23:07:14,483 - INFO - memory_search:_load_queries:54 - ✅ 358c3a13-be49-4ab1-9836-60b915a572be.json: 1 matching entries
+2025-05-23 23:07:14,520 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:14,521 - INFO - memory_search:_load_queries:54 - ✅ 41e3f8c4-5c39-4722-8b43-1d1c9022981b.json: 1 matching entries
+2025-05-23 23:07:14,561 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
+2025-05-23 23:07:14,561 - INFO - memory_search:_load_queries:54 - ✅ 48e582bf-cbf3-497d-a19a-69d37e28c592.json: 1 matching entries
+2025-05-23 23:07:14,594 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
+2025-05-23 23:07:14,595 - INFO - memory_search:_load_queries:54 - ✅ 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json: 1 matching entries
+2025-05-23 23:07:14,630 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
+2025-05-23 23:07:14,630 - INFO - memory_search:_load_queries:54 - ✅ 4e05b1dd-4402-49e6-bd3e-00e9256f55b0.json: 1 matching entries
+2025-05-23 23:07:14,665 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Divide 144 by 12? Fetch fresh results u → The result of 144 divided by 12 is 12.0.
+2025-05-23 23:07:14,665 - INFO - memory_search:_load_queries:54 - ✅ 4f308bde-a704-489e-bdbb-f4553d8ebd11.json: 1 matching entries
+2025-05-23 23:07:14,705 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is approximately 4.
+2025-05-23 23:07:14,707 - INFO - memory_search:_load_queries:54 - ✅ 4f6ccc29-5359-4617-acf7-678f6683efc3.json: 1 matching entries
+2025-05-23 23:07:14,732 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:14,733 - INFO - memory_search:_load_queries:54 - ✅ 4f793389-efa5-437b-9b5b-1f83cdbce87f.json: 1 matching entries
+2025-05-23 23:07:14,788 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial?" → The value of 7 factorial is 5040.
+2025-05-23 23:07:14,789 - INFO - memory_search:_load_queries:54 - ✅ 53915aec-f2fa-453d-8c0b-9005623c0879.json: 1 matching entries
+2025-05-23 23:07:14,815 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125" → The cube root of 125 is approximately 4.
+2025-05-23 23:07:14,815 - INFO - memory_search:_load_queries:54 - ✅ 5628227c-5440-4a91-ac4f-ad864df908c6.json: 1 matching entries
+2025-05-23 23:07:14,841 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
+2025-05-23 23:07:14,841 - INFO - memory_search:_load_queries:54 - ✅ 5c081240-b0e7-4d27-8249-5109f8ae5e36.json: 1 matching entries
+2025-05-23 23:07:14,868 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The difference between 25 and 8 is 17.
+2025-05-23 23:07:14,869 - INFO - memory_search:_load_queries:54 - ✅ 5d15f431-7dd2-42cc-9b8a-14a221ad8688.json: 1 matching entries
+2025-05-23 23:07:14,900 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of subtracting 8 from 25 is 1
+2025-05-23 23:07:14,901 - INFO - memory_search:_load_queries:54 - ✅ 629324ba-f2d2-4e9d-92e5-b25f3019ce6d.json: 1 matching entries
+2025-05-23 23:07:14,930 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
+2025-05-23 23:07:14,931 - INFO - memory_search:_load_queries:54 - ✅ 632f8153-9c2e-4322-965e-be127ddd68ce.json: 1 matching entries
+2025-05-23 23:07:14,962 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
+2025-05-23 23:07:14,962 - INFO - memory_search:_load_queries:54 - ✅ 6aed4438-a034-4303-8dd4-267fa527d633.json: 1 matching entries
+2025-05-23 23:07:14,997 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
+2025-05-23 23:07:14,998 - INFO - memory_search:_load_queries:54 - ✅ 7693db68-0a3f-4219-8aba-e9608faff9f8.json: 1 matching entries
+2025-05-23 23:07:15,028 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder of 26 divided by 5 is 1.
+2025-05-23 23:07:15,029 - INFO - memory_search:_load_queries:54 - ✅ 7e3045fa-72e1-4a5d-baba-c8a3b72a01f8.json: 1 matching entries
+2025-05-23 23:07:15,059 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
+2025-05-23 23:07:15,060 - INFO - memory_search:_load_queries:54 - ✅ 894685ca-764b-4ca6-bff5-beb385368084.json: 1 matching entries
+2025-05-23 23:07:15,093 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
+2025-05-23 23:07:15,093 - INFO - memory_search:_load_queries:54 - ✅ 8c8c9fad-4b5e-4089-b453-ff124dc73afb.json: 1 matching entries
+2025-05-23 23:07:15,125 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:15,125 - INFO - memory_search:_load_queries:54 - ✅ 98b6fcd7-f26d-4ff8-97d4-96a5cf91295c.json: 1 matching entries
+2025-05-23 23:07:15,184 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
+2025-05-23 23:07:15,185 - INFO - memory_search:_load_queries:54 - ✅ 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json: 1 matching entries
+2025-05-23 23:07:15,222 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of the calculation 25 - 8 is 
+2025-05-23 23:07:15,222 - INFO - memory_search:_load_queries:54 - ✅ 9b100789-0a52-48d5-89fe-2c7288dfd762.json: 1 matching entries
+2025-05-23 23:07:15,250 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Add 78 and 89 then multiply by 67 → The result of adding 78 and 89, then mul
+2025-05-23 23:07:15,251 - INFO - memory_search:_load_queries:54 - ✅ 9ed2863f-9daf-4f84-b7a1-e5a919e3f00d.json: 1 matching entries
+2025-05-23 23:07:15,315 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The factorial of 7 is 5040.
+2025-05-23 23:07:15,315 - INFO - memory_search:_load_queries:54 - ✅ a2da4066-6caf-4ea7-8bbb-83ec921108a3.json: 1 matching entries
+2025-05-23 23:07:15,348 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder when 26 is divided by 5 is
+2025-05-23 23:07:15,349 - INFO - memory_search:_load_queries:54 - ✅ a423633a-28c8-4843-915d-3afdd3042dbd.json: 1 matching entries
+2025-05-23 23:07:15,375 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,377 - INFO - memory_search:_load_queries:54 - ✅ b6234fda-1a50-4c68-b7bd-243b8202b7ff.json: 1 matching entries
+2025-05-23 23:07:15,405 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,407 - INFO - memory_search:_load_queries:54 - ✅ bb28b747-8310-4046-b14d-3fd93243a8ab.json: 1 matching entries
+2025-05-23 23:07:15,435 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
+2025-05-23 23:07:15,435 - INFO - memory_search:_load_queries:54 - ✅ c22ca837-80cf-4850-8d03-99e38b0bc40c.json: 1 matching entries
+2025-05-23 23:07:15,465 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,465 - INFO - memory_search:_load_queries:54 - ✅ c9481cf2-8f3b-433a-bf47-1b48d85014ec.json: 1 matching entries
+2025-05-23 23:07:15,499 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,499 - INFO - memory_search:_load_queries:54 - ✅ d0d0daee-1b3b-4e65-969d-4f56f4ebbfe1.json: 1 matching entries
+2025-05-23 23:07:15,528 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
+2025-05-23 23:07:15,528 - INFO - memory_search:_load_queries:54 - ✅ d4f7550f-04ab-41ad-a25a-5271ed97e830.json: 1 matching entries
+2025-05-23 23:07:15,566 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Find the ASCII values of characters in I → The sum of exponentials of the ASCII val
+2025-05-23 23:07:15,567 - INFO - memory_search:_load_queries:54 - ✅ dc586bc7-5d55-42fa-be47-3db67f8f66d4.json: 1 matching entries
+2025-05-23 23:07:15,602 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → 15 to the power of 3 is 3375.
+2025-05-23 23:07:15,603 - INFO - memory_search:_load_queries:54 - ✅ e07613f5-53e3-4a3f-ae28-8baca65c202f.json: 1 matching entries
+2025-05-23 23:07:15,635 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → 7 factorial is 5040.
+2025-05-23 23:07:15,636 - INFO - memory_search:_load_queries:54 - ✅ e279f7ac-777a-4459-9275-50e60ca80e33.json: 1 matching entries
+2025-05-23 23:07:15,692 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:15,693 - INFO - memory_search:_load_queries:54 - ✅ e3e0ffc1-3a3c-427f-9423-bbe4adc351f1.json: 1 matching entries
+2025-05-23 23:07:15,695 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,696 - INFO - memory_search:_load_queries:54 - ✅ e570627e-d2fa-4531-a626-17f946f724b1.json: 1 matching entries
+2025-05-23 23:07:15,757 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
+2025-05-23 23:07:15,758 - INFO - memory_search:_load_queries:54 - ✅ edb1b622-0c07-48bb-9627-3cc378d54cea.json: 1 matching entries
+2025-05-23 23:07:15,790 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:15,790 - INFO - memory_search:_load_queries:54 - ✅ fe368185-7685-464a-9b25-8fdeb631990e.json: 1 matching entries
+2025-05-23 23:07:15,791 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 41
 
-2025-05-23 22:53:24,030 - INFO - agent_loop2:search_memory:129 - 
+2025-05-23 23:07:15,792 - INFO - agent_loop2:search_memory:129 - 
 🎯 Top Matches:
 
-2025-05-23 22:53:24,031 - INFO - agent_loop2:search_memory:131 - [1] File: e279f7ac-777a-4459-9275-50e60ca80e33.json
+2025-05-23 23:07:15,792 - INFO - agent_loop2:search_memory:131 - [1] File: e279f7ac-777a-4459-9275-50e60ca80e33.json
 Query: What is 7 factorial?
 Result Requirement: The result of 7 factorial.
 Summary: 7 factorial is 5040.
 
-2025-05-23 22:53:24,031 - INFO - agent_loop2:search_memory:131 - [2] File: 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json
+2025-05-23 23:07:15,793 - INFO - agent_loop2:search_memory:131 - [2] File: 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json
 Query: "What is 7 factorial? Fetch fresh results using tools, dont use memory"
 Result Requirement: The value of 7 factorial
 Summary: 7 factorial is 5040.
 
-2025-05-23 22:53:24,032 - INFO - agent_loop2:search_memory:131 - [3] File: 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json
+2025-05-23 23:07:15,793 - INFO - agent_loop2:search_memory:131 - [3] File: 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json
 Query: "What is 7 factorial? Fetch fresh results using tools, dont use memory"
 Result Requirement: The numerical result of 7 factorial.
 Summary: 7 factorial is 5040.
 
-2025-05-23 22:53:24,032 - INFO - agent_loop2:run_perception:135 - Running Perception with query: "What is 7 factorial?" and memory_results: [{'file': 'e279f7ac-777a-4459-9275-50e60ca80e33.json', 'query': 'What is 7 factorial?', 'result_requirement': 'The result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}, {'file': '4c52e81e-11b8-4f5e-ad26-b23140f36d15.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The value of 7 factorial', 'solution_summary': '7 factorial is 5040.'}, {'file': '9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The numerical result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}] and session_memory: [{'file': 'e279f7ac-777a-4459-9275-50e60ca80e33.json', 'query': 'What is 7 factorial?', 'result_requirement': 'The result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}, {'file': '4c52e81e-11b8-4f5e-ad26-b23140f36d15.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The value of 7 factorial', 'solution_summary': '7 factorial is 5040.'}, {'file': '9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The numerical result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}] and current_plan: None and snapshot_type: user_query
-2025-05-23 22:53:24,033 - INFO - agent_loop2:run_perception:146 - 
+2025-05-23 23:07:15,794 - INFO - agent_loop2:run_perception:135 - Running Perception with query: "What is 7 factorial?" and memory_results: [{'file': 'e279f7ac-777a-4459-9275-50e60ca80e33.json', 'query': 'What is 7 factorial?', 'result_requirement': 'The result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}, {'file': '4c52e81e-11b8-4f5e-ad26-b23140f36d15.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The value of 7 factorial', 'solution_summary': '7 factorial is 5040.'}, {'file': '9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The numerical result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}] and session_memory: [{'file': 'e279f7ac-777a-4459-9275-50e60ca80e33.json', 'query': 'What is 7 factorial?', 'result_requirement': 'The result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}, {'file': '4c52e81e-11b8-4f5e-ad26-b23140f36d15.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The value of 7 factorial', 'solution_summary': '7 factorial is 5040.'}, {'file': '9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json', 'query': '"What is 7 factorial? Fetch fresh results using tools, dont use memory"', 'result_requirement': 'The numerical result of 7 factorial.', 'solution_summary': '7 factorial is 5040.'}] and current_plan: None and snapshot_type: user_query
+2025-05-23 23:07:15,795 - INFO - agent_loop2:run_perception:146 - 
 📋 [Perception Input]: 
 {
-  "run_id": "52f32a99-7e4a-4fdc-a7f2-587864924691",
+  "run_id": "94f49e0f-7ee6-4260-8a36-b56d8c94b0ea",
   "snapshot_type": "user_query",
   "raw_input": "\"What is 7 factorial?\"",
   "memory_excerpt": {
@@ -144,110 +148,111 @@ Summary: 7 factorial is 5040.
   },
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-23T17:23:24Z",
+  "timestamp": "2025-05-23T17:37:15Z",
   "schema_version": 1,
   "current_plan": "Inain Query Mode, plan not created"
 }
-2025-05-23 22:53:24,037 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:27,016 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:27,020 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:27,021 - INFO - agent_loop2:run:59 - 
+2025-05-23 23:07:15,838 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:18,640 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:18,642 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:18,643 - INFO - agent_loop2:run:59 - 
 📋 [Perception Result]: 
 {
   "entities": [
-    "7 factorial"
+    "7",
+    "factorial"
   ],
-  "result_requirement": "The numerical result of 7 factorial.",
+  "result_requirement": "The numerical value of 7 factorial.",
   "original_goal_achieved": false,
-  "confidence": "0.9",
-  "reasoning": "The user is asking for the value of 7 factorial, which is a straightforward mathematical calculation. This can be easily achieved using a calculator tool.",
-  "local_goal_achieved": false,
-  "local_reasoning": "The goal is to find the numerical value of 7 factorial. This can be directly calculated.",
-  "last_tooluse_summary": "Not applicable.",
-  "solution_summary": "Not ready yet."
+  "confidence": "0.8",
+  "reasoning": "The user is asking for the value of 7 factorial. This is a standard mathematical calculation that can be directly computed using a calculator tool.",
+  "local_goal_achieved": true,
+  "local_reasoning": "The query is well-defined and can be directly addressed using a calculator tool to compute 7!.",
+  "last_tooluse_summary": "Not ready yet",
+  "solution_summary": "Not ready yet"
 }
-2025-05-23 22:53:27,021 - INFO - agentSession:add_perception:94 - 
+2025-05-23 23:07:18,644 - INFO - agentSession:add_perception:94 - 
 📋 Perception Snapshot updated in AgentSession
-2025-05-23 22:53:27,024 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:28,336 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:28,339 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:28,340 - INFO - agent_loop2:run:67 - 
+2025-05-23 23:07:18,674 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:21,156 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:21,159 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:21,159 - INFO - agent_loop2:run:67 - 
 📝 [Decision Output]: 
 {
   "plan_text": [
-    "Step 0: Calculate 7 factorial using the available tools.",
-    "Step 1: Return the calculated result."
+    "Step 0: Calculate the factorial of 7 using the available calculator tool.",
+    "Step 1: Present the calculated result as the final answer."
   ],
   "step_index": 0,
-  "description": "Calculate 7 factorial using the available tools.",
+  "description": "Calculate 7 factorial using the calculator tool.",
   "type": "CODE",
   "code": "import math\nresult = math.factorial(7)\nreturn result",
   "conclusion": ""
 }
-2025-05-23 22:53:28,346 - INFO - agent_loop2:run:70 - 
+2025-05-23 23:07:21,163 - INFO - agent_loop2:run:70 - 
 📝 [Decision Plan Text: V1]:
-2025-05-23 22:53:28,346 - INFO - agent_loop2:run:72 -   Step 0: Calculate 7 factorial using the available tools.
-2025-05-23 22:53:28,347 - INFO - agent_loop2:run:72 -   Step 1: Return the calculated result.
-2025-05-23 22:53:28,347 - INFO - agent_loop2:run:78 - 
+2025-05-23 23:07:21,164 - INFO - agent_loop2:run:72 -   Step 0: Calculate the factorial of 7 using the available calculator tool.
+2025-05-23 23:07:21,164 - INFO - agent_loop2:run:72 -   Step 1: Present the calculated result as the final answer.
+2025-05-23 23:07:21,165 - INFO - agent_loop2:run:78 - 
 ⚙️ [Out of 3 steps, trying to execute step number 1]
-2025-05-23 22:53:28,347 - INFO - agent_loop2:execute_step:205 - 
-⚙️ [Step 0] Calculate 7 factorial using the available tools.
-2025-05-23 22:53:28,349 - INFO - agent_loop2:execute_step:208 - --------------------------------------------------
+2025-05-23 23:07:21,166 - INFO - agent_loop2:execute_step:205 - 
+⚙️ [Step 0] Calculate 7 factorial using the calculator tool.
+2025-05-23 23:07:21,166 - INFO - agent_loop2:execute_step:208 - --------------------------------------------------
 ⚙️  [EXECUTING CODE]
 import math
 result = math.factorial(7)
 return result
-2025-05-23 22:53:28,387 - INFO - agent_loop2:execute_step:257 - 
+2025-05-23 23:07:21,367 - INFO - agent_loop2:execute_step:257 - 
 ⚙️ [Executor Response]: 
 {
   "status": "success",
   "result": "5040",
-  "execution_time": "2025-05-23 22:53:28",
-  "total_time": "0.038"
+  "execution_time": "2025-05-23 23:07:21",
+  "total_time": "0.201"
 }
-2025-05-23 22:53:28,388 - INFO - agent_loop2:execute_step:259 - 
+2025-05-23 23:07:21,369 - INFO - agent_loop2:execute_step:259 - 
 ⚙️ [Decoding executor response via perception]
-2025-05-23 22:53:28,389 - INFO - agent_loop2:run_perception:135 - Running Perception with query: 5040 and memory_results: [] and session_memory: None and current_plan: ['Step 0: Calculate 7 factorial using the available tools.', 'Step 1: Return the calculated result.'] and snapshot_type: step_result
-2025-05-23 22:53:28,389 - INFO - agent_loop2:run_perception:146 - 
+2025-05-23 23:07:21,369 - INFO - agent_loop2:run_perception:135 - Running Perception with query: 5040 and memory_results: [] and session_memory: None and current_plan: ['Step 0: Calculate the factorial of 7 using the available calculator tool.', 'Step 1: Present the calculated result as the final answer.'] and snapshot_type: step_result
+2025-05-23 23:07:21,370 - INFO - agent_loop2:run_perception:146 - 
 📋 [Perception Input]: 
 {
-  "run_id": "967d2d3f-a16c-4d7c-959d-3f50a29cd1d0",
+  "run_id": "380fb9f1-433f-4dfa-85fd-5e47bc17cea5",
   "snapshot_type": "step_result",
   "raw_input": "5040",
   "memory_excerpt": {},
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-23T17:23:28Z",
+  "timestamp": "2025-05-23T17:37:21Z",
   "schema_version": 1,
   "current_plan": [
-    "Step 0: Calculate 7 factorial using the available tools.",
-    "Step 1: Return the calculated result."
+    "Step 0: Calculate the factorial of 7 using the available calculator tool.",
+    "Step 1: Present the calculated result as the final answer."
   ]
 }
-2025-05-23 22:53:28,392 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:30,465 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:30,469 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:30,469 - INFO - agent_loop2:execute_step:268 - 
+2025-05-23 23:07:21,373 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:23,180 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:23,182 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:23,183 - INFO - agent_loop2:execute_step:268 - 
 📋 [Post-Execution Perception Result]: 
 {
   "entities": [
-    "7 factorial",
-    "5040"
+    "5040",
+    "factorial of 7"
   ],
-  "result_requirement": "Numerical result of 7!",
+  "result_requirement": "The result of the factorial of 7, which should be 5040",
   "original_goal_achieved": true,
   "confidence": "1.0",
-  "reasoning": "The current step has successfully calculated the value of 7 factorial, which directly addresses the original query's goal. The result is a numerical value, as expected.",
+  "reasoning": "The step successfully calculated the factorial of 7, which matches the initial objective. The result is now available, meaning the original goal has been achieved.",
   "local_goal_achieved": true,
-  "local_reasoning": "The calculation of 7 factorial resulted in 5040, which is the correct answer. The step successfully achieved its local goal.",
-  "last_tooluse_summary": "Calculator tool success.",
-  "solution_summary": "The value of 7 factorial is 5040."
+  "local_reasoning": "The calculator tool returned the correct result for the factorial of 7, which is 5040. The local goal of calculating the factorial was achieved.",
+  "last_tooluse_summary": "Calculator tool: Success",
+  "solution_summary": "The factorial of 7 is 5040."
 }
-2025-05-23 22:53:30,514 - INFO - agent_loop2:execute_step:283 - 
+2025-05-23 23:07:23,220 - INFO - agent_loop2:execute_step:283 - 
 🔁 [Post-Execution Step Summary]: 
 {
   "index": 0,
-  "description": "Calculate 7 factorial using the available tools.",
+  "description": "Calculate 7 factorial using the calculator tool.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
@@ -259,22 +264,22 @@ return result
   "execution_result": {
     "status": "success",
     "result": "5040",
-    "execution_time": "2025-05-23 22:53:28",
-    "total_time": "0.038"
+    "execution_time": "2025-05-23 23:07:21",
+    "total_time": "0.201"
   },
   "error": null,
   "perception": {
     "entities": [
-      "7 factorial",
-      "5040"
+      "5040",
+      "factorial of 7"
     ],
-    "result_requirement": "Numerical result of 7!",
+    "result_requirement": "The result of the factorial of 7, which should be 5040",
     "original_goal_achieved": true,
-    "reasoning": "The current step has successfully calculated the value of 7 factorial, which directly addresses the original query's goal. The result is a numerical value, as expected.",
+    "reasoning": "The step successfully calculated the factorial of 7, which matches the initial objective. The result is now available, meaning the original goal has been achieved.",
     "local_goal_achieved": true,
-    "local_reasoning": "The calculation of 7 factorial resulted in 5040, which is the correct answer. The step successfully achieved its local goal.",
-    "last_tooluse_summary": "Calculator tool success.",
-    "solution_summary": "The value of 7 factorial is 5040.",
+    "local_reasoning": "The calculator tool returned the correct result for the factorial of 7, which is 5040. The local goal of calculating the factorial was achieved.",
+    "last_tooluse_summary": "Calculator tool: Success",
+    "solution_summary": "The factorial of 7 is 5040.",
     "confidence": "1.0"
   },
   "status": "completed",
@@ -283,11 +288,11 @@ return result
   "parent_index": null,
   "human_interventions": []
 }
-2025-05-23 22:53:30,516 - INFO - agent_loop2:run:112 - 
+2025-05-23 23:07:23,222 - INFO - agent_loop2:run:112 - 
 ⚙️ [Evaluating Step Summary]: 
 {
   "index": 0,
-  "description": "Calculate 7 factorial using the available tools.",
+  "description": "Calculate 7 factorial using the calculator tool.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
@@ -299,22 +304,22 @@ return result
   "execution_result": {
     "status": "success",
     "result": "5040",
-    "execution_time": "2025-05-23 22:53:28",
-    "total_time": "0.038"
+    "execution_time": "2025-05-23 23:07:21",
+    "total_time": "0.201"
   },
   "error": null,
   "perception": {
     "entities": [
-      "7 factorial",
-      "5040"
+      "5040",
+      "factorial of 7"
     ],
-    "result_requirement": "Numerical result of 7!",
+    "result_requirement": "The result of the factorial of 7, which should be 5040",
     "original_goal_achieved": true,
-    "reasoning": "The current step has successfully calculated the value of 7 factorial, which directly addresses the original query's goal. The result is a numerical value, as expected.",
+    "reasoning": "The step successfully calculated the factorial of 7, which matches the initial objective. The result is now available, meaning the original goal has been achieved.",
     "local_goal_achieved": true,
-    "local_reasoning": "The calculation of 7 factorial resulted in 5040, which is the correct answer. The step successfully achieved its local goal.",
-    "last_tooluse_summary": "Calculator tool success.",
-    "solution_summary": "The value of 7 factorial is 5040.",
+    "local_reasoning": "The calculator tool returned the correct result for the factorial of 7, which is 5040. The local goal of calculating the factorial was achieved.",
+    "last_tooluse_summary": "Calculator tool: Success",
+    "solution_summary": "The factorial of 7 is 5040.",
     "confidence": "1.0"
   },
   "status": "completed",
@@ -323,129 +328,133 @@ return result
   "parent_index": null,
   "human_interventions": []
 }
-2025-05-23 22:53:30,517 - INFO - agent_loop2:evaluate_step:328 - 
+2025-05-23 23:07:23,225 - INFO - agent_loop2:evaluate_step:328 - 
 ✅ Goal achieved.
-2025-05-23 22:53:30,589 - INFO - test_queries:execute_query:68 - Session: <agent.agentSession.AgentSession object at 0x000001CFEE449B50>
-2025-05-23 22:53:30,590 - INFO - test_queries:execute_query:69 - Session State: {'final_plan': ['Step 0: Calculate 7 factorial using the available tools.', 'Step 1: Return the calculated result.'], 'final_steps': [{'index': 0, 'description': 'Calculate 7 factorial using the available tools.', 'type': 'CODE', 'code': {'tool_name': 'raw_code_block', 'tool_arguments': {'code': 'import math\nresult = math.factorial(7)\nreturn result'}}, 'conclusion': '', 'execution_result': {'status': 'success', 'result': '5040', 'execution_time': '2025-05-23 22:53:28', 'total_time': '0.038'}, 'error': None, 'perception': {'entities': ['7 factorial', '5040'], 'result_requirement': 'Numerical result of 7!', 'original_goal_achieved': True, 'reasoning': "The current step has successfully calculated the value of 7 factorial, which directly addresses the original query's goal. The result is a numerical value, as expected.", 'local_goal_achieved': True, 'local_reasoning': 'The calculation of 7 factorial resulted in 5040, which is the correct answer. The step successfully achieved its local goal.', 'last_tooluse_summary': 'Calculator tool success.', 'solution_summary': 'The value of 7 factorial is 5040.', 'confidence': '1.0'}, 'status': 'completed', 'attempts': 0, 'was_replanned': False, 'parent_index': None, 'human_interventions': []}], 'final_answer': 'The value of 7 factorial is 5040.', 'tool_usage': [{'tool_name': 'raw_code_block', 'status': 'success', 'step_index': 0, 'description': 'Calculate 7 factorial using the available tools.', 'result': '5040', 'error': None, 'execution_time': '2025-05-23 22:53:28', 'total_time': '0.038'}], 'session_id': '53915aec-f2fa-453d-8c0b-9005623c0879', 'original_query': '"What is 7 factorial?"', 'timestamp': '2025-05-23T22:53:30.589314', 'confidence': '1.0', 'reasoning_note': "The current step has successfully calculated the value of 7 factorial, which directly addresses the original query's goal. The result is a numerical value, as expected."}
-2025-05-23 22:53:30,590 - INFO - test_queries:execute_query:82 - Tool usage for query '"What is 7 factorial?"':
-2025-05-23 22:53:30,591 - INFO - test_queries:execute_query:84 - - raw_code_block: success (Step 0)
-2025-05-23 22:53:30,591 - INFO - test_queries:execute_query:86 - Final Plan: Step 0: Calculate 7 factorial using the available tools.
-Step 1: Return the calculated result.
-2025-05-23 22:53:30,592 - INFO - test_queries:execute_query:87 - Final Answer: The value of 7 factorial is 5040.
-2025-05-23 22:53:30,592 - INFO - test_queries:execute_query:88 - Tool Usage: [{'tool_name': 'raw_code_block', 'status': 'success', 'step_index': 0, 'description': 'Calculate 7 factorial using the available tools.', 'result': '5040', 'error': None, 'execution_time': '2025-05-23 22:53:28', 'total_time': '0.038'}]
-2025-05-23 22:53:30,603 - INFO - test_queries:main:150 - Sleeping for 5 seconds...
-2025-05-23 22:53:35,610 - INFO - test_queries:main:132 - Processing query 2/2: "Calculate the cube root of 125"
-2025-05-23 22:53:35,613 - INFO - agent_loop2:log_session_start:118 - 
+2025-05-23 23:07:23,301 - INFO - test_queries:execute_query:68 - Session: <agent.agentSession.AgentSession object at 0x0000027E8B3C9ED0>
+2025-05-23 23:07:23,303 - INFO - test_queries:execute_query:69 - Session State: {'final_plan': ['Step 0: Calculate the factorial of 7 using the available calculator tool.', 'Step 1: Present the calculated result as the final answer.'], 'final_steps': [{'index': 0, 'description': 'Calculate 7 factorial using the calculator tool.', 'type': 'CODE', 'code': {'tool_name': 'raw_code_block', 'tool_arguments': {'code': 'import math\nresult = math.factorial(7)\nreturn result'}}, 'conclusion': '', 'execution_result': {'status': 'success', 'result': '5040', 'execution_time': '2025-05-23 23:07:21', 'total_time': '0.201'}, 'error': None, 'perception': {'entities': ['5040', 'factorial of 7'], 'result_requirement': 'The result of the factorial of 7, which should be 5040', 'original_goal_achieved': True, 'reasoning': 'The step successfully calculated the factorial of 7, which matches the initial objective. The result is now available, meaning the original goal has been achieved.', 'local_goal_achieved': True, 'local_reasoning': 'The calculator tool returned the correct result for the factorial of 7, which is 5040. The local goal of calculating the factorial was achieved.', 'last_tooluse_summary': 'Calculator tool: Success', 'solution_summary': 'The factorial of 7 is 5040.', 'confidence': '1.0'}, 'status': 'completed', 'attempts': 0, 'was_replanned': False, 'parent_index': None, 'human_interventions': []}], 'final_answer': 'The factorial of 7 is 5040.', 'tool_usage': [{'tool_name': 'factorial', 'status': 'success', 'step_index': 0, 'description': 'Calculate 7 factorial using the calculator tool.', 'result': '5040', 'error': None, 'execution_time': '2025-05-23 23:07:21', 'total_time': '0.201'}], 'session_id': 'e3c3c415-83ff-445b-a535-3cb7bb47f296', 'original_query': '"What is 7 factorial?"', 'timestamp': '2025-05-23T23:07:23.301915', 'confidence': '1.0', 'reasoning_note': 'The step successfully calculated the factorial of 7, which matches the initial objective. The result is now available, meaning the original goal has been achieved.'}
+2025-05-23 23:07:23,303 - INFO - test_queries:execute_query:82 - Tool usage for query '"What is 7 factorial?"':
+2025-05-23 23:07:23,305 - INFO - test_queries:execute_query:84 - - factorial: success (Step 0)
+2025-05-23 23:07:23,305 - INFO - test_queries:execute_query:86 - Final Plan: Step 0: Calculate the factorial of 7 using the available calculator tool.
+Step 1: Present the calculated result as the final answer.
+2025-05-23 23:07:23,305 - INFO - test_queries:execute_query:87 - Final Answer: The factorial of 7 is 5040.
+2025-05-23 23:07:23,307 - INFO - test_queries:execute_query:88 - Tool Usage: [{'tool_name': 'factorial', 'status': 'success', 'step_index': 0, 'description': 'Calculate 7 factorial using the calculator tool.', 'result': '5040', 'error': None, 'execution_time': '2025-05-23 23:07:21', 'total_time': '0.201'}]
+2025-05-23 23:07:23,313 - INFO - test_queries:main:150 - Sleeping for 5 seconds...
+2025-05-23 23:07:28,317 - INFO - test_queries:main:132 - Processing query 2/2: "Calculate the cube root of 125"
+2025-05-23 23:07:28,318 - INFO - agent_loop2:log_session_start:118 - 
 === LIVE AGENT SESSION TRACE ===
-2025-05-23 22:53:35,614 - INFO - agent_loop2:log_session_start:119 - Session ID: 5628227c-5440-4a91-ac4f-ad864df908c6
-2025-05-23 22:53:35,615 - INFO - agent_loop2:log_session_start:120 - Query: "Calculate the cube root of 125"
-2025-05-23 22:53:35,616 - INFO - agent_loop2:search_memory:123 - Searching Recent Conversation History
-2025-05-23 22:53:35,621 - INFO - memory_search:_load_queries:31 - 🔍 Found 48 JSON file(s) in 'memory\session_logs'
-2025-05-23 22:53:35,629 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The result of 7 factorial is 5040.
-2025-05-23 22:53:35,630 - INFO - memory_search:_load_queries:54 - ✅ 07587f16-ea37-4eda-a180-6686c5b6551a.json: 1 matching entries
-2025-05-23 22:53:35,634 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,635 - INFO - memory_search:_load_queries:54 - ✅ 1175e5bd-3ce0-4bc3-b444-737640b7d503.json: 1 matching entries
-2025-05-23 22:53:35,644 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
-2025-05-23 22:53:35,649 - INFO - memory_search:_load_queries:54 - ✅ 245f7a69-aa85-4b9a-9235-306d83a5b164.json: 1 matching entries
-2025-05-23 22:53:35,653 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial (7!) is 5040.
-2025-05-23 22:53:35,654 - INFO - memory_search:_load_queries:54 - ✅ 358c3a13-be49-4ab1-9836-60b915a572be.json: 1 matching entries
-2025-05-23 22:53:35,657 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:35,658 - INFO - memory_search:_load_queries:54 - ✅ 41e3f8c4-5c39-4722-8b43-1d1c9022981b.json: 1 matching entries
-2025-05-23 22:53:35,669 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
-2025-05-23 22:53:35,670 - INFO - memory_search:_load_queries:54 - ✅ 48e582bf-cbf3-497d-a19a-69d37e28c592.json: 1 matching entries
-2025-05-23 22:53:35,673 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
-2025-05-23 22:53:35,674 - INFO - memory_search:_load_queries:54 - ✅ 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json: 1 matching entries
-2025-05-23 22:53:35,677 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
-2025-05-23 22:53:35,678 - INFO - memory_search:_load_queries:54 - ✅ 4e05b1dd-4402-49e6-bd3e-00e9256f55b0.json: 1 matching entries
-2025-05-23 22:53:35,683 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Divide 144 by 12? Fetch fresh results u → The result of 144 divided by 12 is 12.0.
-2025-05-23 22:53:35,684 - INFO - memory_search:_load_queries:54 - ✅ 4f308bde-a704-489e-bdbb-f4553d8ebd11.json: 1 matching entries
-2025-05-23 22:53:35,688 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is approximately 4.
-2025-05-23 22:53:35,688 - INFO - memory_search:_load_queries:54 - ✅ 4f6ccc29-5359-4617-acf7-678f6683efc3.json: 1 matching entries
-2025-05-23 22:53:35,692 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:35,692 - INFO - memory_search:_load_queries:54 - ✅ 4f793389-efa5-437b-9b5b-1f83cdbce87f.json: 1 matching entries
-2025-05-23 22:53:35,700 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial?" → The value of 7 factorial is 5040.
-2025-05-23 22:53:35,701 - INFO - memory_search:_load_queries:54 - ✅ 53915aec-f2fa-453d-8c0b-9005623c0879.json: 1 matching entries
-2025-05-23 22:53:35,704 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
-2025-05-23 22:53:35,704 - INFO - memory_search:_load_queries:54 - ✅ 5c081240-b0e7-4d27-8249-5109f8ae5e36.json: 1 matching entries
-2025-05-23 22:53:35,707 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The difference between 25 and 8 is 17.
-2025-05-23 22:53:35,709 - INFO - memory_search:_load_queries:54 - ✅ 5d15f431-7dd2-42cc-9b8a-14a221ad8688.json: 1 matching entries
-2025-05-23 22:53:35,713 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of subtracting 8 from 25 is 1
-2025-05-23 22:53:35,714 - INFO - memory_search:_load_queries:54 - ✅ 629324ba-f2d2-4e9d-92e5-b25f3019ce6d.json: 1 matching entries
-2025-05-23 22:53:35,716 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
-2025-05-23 22:53:35,717 - INFO - memory_search:_load_queries:54 - ✅ 632f8153-9c2e-4322-965e-be127ddd68ce.json: 1 matching entries
-2025-05-23 22:53:35,720 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
-2025-05-23 22:53:35,721 - INFO - memory_search:_load_queries:54 - ✅ 6aed4438-a034-4303-8dd4-267fa527d633.json: 1 matching entries
-2025-05-23 22:53:35,723 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
-2025-05-23 22:53:35,724 - INFO - memory_search:_load_queries:54 - ✅ 7693db68-0a3f-4219-8aba-e9608faff9f8.json: 1 matching entries
-2025-05-23 22:53:35,726 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder of 26 divided by 5 is 1.
-2025-05-23 22:53:35,726 - INFO - memory_search:_load_queries:54 - ✅ 7e3045fa-72e1-4a5d-baba-c8a3b72a01f8.json: 1 matching entries
-2025-05-23 22:53:35,735 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
-2025-05-23 22:53:35,735 - INFO - memory_search:_load_queries:54 - ✅ 894685ca-764b-4ca6-bff5-beb385368084.json: 1 matching entries
-2025-05-23 22:53:35,737 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
-2025-05-23 22:53:35,738 - INFO - memory_search:_load_queries:54 - ✅ 8c8c9fad-4b5e-4089-b453-ff124dc73afb.json: 1 matching entries
-2025-05-23 22:53:35,741 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:35,741 - INFO - memory_search:_load_queries:54 - ✅ 98b6fcd7-f26d-4ff8-97d4-96a5cf91295c.json: 1 matching entries
-2025-05-23 22:53:35,745 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
-2025-05-23 22:53:35,746 - INFO - memory_search:_load_queries:54 - ✅ 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json: 1 matching entries
-2025-05-23 22:53:35,750 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of the calculation 25 - 8 is 
-2025-05-23 22:53:35,750 - INFO - memory_search:_load_queries:54 - ✅ 9b100789-0a52-48d5-89fe-2c7288dfd762.json: 1 matching entries
-2025-05-23 22:53:35,752 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Add 78 and 89 then multiply by 67 → The result of adding 78 and 89, then mul
-2025-05-23 22:53:35,753 - INFO - memory_search:_load_queries:54 - ✅ 9ed2863f-9daf-4f84-b7a1-e5a919e3f00d.json: 1 matching entries
-2025-05-23 22:53:35,757 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The factorial of 7 is 5040.
-2025-05-23 22:53:35,758 - INFO - memory_search:_load_queries:54 - ✅ a2da4066-6caf-4ea7-8bbb-83ec921108a3.json: 1 matching entries
-2025-05-23 22:53:35,759 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder when 26 is divided by 5 is
-2025-05-23 22:53:35,759 - INFO - memory_search:_load_queries:54 - ✅ a423633a-28c8-4843-915d-3afdd3042dbd.json: 1 matching entries
-2025-05-23 22:53:35,761 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,763 - INFO - memory_search:_load_queries:54 - ✅ b6234fda-1a50-4c68-b7bd-243b8202b7ff.json: 1 matching entries
-2025-05-23 22:53:35,766 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,767 - INFO - memory_search:_load_queries:54 - ✅ bb28b747-8310-4046-b14d-3fd93243a8ab.json: 1 matching entries
-2025-05-23 22:53:35,769 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
-2025-05-23 22:53:35,770 - INFO - memory_search:_load_queries:54 - ✅ c22ca837-80cf-4850-8d03-99e38b0bc40c.json: 1 matching entries
-2025-05-23 22:53:35,771 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,773 - INFO - memory_search:_load_queries:54 - ✅ c9481cf2-8f3b-433a-bf47-1b48d85014ec.json: 1 matching entries
-2025-05-23 22:53:35,775 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,775 - INFO - memory_search:_load_queries:54 - ✅ d0d0daee-1b3b-4e65-969d-4f56f4ebbfe1.json: 1 matching entries
-2025-05-23 22:53:35,777 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
-2025-05-23 22:53:35,777 - INFO - memory_search:_load_queries:54 - ✅ d4f7550f-04ab-41ad-a25a-5271ed97e830.json: 1 matching entries
-2025-05-23 22:53:35,783 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Find the ASCII values of characters in I → The sum of exponentials of the ASCII val
-2025-05-23 22:53:35,783 - INFO - memory_search:_load_queries:54 - ✅ dc586bc7-5d55-42fa-be47-3db67f8f66d4.json: 1 matching entries
-2025-05-23 22:53:35,786 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → 15 to the power of 3 is 3375.
-2025-05-23 22:53:35,786 - INFO - memory_search:_load_queries:54 - ✅ e07613f5-53e3-4a3f-ae28-8baca65c202f.json: 1 matching entries
-2025-05-23 22:53:35,788 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → 7 factorial is 5040.
-2025-05-23 22:53:35,789 - INFO - memory_search:_load_queries:54 - ✅ e279f7ac-777a-4459-9275-50e60ca80e33.json: 1 matching entries
-2025-05-23 22:53:35,791 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
-2025-05-23 22:53:35,792 - INFO - memory_search:_load_queries:54 - ✅ e3e0ffc1-3a3c-427f-9423-bbe4adc351f1.json: 1 matching entries
-2025-05-23 22:53:35,793 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,794 - INFO - memory_search:_load_queries:54 - ✅ e570627e-d2fa-4531-a626-17f946f724b1.json: 1 matching entries
-2025-05-23 22:53:35,800 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
-2025-05-23 22:53:35,801 - INFO - memory_search:_load_queries:54 - ✅ edb1b622-0c07-48bb-9627-3cc378d54cea.json: 1 matching entries
-2025-05-23 22:53:35,803 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
-2025-05-23 22:53:35,804 - INFO - memory_search:_load_queries:54 - ✅ fe368185-7685-464a-9b25-8fdeb631990e.json: 1 matching entries
-2025-05-23 22:53:35,804 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 40
+2025-05-23 23:07:28,321 - INFO - agent_loop2:log_session_start:119 - Session ID: 52cc1717-3fa2-467a-bd85-62e4331ad7b8
+2025-05-23 23:07:28,322 - INFO - agent_loop2:log_session_start:120 - Query: "Calculate the cube root of 125"
+2025-05-23 23:07:28,323 - INFO - agent_loop2:search_memory:123 - Searching Recent Conversation History
+2025-05-23 23:07:28,343 - INFO - memory_search:_load_queries:31 - 🔍 Found 50 JSON file(s) in 'memory\session_logs'
+2025-05-23 23:07:28,350 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The result of 7 factorial is 5040.
+2025-05-23 23:07:28,351 - INFO - memory_search:_load_queries:54 - ✅ 07587f16-ea37-4eda-a180-6686c5b6551a.json: 1 matching entries
+2025-05-23 23:07:28,354 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,355 - INFO - memory_search:_load_queries:54 - ✅ 1175e5bd-3ce0-4bc3-b444-737640b7d503.json: 1 matching entries
+2025-05-23 23:07:28,368 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
+2025-05-23 23:07:28,369 - INFO - memory_search:_load_queries:54 - ✅ 245f7a69-aa85-4b9a-9235-306d83a5b164.json: 1 matching entries
+2025-05-23 23:07:28,372 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial (7!) is 5040.
+2025-05-23 23:07:28,373 - INFO - memory_search:_load_queries:54 - ✅ 358c3a13-be49-4ab1-9836-60b915a572be.json: 1 matching entries
+2025-05-23 23:07:28,374 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:28,375 - INFO - memory_search:_load_queries:54 - ✅ 41e3f8c4-5c39-4722-8b43-1d1c9022981b.json: 1 matching entries
+2025-05-23 23:07:28,378 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
+2025-05-23 23:07:28,378 - INFO - memory_search:_load_queries:54 - ✅ 48e582bf-cbf3-497d-a19a-69d37e28c592.json: 1 matching entries
+2025-05-23 23:07:28,381 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
+2025-05-23 23:07:28,382 - INFO - memory_search:_load_queries:54 - ✅ 4c52e81e-11b8-4f5e-ad26-b23140f36d15.json: 1 matching entries
+2025-05-23 23:07:28,383 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Add 12 and 34? Fetch fresh results usin → The sum of 12 and 34 is 46.
+2025-05-23 23:07:28,384 - INFO - memory_search:_load_queries:54 - ✅ 4e05b1dd-4402-49e6-bd3e-00e9256f55b0.json: 1 matching entries
+2025-05-23 23:07:28,385 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Divide 144 by 12? Fetch fresh results u → The result of 144 divided by 12 is 12.0.
+2025-05-23 23:07:28,387 - INFO - memory_search:_load_queries:54 - ✅ 4f308bde-a704-489e-bdbb-f4553d8ebd11.json: 1 matching entries
+2025-05-23 23:07:28,391 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is approximately 4.
+2025-05-23 23:07:28,392 - INFO - memory_search:_load_queries:54 - ✅ 4f6ccc29-5359-4617-acf7-678f6683efc3.json: 1 matching entries
+2025-05-23 23:07:28,394 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:28,395 - INFO - memory_search:_load_queries:54 - ✅ 4f793389-efa5-437b-9b5b-1f83cdbce87f.json: 1 matching entries
+2025-05-23 23:07:28,398 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial?" → The value of 7 factorial is 5040.
+2025-05-23 23:07:28,399 - INFO - memory_search:_load_queries:54 - ✅ 53915aec-f2fa-453d-8c0b-9005623c0879.json: 1 matching entries
+2025-05-23 23:07:28,401 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125" → The cube root of 125 is approximately 4.
+2025-05-23 23:07:28,401 - INFO - memory_search:_load_queries:54 - ✅ 5628227c-5440-4a91-ac4f-ad864df908c6.json: 1 matching entries
+2025-05-23 23:07:28,404 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
+2025-05-23 23:07:28,405 - INFO - memory_search:_load_queries:54 - ✅ 5c081240-b0e7-4d27-8249-5109f8ae5e36.json: 1 matching entries
+2025-05-23 23:07:28,408 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The difference between 25 and 8 is 17.
+2025-05-23 23:07:28,410 - INFO - memory_search:_load_queries:54 - ✅ 5d15f431-7dd2-42cc-9b8a-14a221ad8688.json: 1 matching entries
+2025-05-23 23:07:28,419 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of subtracting 8 from 25 is 1
+2025-05-23 23:07:28,420 - INFO - memory_search:_load_queries:54 - ✅ 629324ba-f2d2-4e9d-92e5-b25f3019ce6d.json: 1 matching entries
+2025-05-23 23:07:28,422 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → The factorial of 7 is 5040.
+2025-05-23 23:07:28,424 - INFO - memory_search:_load_queries:54 - ✅ 632f8153-9c2e-4322-965e-be127ddd68ce.json: 1 matching entries
+2025-05-23 23:07:28,427 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
+2025-05-23 23:07:28,428 - INFO - memory_search:_load_queries:54 - ✅ 6aed4438-a034-4303-8dd4-267fa527d633.json: 1 matching entries
+2025-05-23 23:07:28,431 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
+2025-05-23 23:07:28,432 - INFO - memory_search:_load_queries:54 - ✅ 7693db68-0a3f-4219-8aba-e9608faff9f8.json: 1 matching entries
+2025-05-23 23:07:28,434 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder of 26 divided by 5 is 1.
+2025-05-23 23:07:28,435 - INFO - memory_search:_load_queries:54 - ✅ 7e3045fa-72e1-4a5d-baba-c8a3b72a01f8.json: 1 matching entries
+2025-05-23 23:07:28,438 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Multiply 23 and 17? Fetch fresh results → The product of 23 and 17 is 391.
+2025-05-23 23:07:28,438 - INFO - memory_search:_load_queries:54 - ✅ 894685ca-764b-4ca6-bff5-beb385368084.json: 1 matching entries
+2025-05-23 23:07:28,441 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → The result of 15 to the power of 3 is 33
+2025-05-23 23:07:28,441 - INFO - memory_search:_load_queries:54 - ✅ 8c8c9fad-4b5e-4089-b453-ff124dc73afb.json: 1 matching entries
+2025-05-23 23:07:28,444 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:28,445 - INFO - memory_search:_load_queries:54 - ✅ 98b6fcd7-f26d-4ff8-97d4-96a5cf91295c.json: 1 matching entries
+2025-05-23 23:07:28,449 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is 5040.
+2025-05-23 23:07:28,450 - INFO - memory_search:_load_queries:54 - ✅ 9a77242c-86e9-4f1c-966c-c8bd2f25c2a3.json: 1 matching entries
+2025-05-23 23:07:28,452 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Subtract 8 from 25? Fetch fresh results → The result of the calculation 25 - 8 is 
+2025-05-23 23:07:28,453 - INFO - memory_search:_load_queries:54 - ✅ 9b100789-0a52-48d5-89fe-2c7288dfd762.json: 1 matching entries
+2025-05-23 23:07:28,455 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Add 78 and 89 then multiply by 67 → The result of adding 78 and 89, then mul
+2025-05-23 23:07:28,455 - INFO - memory_search:_load_queries:54 - ✅ 9ed2863f-9daf-4f84-b7a1-e5a919e3f00d.json: 1 matching entries
+2025-05-23 23:07:28,460 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → The factorial of 7 is 5040.
+2025-05-23 23:07:28,461 - INFO - memory_search:_load_queries:54 - ✅ a2da4066-6caf-4ea7-8bbb-83ec921108a3.json: 1 matching entries
+2025-05-23 23:07:28,466 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the remainder when 26 is divide → The remainder when 26 is divided by 5 is
+2025-05-23 23:07:28,466 - INFO - memory_search:_load_queries:54 - ✅ a423633a-28c8-4843-915d-3afdd3042dbd.json: 1 matching entries
+2025-05-23 23:07:28,469 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,469 - INFO - memory_search:_load_queries:54 - ✅ b6234fda-1a50-4c68-b7bd-243b8202b7ff.json: 1 matching entries
+2025-05-23 23:07:28,471 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,472 - INFO - memory_search:_load_queries:54 - ✅ bb28b747-8310-4046-b14d-3fd93243a8ab.json: 1 matching entries
+2025-05-23 23:07:28,475 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
+2025-05-23 23:07:28,476 - INFO - memory_search:_load_queries:54 - ✅ c22ca837-80cf-4850-8d03-99e38b0bc40c.json: 1 matching entries
+2025-05-23 23:07:28,477 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,478 - INFO - memory_search:_load_queries:54 - ✅ c9481cf2-8f3b-433a-bf47-1b48d85014ec.json: 1 matching entries
+2025-05-23 23:07:28,480 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,480 - INFO - memory_search:_load_queries:54 - ✅ d0d0daee-1b3b-4e65-969d-4f56f4ebbfe1.json: 1 matching entries
+2025-05-23 23:07:28,482 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial? Fetch fresh result → 7 factorial is equal to 5040.
+2025-05-23 23:07:28,483 - INFO - memory_search:_load_queries:54 - ✅ d4f7550f-04ab-41ad-a25a-5271ed97e830.json: 1 matching entries
+2025-05-23 23:07:28,485 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: Find the ASCII values of characters in I → The sum of exponentials of the ASCII val
+2025-05-23 23:07:28,485 - INFO - memory_search:_load_queries:54 - ✅ dc586bc7-5d55-42fa-be47-3db67f8f66d4.json: 1 matching entries
+2025-05-23 23:07:28,488 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 15 to the power of 3? Fetch fre → 15 to the power of 3 is 3375.
+2025-05-23 23:07:28,489 - INFO - memory_search:_load_queries:54 - ✅ e07613f5-53e3-4a3f-ae28-8baca65c202f.json: 1 matching entries
+2025-05-23 23:07:28,492 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: What is 7 factorial? → 7 factorial is 5040.
+2025-05-23 23:07:28,493 - INFO - memory_search:_load_queries:54 - ✅ e279f7ac-777a-4459-9275-50e60ca80e33.json: 1 matching entries
+2025-05-23 23:07:28,497 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is 7 factorial?" → The factorial of 7 is 5040.
+2025-05-23 23:07:28,497 - INFO - memory_search:_load_queries:54 - ✅ e3c3c415-83ff-445b-a535-3cb7bb47f296.json: 1 matching entries
+2025-05-23 23:07:28,499 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "What is the cosine of 0? Fetch fresh re → The cosine of 0 is 1.
+2025-05-23 23:07:28,500 - INFO - memory_search:_load_queries:54 - ✅ e3e0ffc1-3a3c-427f-9423-bbe4adc351f1.json: 1 matching entries
+2025-05-23 23:07:28,501 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,502 - INFO - memory_search:_load_queries:54 - ✅ e570627e-d2fa-4531-a626-17f946f724b1.json: 1 matching entries
+2025-05-23 23:07:28,506 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Calculate the cube root of 125? Fetch f → The cube root of 125 is 5.
+2025-05-23 23:07:28,507 - INFO - memory_search:_load_queries:54 - ✅ edb1b622-0c07-48bb-9627-3cc378d54cea.json: 1 matching entries
+2025-05-23 23:07:28,509 - INFO - memory_search:_extract_entry:101 - ✅ Extracted: "Find the ASCII values of characters in  → The sum of the exponentials of the ASCII
+2025-05-23 23:07:28,510 - INFO - memory_search:_load_queries:54 - ✅ fe368185-7685-464a-9b25-8fdeb631990e.json: 1 matching entries
+2025-05-23 23:07:28,510 - INFO - memory_search:_load_queries:56 - 📦 Total usable memory entries collected: 42
 
-2025-05-23 22:53:35,805 - INFO - agent_loop2:search_memory:129 - 
+2025-05-23 23:07:28,512 - INFO - agent_loop2:search_memory:129 - 
 🎯 Top Matches:
 
-2025-05-23 22:53:35,805 - INFO - agent_loop2:search_memory:131 - [1] File: c22ca837-80cf-4850-8d03-99e38b0bc40c.json
+2025-05-23 23:07:28,512 - INFO - agent_loop2:search_memory:131 - [1] File: c22ca837-80cf-4850-8d03-99e38b0bc40c.json
 Query: "Calculate the cube root of 125? Fetch fresh results using tools"
 Result Requirement: The cube root of 125
 Summary: The cube root of 125 is 5.
 
-2025-05-23 22:53:35,806 - INFO - agent_loop2:search_memory:131 - [2] File: edb1b622-0c07-48bb-9627-3cc378d54cea.json
+2025-05-23 23:07:28,513 - INFO - agent_loop2:search_memory:131 - [2] File: edb1b622-0c07-48bb-9627-3cc378d54cea.json
 Query: "Calculate the cube root of 125? Fetch fresh results using tools"
 Result Requirement: Numerical value of the cube root of 125
 Summary: The cube root of 125 is 5.
 
-2025-05-23 22:53:35,806 - INFO - agent_loop2:search_memory:131 - [3] File: 4f6ccc29-5359-4617-acf7-678f6683efc3.json
-Query: "Calculate the cube root of 125? Fetch fresh results using tools"
-Result Requirement: The cube root of 125.
-Summary: The cube root of 125 is approximately 4.999999999999999.
+2025-05-23 23:07:28,513 - INFO - agent_loop2:search_memory:131 - [3] File: 5628227c-5440-4a91-ac4f-ad864df908c6.json
+Query: "Calculate the cube root of 125"
+Result Requirement: The cube root of 125
+Summary: The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.
 
-2025-05-23 22:53:35,806 - INFO - agent_loop2:run_perception:135 - Running Perception with query: "Calculate the cube root of 125" and memory_results: [{'file': 'c22ca837-80cf-4850-8d03-99e38b0bc40c.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': 'edb1b622-0c07-48bb-9627-3cc378d54cea.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'Numerical value of the cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': '4f6ccc29-5359-4617-acf7-678f6683efc3.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125.', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999.'}] and session_memory: [{'file': 'c22ca837-80cf-4850-8d03-99e38b0bc40c.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': 'edb1b622-0c07-48bb-9627-3cc378d54cea.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'Numerical value of the cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': '4f6ccc29-5359-4617-acf7-678f6683efc3.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125.', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999.'}] and current_plan: None and snapshot_type: user_query
-2025-05-23 22:53:35,807 - INFO - agent_loop2:run_perception:146 - 
+2025-05-23 23:07:28,514 - INFO - agent_loop2:run_perception:135 - Running Perception with query: "Calculate the cube root of 125" and memory_results: [{'file': 'c22ca837-80cf-4850-8d03-99e38b0bc40c.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': 'edb1b622-0c07-48bb-9627-3cc378d54cea.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'Numerical value of the cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': '5628227c-5440-4a91-ac4f-ad864df908c6.json', 'query': '"Calculate the cube root of 125"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.'}] and session_memory: [{'file': 'c22ca837-80cf-4850-8d03-99e38b0bc40c.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': 'edb1b622-0c07-48bb-9627-3cc378d54cea.json', 'query': '"Calculate the cube root of 125? Fetch fresh results using tools"', 'result_requirement': 'Numerical value of the cube root of 125', 'solution_summary': 'The cube root of 125 is 5.'}, {'file': '5628227c-5440-4a91-ac4f-ad864df908c6.json', 'query': '"Calculate the cube root of 125"', 'result_requirement': 'The cube root of 125', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.'}] and current_plan: None and snapshot_type: user_query
+2025-05-23 23:07:28,514 - INFO - agent_loop2:run_perception:146 - 
 📋 [Perception Input]: 
 {
-  "run_id": "974bb963-8a88-414f-8561-dd166cf5aa7a",
+  "run_id": "9da15163-8e32-4edc-bc89-79b0871bbf6d",
   "snapshot_type": "user_query",
   "raw_input": "\"Calculate the cube root of 125\"",
   "memory_excerpt": {
@@ -460,9 +469,9 @@ Summary: The cube root of 125 is approximately 4.999999999999999.
       "solution_summary": "The cube root of 125 is 5."
     },
     "memory_3": {
-      "query": "\"Calculate the cube root of 125? Fetch fresh results using tools\"",
-      "result_requirement": "The cube root of 125.",
-      "solution_summary": "The cube root of 125 is approximately 4.999999999999999."
+      "query": "\"Calculate the cube root of 125\"",
+      "result_requirement": "The cube root of 125",
+      "solution_summary": "The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5."
     },
     "memory_4": {
       "query": "\"Calculate the cube root of 125? Fetch fresh results using tools\"",
@@ -475,21 +484,21 @@ Summary: The cube root of 125 is approximately 4.999999999999999.
       "solution_summary": "The cube root of 125 is 5."
     },
     "memory_6": {
-      "query": "\"Calculate the cube root of 125? Fetch fresh results using tools\"",
-      "result_requirement": "The cube root of 125.",
-      "solution_summary": "The cube root of 125 is approximately 4.999999999999999."
+      "query": "\"Calculate the cube root of 125\"",
+      "result_requirement": "The cube root of 125",
+      "solution_summary": "The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5."
     }
   },
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-23T17:23:35Z",
+  "timestamp": "2025-05-23T17:37:28Z",
   "schema_version": 1,
   "current_plan": "Inain Query Mode, plan not created"
 }
-2025-05-23 22:53:35,810 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:37,657 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:37,660 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:37,661 - INFO - agent_loop2:run:59 - 
+2025-05-23 23:07:28,517 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:31,604 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:31,607 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:31,607 - INFO - agent_loop2:run:59 - 
 📋 [Perception Result]: 
 {
   "entities": [
@@ -498,94 +507,94 @@ Summary: The cube root of 125 is approximately 4.999999999999999.
   ],
   "result_requirement": "Numerical value of the cube root of 125",
   "original_goal_achieved": false,
-  "confidence": "0.5",
-  "reasoning": "The user is asking for the cube root of 125. This can be directly achieved using a calculator tool. While similar queries exist in memory, it's best to get a fresh result.",
+  "confidence": "0.75",
+  "reasoning": "The user is asking for a numerical calculation, and this can be directly achieved using a calculator tool. Although similar queries exist in memory, fetching a fresh result is important for mathematical queries to ensure accuracy.",
   "local_goal_achieved": false,
-  "local_reasoning": "The user query requires a calculation. A calculator tool should be used to directly answer the question.",
+  "local_reasoning": "The query is understood and ready to be executed by a tool.",
   "last_tooluse_summary": "Not applicable",
   "solution_summary": "Not ready yet"
 }
-2025-05-23 22:53:37,662 - INFO - agentSession:add_perception:94 - 
+2025-05-23 23:07:31,608 - INFO - agentSession:add_perception:94 - 
 📋 Perception Snapshot updated in AgentSession
-2025-05-23 22:53:37,666 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:38,976 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:38,979 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:38,980 - INFO - agent_loop2:run:67 - 
+2025-05-23 23:07:31,611 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:34,159 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:34,161 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:34,161 - INFO - agent_loop2:run:67 - 
 📝 [Decision Output]: 
 {
   "plan_text": [
-    "Step 0: Calculate the cube root of 125 using the calculator tool.",
+    "Step 0: Calculate the cube root of 125 using a code block.",
     "Step 1: Return the result."
   ],
   "step_index": 0,
-  "description": "Calculate the cube root of 125 using the calculator tool.",
+  "description": "Calculate the cube root of 125.",
   "type": "CODE",
   "code": "result = 125**(1/3)\nreturn result",
   "conclusion": ""
 }
-2025-05-23 22:53:38,986 - INFO - agent_loop2:run:70 - 
+2025-05-23 23:07:34,168 - INFO - agent_loop2:run:70 - 
 📝 [Decision Plan Text: V1]:
-2025-05-23 22:53:38,986 - INFO - agent_loop2:run:72 -   Step 0: Calculate the cube root of 125 using the calculator tool.
-2025-05-23 22:53:38,987 - INFO - agent_loop2:run:72 -   Step 1: Return the result.
-2025-05-23 22:53:38,988 - INFO - agent_loop2:run:78 - 
+2025-05-23 23:07:34,168 - INFO - agent_loop2:run:72 -   Step 0: Calculate the cube root of 125 using a code block.
+2025-05-23 23:07:34,170 - INFO - agent_loop2:run:72 -   Step 1: Return the result.
+2025-05-23 23:07:34,170 - INFO - agent_loop2:run:78 - 
 ⚙️ [Out of 3 steps, trying to execute step number 1]
-2025-05-23 22:53:38,988 - INFO - agent_loop2:execute_step:205 - 
-⚙️ [Step 0] Calculate the cube root of 125 using the calculator tool.
-2025-05-23 22:53:38,989 - INFO - agent_loop2:execute_step:208 - --------------------------------------------------
+2025-05-23 23:07:34,171 - INFO - agent_loop2:execute_step:205 - 
+⚙️ [Step 0] Calculate the cube root of 125.
+2025-05-23 23:07:34,171 - INFO - agent_loop2:execute_step:208 - --------------------------------------------------
 ⚙️  [EXECUTING CODE]
 result = 125**(1/3)
 return result
-2025-05-23 22:53:38,991 - INFO - agent_loop2:execute_step:257 - 
+2025-05-23 23:07:34,173 - INFO - agent_loop2:execute_step:257 - 
 ⚙️ [Executor Response]: 
 {
   "status": "success",
   "result": "4.999999999999999",
-  "execution_time": "2025-05-23 22:53:38",
+  "execution_time": "2025-05-23 23:07:34",
   "total_time": "0.001"
 }
-2025-05-23 22:53:38,991 - INFO - agent_loop2:execute_step:259 - 
+2025-05-23 23:07:34,174 - INFO - agent_loop2:execute_step:259 - 
 ⚙️ [Decoding executor response via perception]
-2025-05-23 22:53:38,992 - INFO - agent_loop2:run_perception:135 - Running Perception with query: 4.999999999999999 and memory_results: [] and session_memory: None and current_plan: ['Step 0: Calculate the cube root of 125 using the calculator tool.', 'Step 1: Return the result.'] and snapshot_type: step_result
-2025-05-23 22:53:38,993 - INFO - agent_loop2:run_perception:146 - 
+2025-05-23 23:07:34,174 - INFO - agent_loop2:run_perception:135 - Running Perception with query: 4.999999999999999 and memory_results: [] and session_memory: None and current_plan: ['Step 0: Calculate the cube root of 125 using a code block.', 'Step 1: Return the result.'] and snapshot_type: step_result
+2025-05-23 23:07:34,176 - INFO - agent_loop2:run_perception:146 - 
 📋 [Perception Input]: 
 {
-  "run_id": "259b7c1f-fcf9-4612-a04e-b64158c7a23b",
+  "run_id": "a59497cd-e421-4cba-af4e-490b55cae561",
   "snapshot_type": "step_result",
   "raw_input": "4.999999999999999",
   "memory_excerpt": {},
   "prev_objective": "",
   "prev_confidence": null,
-  "timestamp": "2025-05-23T17:23:38Z",
+  "timestamp": "2025-05-23T17:37:34Z",
   "schema_version": 1,
   "current_plan": [
-    "Step 0: Calculate the cube root of 125 using the calculator tool.",
+    "Step 0: Calculate the cube root of 125 using a code block.",
     "Step 1: Return the result."
   ]
 }
-2025-05-23 22:53:38,996 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
-2025-05-23 22:53:40,880 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
-2025-05-23 22:53:40,884 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
-2025-05-23 22:53:40,885 - INFO - agent_loop2:execute_step:268 - 
+2025-05-23 23:07:34,179 - INFO - models:generate_content:5194 - AFC is enabled with max remote calls: 10.
+2025-05-23 23:07:35,799 - INFO - _client:_send_single_request:1025 - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent "HTTP/1.1 200 OK"
+2025-05-23 23:07:35,801 - INFO - models:generate_content:5205 - AFC remote call 1 is done.
+2025-05-23 23:07:35,802 - INFO - agent_loop2:execute_step:268 - 
 📋 [Post-Execution Perception Result]: 
 {
   "entities": [
-    "4.999999999999999",
-    "125"
+    "125",
+    "4.999999999999999"
   ],
   "result_requirement": "The cube root of 125",
   "original_goal_achieved": true,
   "confidence": "1.0",
-  "reasoning": "The calculator tool provided the cube root of 125, which is approximately 5. The goal is achieved.",
+  "reasoning": "The code block successfully calculated the cube root of 125, which is approximately 5. The goal has been achieved.",
   "local_goal_achieved": true,
-  "local_reasoning": "The calculator tool successfully computed the cube root of 125.",
-  "last_tooluse_summary": "calculator tool: success",
-  "solution_summary": "The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5."
+  "local_reasoning": "The code block executed successfully and returned the correct result.",
+  "last_tooluse_summary": "CodeBlock: success",
+  "solution_summary": "The cube root of 125 is approximately 4.999999999999999."
 }
-2025-05-23 22:53:40,918 - INFO - agent_loop2:execute_step:283 - 
+2025-05-23 23:07:35,837 - INFO - agent_loop2:execute_step:283 - 
 🔁 [Post-Execution Step Summary]: 
 {
   "index": 0,
-  "description": "Calculate the cube root of 125 using the calculator tool.",
+  "description": "Calculate the cube root of 125.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
@@ -597,22 +606,22 @@ return result
   "execution_result": {
     "status": "success",
     "result": "4.999999999999999",
-    "execution_time": "2025-05-23 22:53:38",
+    "execution_time": "2025-05-23 23:07:34",
     "total_time": "0.001"
   },
   "error": null,
   "perception": {
     "entities": [
-      "4.999999999999999",
-      "125"
+      "125",
+      "4.999999999999999"
     ],
     "result_requirement": "The cube root of 125",
     "original_goal_achieved": true,
-    "reasoning": "The calculator tool provided the cube root of 125, which is approximately 5. The goal is achieved.",
+    "reasoning": "The code block successfully calculated the cube root of 125, which is approximately 5. The goal has been achieved.",
     "local_goal_achieved": true,
-    "local_reasoning": "The calculator tool successfully computed the cube root of 125.",
-    "last_tooluse_summary": "calculator tool: success",
-    "solution_summary": "The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.",
+    "local_reasoning": "The code block executed successfully and returned the correct result.",
+    "last_tooluse_summary": "CodeBlock: success",
+    "solution_summary": "The cube root of 125 is approximately 4.999999999999999.",
     "confidence": "1.0"
   },
   "status": "completed",
@@ -621,11 +630,11 @@ return result
   "parent_index": null,
   "human_interventions": []
 }
-2025-05-23 22:53:40,919 - INFO - agent_loop2:run:112 - 
+2025-05-23 23:07:35,838 - INFO - agent_loop2:run:112 - 
 ⚙️ [Evaluating Step Summary]: 
 {
   "index": 0,
-  "description": "Calculate the cube root of 125 using the calculator tool.",
+  "description": "Calculate the cube root of 125.",
   "type": "CODE",
   "code": {
     "tool_name": "raw_code_block",
@@ -637,22 +646,22 @@ return result
   "execution_result": {
     "status": "success",
     "result": "4.999999999999999",
-    "execution_time": "2025-05-23 22:53:38",
+    "execution_time": "2025-05-23 23:07:34",
     "total_time": "0.001"
   },
   "error": null,
   "perception": {
     "entities": [
-      "4.999999999999999",
-      "125"
+      "125",
+      "4.999999999999999"
     ],
     "result_requirement": "The cube root of 125",
     "original_goal_achieved": true,
-    "reasoning": "The calculator tool provided the cube root of 125, which is approximately 5. The goal is achieved.",
+    "reasoning": "The code block successfully calculated the cube root of 125, which is approximately 5. The goal has been achieved.",
     "local_goal_achieved": true,
-    "local_reasoning": "The calculator tool successfully computed the cube root of 125.",
-    "last_tooluse_summary": "calculator tool: success",
-    "solution_summary": "The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.",
+    "local_reasoning": "The code block executed successfully and returned the correct result.",
+    "last_tooluse_summary": "CodeBlock: success",
+    "solution_summary": "The cube root of 125 is approximately 4.999999999999999.",
     "confidence": "1.0"
   },
   "status": "completed",
@@ -661,14 +670,12 @@ return result
   "parent_index": null,
   "human_interventions": []
 }
-2025-05-23 22:53:40,920 - INFO - agent_loop2:evaluate_step:328 - 
+2025-05-23 23:07:35,839 - INFO - agent_loop2:evaluate_step:328 - 
 ✅ Goal achieved.
-2025-05-23 22:53:41,002 - INFO - test_queries:execute_query:68 - Session: <agent.agentSession.AgentSession object at 0x000001CFEE46A510>
-2025-05-23 22:53:41,003 - INFO - test_queries:execute_query:69 - Session State: {'final_plan': ['Step 0: Calculate the cube root of 125 using the calculator tool.', 'Step 1: Return the result.'], 'final_steps': [{'index': 0, 'description': 'Calculate the cube root of 125 using the calculator tool.', 'type': 'CODE', 'code': {'tool_name': 'raw_code_block', 'tool_arguments': {'code': 'result = 125**(1/3)\nreturn result'}}, 'conclusion': '', 'execution_result': {'status': 'success', 'result': '4.999999999999999', 'execution_time': '2025-05-23 22:53:38', 'total_time': '0.001'}, 'error': None, 'perception': {'entities': ['4.999999999999999', '125'], 'result_requirement': 'The cube root of 125', 'original_goal_achieved': True, 'reasoning': 'The calculator tool provided the cube root of 125, which is approximately 5. The goal is achieved.', 'local_goal_achieved': True, 'local_reasoning': 'The calculator tool successfully computed the cube root of 125.', 'last_tooluse_summary': 'calculator tool: success', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.', 'confidence': '1.0'}, 'status': 'completed', 'attempts': 0, 'was_replanned': False, 'parent_index': None, 'human_interventions': []}], 'final_answer': 'The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.', 'tool_usage': [{'tool_name': 'raw_code_block', 'status': 'success', 'step_index': 0, 'description': 'Calculate the cube root of 125 using the calculator tool.', 'result': '4.999999999999999', 'error': None, 'execution_time': '2025-05-23 22:53:38', 'total_time': '0.001'}], 'session_id': '5628227c-5440-4a91-ac4f-ad864df908c6', 'original_query': '"Calculate the cube root of 125"', 'timestamp': '2025-05-23T22:53:41.002156', 'confidence': '1.0', 'reasoning_note': 'The calculator tool provided the cube root of 125, which is approximately 5. The goal is achieved.'}
-2025-05-23 22:53:41,004 - INFO - test_queries:execute_query:82 - Tool usage for query '"Calculate the cube root of 125"':
-2025-05-23 22:53:41,005 - INFO - test_queries:execute_query:84 - - raw_code_block: success (Step 0)
-2025-05-23 22:53:41,005 - INFO - test_queries:execute_query:86 - Final Plan: Step 0: Calculate the cube root of 125 using the calculator tool.
+2025-05-23 23:07:35,923 - INFO - test_queries:execute_query:68 - Session: <agent.agentSession.AgentSession object at 0x0000027E8B3CA390>
+2025-05-23 23:07:35,924 - INFO - test_queries:execute_query:69 - Session State: {'final_plan': ['Step 0: Calculate the cube root of 125 using a code block.', 'Step 1: Return the result.'], 'final_steps': [{'index': 0, 'description': 'Calculate the cube root of 125.', 'type': 'CODE', 'code': {'tool_name': 'raw_code_block', 'tool_arguments': {'code': 'result = 125**(1/3)\nreturn result'}}, 'conclusion': '', 'execution_result': {'status': 'success', 'result': '4.999999999999999', 'execution_time': '2025-05-23 23:07:34', 'total_time': '0.001'}, 'error': None, 'perception': {'entities': ['125', '4.999999999999999'], 'result_requirement': 'The cube root of 125', 'original_goal_achieved': True, 'reasoning': 'The code block successfully calculated the cube root of 125, which is approximately 5. The goal has been achieved.', 'local_goal_achieved': True, 'local_reasoning': 'The code block executed successfully and returned the correct result.', 'last_tooluse_summary': 'CodeBlock: success', 'solution_summary': 'The cube root of 125 is approximately 4.999999999999999.', 'confidence': '1.0'}, 'status': 'completed', 'attempts': 0, 'was_replanned': False, 'parent_index': None, 'human_interventions': []}], 'final_answer': 'The cube root of 125 is approximately 4.999999999999999.', 'tool_usage': [], 'session_id': '52cc1717-3fa2-467a-bd85-62e4331ad7b8', 'original_query': '"Calculate the cube root of 125"', 'timestamp': '2025-05-23T23:07:35.923520', 'confidence': '1.0', 'reasoning_note': 'The code block successfully calculated the cube root of 125, which is approximately 5. The goal has been achieved.'}
+2025-05-23 23:07:35,924 - INFO - test_queries:execute_query:86 - Final Plan: Step 0: Calculate the cube root of 125 using a code block.
 Step 1: Return the result.
-2025-05-23 22:53:41,006 - INFO - test_queries:execute_query:87 - Final Answer: The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5.
-2025-05-23 22:53:41,007 - INFO - test_queries:execute_query:88 - Tool Usage: [{'tool_name': 'raw_code_block', 'status': 'success', 'step_index': 0, 'description': 'Calculate the cube root of 125 using the calculator tool.', 'result': '4.999999999999999', 'error': None, 'execution_time': '2025-05-23 22:53:38', 'total_time': '0.001'}]
-2025-05-23 22:53:41,014 - INFO - test_queries:main:153 - All queries processed. Results written to C:\Users\dsaha\OneDrive - Microsoft\Documents\Personal\deep\study\artificial intelligence\eagv1\eag10\e10\performance\test_queries_output.csv
+2025-05-23 23:07:35,925 - INFO - test_queries:execute_query:87 - Final Answer: The cube root of 125 is approximately 4.999999999999999.
+2025-05-23 23:07:35,925 - INFO - test_queries:execute_query:88 - Tool Usage: []
+2025-05-23 23:07:35,930 - INFO - test_queries:main:153 - All queries processed. Results written to C:\Users\dsaha\OneDrive - Microsoft\Documents\Personal\deep\study\artificial intelligence\eagv1\eag10\e10\performance\test_queries_output.csv

@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from datetime import datetime
 from config.log_config import setup_logging
+from typing import Dict, List, Optional, Tuple
+import re
 
 logger = setup_logging(__name__)
 
@@ -67,8 +69,6 @@ def live_update_session(session_obj, base_dir: str = "memory/session_logs") -> N
 
 # memory/session_log.py
 
-from typing import Dict, List, Optional, Tuple
-
 def extract_session_state(session) -> Dict:
     """
     Extract key details from a session object by reading the session log file.
@@ -120,10 +120,18 @@ def extract_session_state(session) -> Dict:
         for step in final_steps:
             if step.get("type") == "CODE":
                 code = step.get("code", {})
-                tool_name = code.get("tool_name")
-                if tool_name:
+                code_str = code.get("tool_arguments", {}).get("code", "")
+                
+                # Extract tool name from the code string
+                # Look for function calls like factorial(), sin(), etc.
+                tool_matches = re.findall(r'(\w+)\s*\(', code_str)
+                if tool_matches:
+                    tool_name = tool_matches[0]  # Get the first function call
+                    
+                    # Get execution result
                     execution_result = step.get("execution_result", {})
                     status = execution_result.get("status", "unknown")
+                    
                     tool_usage.append({
                         "tool_name": tool_name,
                         "status": status,
