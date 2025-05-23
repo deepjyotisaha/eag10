@@ -107,7 +107,7 @@ class AgentLoop:
             self.total_steps_executed += 1
 
             logger.info("\n⚙️ [Evaluating Step Summary]: \n%s", json.dumps(step_result.to_dict(), indent=2, ensure_ascii=False))
-            step = self.evaluate_step(step_result, session, query)
+            step = await self.evaluate_step(step_result, session, query)
 
         return session
 
@@ -129,6 +129,10 @@ class AgentLoop:
         return results
 
     def run_perception(self, query, memory_results, session_memory=None, snapshot_type="user_query", current_plan=None):
+        logger.info(
+            "Running Perception with query: %s and memory_results: %s and session_memory: %s and current_plan: %s and snapshot_type: %s",
+            query, memory_results, session_memory, current_plan, snapshot_type
+        )
         combined_memory = (memory_results or []) + (session_memory or [])
         perception_input = self.perception.build_perception_input(
             raw_input=query, 
@@ -351,7 +355,7 @@ class AgentLoop:
             
             return None
 
-    def evaluate_step(self, step, session, query):
+    async def evaluate_step(self, step, session, query):
         if step.perception.original_goal_achieved:
             logger.info("\n✅ Goal achieved.")
             session.mark_complete(step.perception)
@@ -389,15 +393,44 @@ class AgentLoop:
             logger.info(f"\n🔄 Attempt {step.attempts} of {self.max_lifelines} for step {step.index}")
 
             # Replan the step
-            decision_output = self.decision.run({
-                "plan_mode": "mid_session",
-                "planning_strategy": self.strategy,
-                "original_query": query,
-                "current_plan_version": len(session.plan_versions),
-                "current_plan": session.plan_versions[-1]["plan_text"],
-                "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
-                "current_step": step.to_dict()
-            })
+            if step.attempts >= self.max_lifelines - 1:  # Last attempt
+                logger.info(f"\n⚠️ Last attempt for step {step.index}, seeking human input before replanning")
+                
+                # Use get_human_input with a special tool name for planning input
+                intervention = await self.get_human_input(
+                    step=step,
+                    tool_name="planning_input_request",
+                    tool_args={
+                        "message": "Last attempt reached. Please provide guidance for replanning.",
+                        "type": "planning_input"
+                    },
+                    error="Planning input needed from user"
+                )
+                
+                # Add the intervention to the step
+                step.add_human_intervention(intervention)
+                
+                # Use the human input in the replanning decision
+                decision_output = self.decision.run({
+                    "plan_mode": "mid_session",
+                    "planning_strategy": self.strategy,
+                    "original_query": query,
+                    "current_plan_version": len(session.plan_versions),
+                    "current_plan": session.plan_versions[-1]["plan_text"],
+                    "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
+                    "current_step": step.to_dict(),
+                    "human_input": intervention.human_input  # Add human input to decision context
+                })
+            else:
+                decision_output = self.decision.run({
+                    "plan_mode": "mid_session",
+                    "planning_strategy": self.strategy,
+                    "original_query": query,
+                    "current_plan_version": len(session.plan_versions),
+                    "current_plan": session.plan_versions[-1]["plan_text"],
+                    "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
+                    "current_step": step.to_dict()
+                })
 
             logger.info("\n📝 [Post-Replanning Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
 
