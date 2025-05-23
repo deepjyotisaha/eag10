@@ -331,7 +331,24 @@ class AgentLoop:
         elif step.type == "NOP":
             logger.info(f"\n❓ Clarification needed: {step.description}")
             step.status = "clarification_needed"
+            
+            # Use the same get_human_input method as tool failures
+            intervention = await self.get_human_input(
+                step=step,
+                tool_name="clarification_request",
+                tool_args={
+                    "message": step.description,
+                    "type": "clarification"
+                },
+                error="Clarification needed from user"
+            )
+            
+            # Add the intervention to the step
+            step.add_human_intervention(intervention)
+            
+            # Update the session
             live_update_session(session)
+            
             return None
 
     def evaluate_step(self, step, session, query):
