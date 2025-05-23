@@ -12,7 +12,7 @@ strategy:
   max_steps: 3                  # max sequential agent steps
   max_lifelines_per_step: 3      # retries for each step (after primary failure)
   human_intervention:
-    enabled: true
+    enabled: false
     prompt: "Tool execution failed. Please provide the expected output:"
     timeout_seconds: 300  # 5 minutes timeout for human input
   tool_simulation:

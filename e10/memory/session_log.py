@@ -62,3 +62,102 @@ def live_update_session(session_obj, base_dir: str = "memory/session_logs") -> N
         print("📝 Session live-updated.")
     except Exception as e:
         print(f"❌ Failed to update session: {e}")
+
+# memory/session_log.py
+
+from typing import Dict, List, Optional, Tuple
+
+def extract_session_details(session: Dict) -> Dict:
+    """
+    Extract key details from a session including final steps, plan, answer, and tool usage.
+    
+    Args:
+        session: The session dictionary loaded from a session log file
+        
+    Returns:
+        Dict containing:
+        - final_plan: List of plan steps
+        - final_steps: List of executed steps
+        - final_answer: The final answer from the session
+        - tool_usage: List of tools used with their status
+    """
+    try:
+        # Get the state snapshot which contains final results
+        state = session.get("state_snapshot", {})
+        
+        # Extract final plan and steps
+        final_plan = state.get("final_plan", [])
+        final_steps = state.get("final_steps", [])
+        final_answer = state.get("final_answer", "")
+        
+        # Extract tool usage from steps
+        tool_usage = []
+        for step in final_steps:
+            if step.get("type") == "CODE":
+                code = step.get("code", {})
+                tool_name = code.get("tool_name")
+                if tool_name:
+                    execution_result = step.get("execution_result", {})
+                    status = execution_result.get("status", "unknown")
+                    tool_usage.append({
+                        "tool_name": tool_name,
+                        "status": status,
+                        "step_index": step.get("index"),
+                        "description": step.get("description")
+                    })
+        
+        return {
+            "final_plan": final_plan,
+            "final_steps": final_steps,
+            "final_answer": final_answer,
+            "tool_usage": tool_usage
+        }
+        
+    except Exception as e:
+        print(f"Error extracting session details: {str(e)}")
+        return {
+            "final_plan": [],
+            "final_steps": [],
+            "final_answer": "",
+            "tool_usage": []
+        }
+
+def get_tool_success_rate(tool_usage: List[Dict]) -> Dict[str, Tuple[int, int]]:
+    """
+    Calculate success rate for each tool used in the session.
+    
+    Args:
+        tool_usage: List of tool usage dictionaries from extract_session_details
+        
+    Returns:
+        Dict mapping tool names to (success_count, total_attempts)
+    """
+    tool_stats = {}
+    
+    for usage in tool_usage:
+        tool_name = usage["tool_name"]
+        if tool_name not in tool_stats:
+            tool_stats[tool_name] = [0, 0]  # [successes, total]
+            
+        tool_stats[tool_name][1] += 1  # increment total
+        if usage["status"] == "success":
+            tool_stats[tool_name][0] += 1  # increment successes
+            
+    return tool_stats
+
+# Example usage:
+"""
+session = load_session_from_file("path/to/session.json")
+details = extract_session_details(session)
+
+print("Final Plan:", details["final_plan"])
+print("Final Answer:", details["final_answer"])
+print("\nTool Usage:")
+for tool in details["tool_usage"]:
+    print(f"- {tool['tool_name']}: {tool['status']}")
+
+success_rates = get_tool_success_rate(details["tool_usage"])
+print("\nTool Success Rates:")
+for tool, (successes, total) in success_rates.items():
+    print(f"- {tool}: {successes}/{total} successful")
+"""

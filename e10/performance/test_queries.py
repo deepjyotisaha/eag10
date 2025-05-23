@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Configuration
-NUM_QUERIES = 2  # Number of queries to process
+NUM_QUERIES = 10  # Number of queries to process
 SLEEP_TIME = 5    # Sleep time between queries in seconds
 INPUT_FILE = Path(__file__).parent / "test_queries_input.csv"
 OUTPUT_FILE = Path(__file__).parent / "test_queries_output.csv"
@@ -51,9 +51,16 @@ class QueryTester:
             # Run the query through the agent
             session = await self.agent_loop.run(query)
             
-            # Extract the final plan and output
-            final_plan = session.plan_versions[-1]["plan_text"] if session.plan_versions else "No plan generated"
-            output = session.state.get("solution_summary", "No output generated")
+            # Extract the final plan and output from session state
+            state = session.state
+            final_plan = state.get("final_plan", [])
+            if isinstance(final_plan, list):
+                final_plan = "\n".join(final_plan)  # Convert list to string if it's a list
+            output = state.get("final_answer", state.get("solution_summary", "No output generated"))
+
+            logger.info(f"Final Plan: {final_plan}")
+            logger.info(f"Output: {output}")    
+            logger.info(f"Query: {query}")
             
             return {
                 "query": query,

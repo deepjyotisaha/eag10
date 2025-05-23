@@ -1,39 +1,39 @@
 Query,Tools Needed,Complexity
-"""What is 7 factorial?""",factorial,very_low
-"""Calculate the cube root of 125""",cbrt,very_low
-"""What is the cosine of 0?""",cos,very_low
-"""What is 15 to the power of 3?""",power,very_low
-"""Divide 144 by 12""",divide,very_low
-"""Multiply 23 and 17""",multiply,very_low
-"""Subtract 8 from 25""",subtract,very_low
-"""Add 12 and 34""",add,very_low
-"""What is the remainder when 26 is divided by 5?""",remainder,very_low
-"""What is the sine of 90?""",sin,very_low
-"""Find the tangent of 45 degrees""",tan,very_low
-"""Generate the first 7 Fibonacci numbers""",fibonacci_numbers,very_low
-"""Convert 'hello' to integers""",strings_to_chars_to_int,very_low
+"""What is 7 factorial? Fetch fresh results using tools, dont use memory""",factorial,very_low
+"""Calculate the cube root of 125? Fetch fresh results using tools""",cbrt,very_low
+"""What is the cosine of 0? Fetch fresh results using tools""",cos,very_low
+"""What is 15 to the power of 3? Fetch fresh results using tools""",power,very_low
+"""Divide 144 by 12? Fetch fresh results using tools""",divide,very_low
+"""Multiply 23 and 17? Fetch fresh results using tools""",multiply,very_low
+"""Subtract 8 from 25? Fetch fresh results using tools""",subtract,very_low
+"""Add 12 and 34? Fetch fresh results using tools""",add,very_low
+"""What is the remainder when 26 is divided by 5? Fetch fresh results using tools""",remainder,very_low
+"""What is the sine of 90? Fetch fresh results using tools""",sin,very_low
+"""Find the tangent of 45 degrees? Fetch fresh results using tools""",tan,very_low
+"""Generate the first 7 Fibonacci numbers? Fetch fresh results using tools""",fibonacci_numbers,very_low
+"""Convert 'hello' to integers? Fetch fresh results using tools""",strings_to_chars_to_int,very_low
 """Mine the string 'this is a test'""",mine,very_low
 """Create a thumbnail for the image at 'https://example.com/image.jpg'""",create_thumbnail,very_low
-"""Search for 'latest news on AI' using DuckDuckGo""",duckduckgo_search_results,very_low
+"""Search for 'latest news on AI' using DuckDuckGo? Fetch fresh results using tools""",duckduckgo_search_results,very_low
 """Find the text in the document named 'Company Policy'""",search_stored_documents_rag,very_low
 """Download the HTML content from 'https://example.com'""",download_raw_html_from_url,very_low
 """Extract text from PDF at 'https://example.com/report.pdf'""",extract_pdf,very_low
-"""Convert text 'Sample Text' to markdown""",convert_webpage_url_into_markdown,very_low
-"""Add 10 and 20 and then multiply the result by 5""",add|multiply,low
-"""Calculate 5 to the power of 3 then find the cube root of the result""",power|cbrt,low
-"""Find the factorial of 6 and then subtract 10""",factorial|subtract,low
-"""Divide 100 by 4 and then add 15""",divide|add,low
-"""Multiply 7 and 8 and then calculate the sine of the result""",multiply|sin,low
-"""Subtract 3 from 17 and then calculate the cosine of the result""",subtract|cos,low
-"""Calculate the tangent of 60 degrees and then find its factorial""",tan|factorial,low
-"""Find the remainder when 35 is divided by 8 and then add 20""",remainder|add,low
-"""Generate the first 5 Fibonacci numbers and then calculate their sum""",fibonacci_numbers|int_list_to_exponential_sum,low
-"""Convert 'abc' to integers and then calculate their sum""",strings_to_chars_to_int|int_list_to_exponential_sum,low
-"""Find the current price of Bitcoin using DuckDuckGo and display it""",duckduckgo_search_results,medium
-"""Get the weather forecast for London and summarise the key information""",duckduckgo_search_results,medium
-"""Search for 'history of the internet' and summarise the first 3 paragraphs""",duckduckgo_search_results,medium
-"""Find 'best restaurants in Rome' and list the top 5 with their ratings""",duckduckgo_search_results,medium
-"""Search for 'artificial intelligence applications' and list the main applications""",duckduckgo_search_results,medium
+"""Convert text 'Sample Text' to markdown? Fetch fresh results using tools""",convert_webpage_url_into_markdown,very_low
+"""Add 10 and 20 and then multiply the result by 5? Fetch fresh results using tools""",add|multiply,low
+"""Calculate 5 to the power of 3 then find the cube root of the result? Fetch fresh results using tools""",power|cbrt,low
+"""Find the factorial of 6 and then subtract 10? Fetch fresh results using tools""",factorial|subtract,low
+"""Divide 100 by 4 and then add 15? Fetch fresh results using tools""",divide|add,low
+"""Multiply 7 and 8 and then calculate the sine of the result? Fetch fresh results using tools""",multiply|sin,low
+"""Subtract 3 from 17 and then calculate the cosine of the result? Fetch fresh results using tools""",subtract|cos,low
+"""Calculate the tangent of 60 degrees and then find its factorial? Fetch fresh results using tools""",tan|factorial,low
+"""Find the remainder when 35 is divided by 8 and then add 20? Fetch fresh results using tools""",remainder|add,low
+"""Generate the first 5 Fibonacci numbers and then calculate their sum? Fetch fresh results using tools""",fibonacci_numbers|int_list_to_exponential_sum,low
+"""Convert 'abc' to integers and then calculate their sum? Fetch fresh results using tools""",strings_to_chars_to_int|int_list_to_exponential_sum,low
+"""Find the current price of Bitcoin using DuckDuckGo and display it? Fetch fresh results using tools""",duckduckgo_search_results,medium
+"""Get the weather forecast for London and summarise the key information? Fetch fresh results using tools""",duckduckgo_search_results,medium
+"""Search for 'history of the internet' and summarise the first 3 paragraphs? Fetch fresh results using tools""",duckduckgo_search_results,medium
+"""Find 'best restaurants in Rome' and list the top 5 with their ratings? Fetch fresh results using tools""",duckduckgo_search_results,medium
+"""Search for 'artificial intelligence applications' and list the main applications? Fetch fresh results using tools""",duckduckgo_search_results,medium
 """Extract the abstract from the PDF at 'https://example.com/scientific_paper.pdf'""",extract_pdf,medium
 """Find all email addresses on the webpage at 'https://example.com/contact'""",download_raw_html_from_url|mine,medium
 """Get the table of contents from 'https://example.com/large_document.pdf'""",extract_pdf,medium

@@ -1,6 +1,1 @@
 Query,Tools Needed,Complexity,Final Plan,Output
-"""What is 7 factorial?""",factorial,very_low,No plan generated,7 factorial (7!) is 7 * 6 * 5 * 4 * 3 * 2 * 1 = 5040
-"""Calculate the cube root of 125""",cbrt,very_low,No plan generated,The cube root of 125 is 5.
-"""What is the cosine of 0?""",cos,very_low,No plan generated,The cosine of 0 is 1.
-"""What is 15 to the power of 3?""",power,very_low,No plan generated,15 to the power of 3 is 3375.
-"""Divide 144 by 12""",divide,very_low,No plan generated,144 divided by 12 is 12.
