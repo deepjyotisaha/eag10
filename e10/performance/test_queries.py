@@ -5,15 +5,17 @@ import csv
 import time
 import logging
 import asyncio
+import yaml
 from pathlib import Path
 from typing import List, Dict
 
 # Add the root directory to Python path
 import sys
-sys.path.append(str(Path(__file__).parent.parent))
+root_dir = Path(__file__).parent.parent
+sys.path.insert(0, str(root_dir))
 
-from agent.agent_loop2 import AgentLoop2
-from agent.model_manager import ModelManager
+from agent.agent_loop2 import AgentLoop
+from mcp_servers.multiMCP import MultiMCP
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -22,14 +24,26 @@ logger = logging.getLogger(__name__)
 # Configuration
 NUM_QUERIES = 10  # Number of queries to process
 SLEEP_TIME = 5    # Sleep time between queries in seconds
-INPUT_FILE = "test_queries_input.csv"
-OUTPUT_FILE = "test_queries_output.csv"
+INPUT_FILE = Path(__file__).parent / "test_queries_input.csv"
+OUTPUT_FILE = Path(__file__).parent / "test_queries_output.csv"
 
 class QueryTester:
     def __init__(self):
-        """Initialize the query tester with agent and model manager"""
-        self.model_manager = ModelManager()
-        self.agent_loop = AgentLoop2(self.model_manager)
+        """Initialize the query tester with agent and MCP"""
+        # Load server configs from yaml
+        with open(root_dir / "config" / "mcp_server_config.yaml", "r") as f:
+            server_configs = yaml.safe_load(f)
+            
+        # Initialize MCP + Dispatcher
+        self.multi_mcp = MultiMCP(server_configs=server_configs)
+        
+        # Initialize agent loop
+        self.agent_loop = AgentLoop(
+            perception_prompt_path="prompts/perception_prompt.txt",
+            decision_prompt_path="prompts/decision_prompt.txt",
+            multi_mcp=self.multi_mcp,
+            strategy="exploratory"
+        )
         
     async def execute_query(self, query: str) -> Dict:
         """Execute a single query using the agent"""
@@ -38,8 +52,8 @@ class QueryTester:
             session = await self.agent_loop.run(query)
             
             # Extract the final plan and output
-            final_plan = session.current_plan if session.current_plan else "No plan generated"
-            output = session.perception_result.get("solution_summary", "No output generated")
+            final_plan = session.plan_versions[-1]["plan_text"] if session.plan_versions else "No plan generated"
+            output = session.state.get("solution_summary", "No output generated")
             
             return {
                 "query": query,
@@ -56,48 +70,45 @@ class QueryTester:
             }
 
 async def main():
-    """Main function to process queries"""
+    """Main function to process queries one at a time"""
     try:
         # Initialize query tester
         tester = QueryTester()
         
-        # Read queries from input file
-        queries = []
+        # Create output file with headers if it doesn't exist
+        if not OUTPUT_FILE.exists():
+            with open(OUTPUT_FILE, 'w', newline='') as f:
+                writer = csv.DictWriter(f, fieldnames=['Query', 'Final Plan', 'Output'])
+                writer.writeheader()
+        
+        # Process queries one at a time
         with open(INPUT_FILE, 'r') as f:
             reader = csv.DictReader(f)
-            for row in reader:
-                queries.append(row['Query'])
+            for i, row in enumerate(reader):
+                if i >= NUM_QUERIES:
+                    break
+                    
+                query = row['Query']
+                logger.info(f"Processing query {i+1}/{NUM_QUERIES}: {query}")
+                
+                # Execute query
+                result = await tester.execute_query(query)
+                
+                # Write result immediately
+                with open(OUTPUT_FILE, 'a', newline='') as f:
+                    writer = csv.DictWriter(f, fieldnames=['Query', 'Final Plan', 'Output'])
+                    writer.writerow({
+                        'Query': result['query'],
+                        'Final Plan': result['final_plan'],
+                        'Output': result['output']
+                    })
+                
+                # Sleep between queries
+                if i < NUM_QUERIES - 1:
+                    logger.info(f"Sleeping for {SLEEP_TIME} seconds...")
+                    await asyncio.sleep(SLEEP_TIME)
         
-        # Process specified number of queries
-        queries = queries[:NUM_QUERIES]
-        logger.info(f"Processing {len(queries)} queries...")
-        
-        # Process each query
-        results = []
-        for i, query in enumerate(queries, 1):
-            logger.info(f"Processing query {i}/{len(queries)}: {query}")
-            
-            # Execute query
-            result = await tester.execute_query(query)
-            results.append(result)
-            
-            # Sleep between queries
-            if i < len(queries):
-                logger.info(f"Sleeping for {SLEEP_TIME} seconds...")
-                await asyncio.sleep(SLEEP_TIME)
-        
-        # Write results to output file
-        with open(OUTPUT_FILE, 'w', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=['Query', 'Final Plan', 'Output'])
-            writer.writeheader()
-            for result in results:
-                writer.writerow({
-                    'Query': result['query'],
-                    'Final Plan': result['final_plan'],
-                    'Output': result['output']
-                })
-        
-        logger.info(f"Results written to {OUTPUT_FILE}")
+        logger.info(f"All queries processed. Results written to {OUTPUT_FILE}")
         
     except Exception as e:
         logger.error(f"Error in main: {str(e)}")

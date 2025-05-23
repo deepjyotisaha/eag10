@@ -1,1 +1,12 @@
-Query,Final Plan,Result
+Query,Final Plan,Output
+"""What is 7 factorial?""",Error: PerceptionSnapshot.__init__() got an unexpected keyword argument 'plan_mode',Failed to execute query
+"""What is 7 factorial?""",No plan generated,7 factorial (7!) is 7 * 6 * 5 * 4 * 3 * 2 * 1 = 5040
+"""Calculate the cube root of 125""",No plan generated,The cube root of 125 is 5.
+"""What is the cosine of 0?""",No plan generated,The cosine of 0 is 1.
+"""What is 15 to the power of 3?""",No plan generated,15 to the power of 3 is 3375.
+"""Divide 144 by 12""",No plan generated,144 divided by 12 is 12.
+"""Multiply 23 and 17""",No plan generated,The result of 23 multiplied by 17 is 391.
+"""Subtract 8 from 25""",No plan generated,25 - 8 = 17
+"""Add 12 and 34""",No plan generated,The result of adding 12 and 34 is 46.
+"""What is the remainder when 26 is divided by 5?""",No plan generated,The remainder when 26 is divided by 5 is 1.
+"""What is the sine of 90?""",No plan generated,The sine of 90 degrees is 1.
