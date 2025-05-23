@@ -1,4 +1,5 @@
 Query,Tools Needed,Complexity
+"""Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.""",strings_to_chars_to_int|int_list_to_exponential_sum,low
 """What is 7 factorial? Fetch fresh results using tools, dont use memory""",factorial,very_low
 """Calculate the cube root of 125? Fetch fresh results using tools""",cbrt,very_low
 """What is the cosine of 0? Fetch fresh results using tools""",cos,very_low

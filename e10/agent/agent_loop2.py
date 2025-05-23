@@ -304,23 +304,23 @@ class AgentLoop:
             logger.info(f"\n❓ Clarification needed: {step.description}")
             step.status = "clarification_needed"
             
-            # Use the same get_human_input method as tool failures
-            intervention = await self.get_human_input(
-                step=step,
-                tool_name="clarification_request",
-                tool_args={
-                    "message": step.description,
-                    "type": "clarification"
-                },
-                error="Clarification needed from user"
-            )
+            if self.human_intervention["enabled"]:
+                # Use the same get_human_input method as tool failures
+                intervention = await self.get_human_input(
+                    step=step,
+                    tool_name="clarification_request",
+                    tool_args={
+                        "message": step.description,
+                        "type": "clarification"
+                    },
+                    error="Clarification needed from user"
+                )
             
-            # Add the intervention to the step
-            step.add_human_intervention(intervention)
+                # Add the intervention to the step
+                step.add_human_intervention(intervention)
             
             # Update the session
             live_update_session(session)
-            
             return None
 
     async def evaluate_step(self, step, session, query):
@@ -360,35 +360,46 @@ class AgentLoop:
             step.attempts += 1
             logger.info(f"\n🔄 Attempt {step.attempts} of {self.max_lifelines} for step {step.index}")
 
-            # Replan the step
-            if step.attempts >= self.max_lifelines - 1:  # Last attempt
-                logger.info(f"\n⚠️ Last attempt for step {step.index}, seeking human input before replanning")
+            # Replan the step with human input
+            if self.human_intervention["enabled"]:
+                if step.attempts >= self.max_lifelines - 1:  # Last attempt
+                    logger.info(f"\n⚠️ Last attempt for step {step.index}, seeking human input before replanning")
                 
-                # Use get_human_input with a special tool name for planning input
-                intervention = await self.get_human_input(
-                    step=step,
-                    tool_name="planning_input_request",
-                    tool_args={
-                        "message": "Last attempt reached. Please provide guidance for replanning.",
-                        "type": "planning_input"
-                    },
-                    error="Planning input needed from user"
-                )
+                    # Use get_human_input with a special tool name for planning input
+                    intervention = await self.get_human_input(
+                        step=step,
+                        tool_name="planning_input_request",
+                        tool_args={
+                            "message": "Last attempt reached. Please provide guidance for replanning.",
+                            "type": "planning_input"
+                        },
+                        error="Planning input needed from user"
+                    )
                 
-                # Add the intervention to the step
-                step.add_human_intervention(intervention)
+                    # Add the intervention to the step
+                    step.add_human_intervention(intervention)
                 
-                # Use the human input in the replanning decision
-                decision_output = self.decision.run({
-                    "plan_mode": "mid_session",
-                    "planning_strategy": self.strategy,
-                    "original_query": query,
-                    "current_plan_version": len(session.plan_versions),
-                    "current_plan": session.plan_versions[-1]["plan_text"],
-                    "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
-                    "current_step": step.to_dict(),
-                    "human_input": intervention.human_input  # Add human input to decision context
-                })
+                    # Use the human input in the replanning decision
+                    decision_output = self.decision.run({
+                        "plan_mode": "mid_session",
+                        "planning_strategy": self.strategy,
+                        "original_query": query,
+                        "current_plan_version": len(session.plan_versions),
+                        "current_plan": session.plan_versions[-1]["plan_text"],
+                        "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
+                        "current_step": step.to_dict(),
+                        "human_input": intervention.human_input  # Add human input to decision context
+                    })
+                else:
+                    decision_output = self.decision.run({
+                        "plan_mode": "mid_session",
+                        "planning_strategy": self.strategy,
+                        "original_query": query,
+                        "current_plan_version": len(session.plan_versions),
+                        "current_plan": session.plan_versions[-1]["plan_text"],
+                        "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
+                        "current_step": step.to_dict()
+                    })
             else:
                 decision_output = self.decision.run({
                     "plan_mode": "mid_session",
@@ -399,6 +410,7 @@ class AgentLoop:
                     "completed_steps": [s.to_dict() for s in session.plan_versions[-1]["steps"] if s.status == "completed"],
                     "current_step": step.to_dict()
                 })
+            
 
             logger.info("\n📝 [Post-Replanning Decision Output]: \n%s", json.dumps(decision_output, indent=2, ensure_ascii=False))
 

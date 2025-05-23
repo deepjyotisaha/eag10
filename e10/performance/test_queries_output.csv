@@ -1,1 +1,2 @@
 Query,Tools Needed,Complexity,Final Plan,Output
+"""What is 7 factorial? Fetch fresh results using tools, dont use memory""",factorial,very_low,,
