@@ -167,6 +167,7 @@ For Middle steps:
 * If a tool failed once, do not use it again. 
 * Before using any function in `"CODE"`, make sure it is available. If not then use your Analytical mind. 
 * For mathematical queries, always get fresh results from executing tools.
+* For mathematical queries, always prefer MCP tools over diret python code if there is a MCP tool available
 
 ---
 
