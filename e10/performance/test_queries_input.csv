@@ -1,0 +1,103 @@
+Query,Tools Needed,Complexity
+"""What is 7 factorial?""",factorial,very_low
+"""Calculate the cube root of 125""",cbrt,very_low
+"""What is the cosine of 0?""",cos,very_low
+"""What is 15 to the power of 3?""",power,very_low
+"""Divide 144 by 12""",divide,very_low
+"""Multiply 23 and 17""",multiply,very_low
+"""Subtract 8 from 25""",subtract,very_low
+"""Add 12 and 34""",add,very_low
+"""What is the remainder when 26 is divided by 5?""",remainder,very_low
+"""What is the sine of 90?""",sin,very_low
+"""Find the tangent of 45 degrees""",tan,very_low
+"""Generate the first 7 Fibonacci numbers""",fibonacci_numbers,very_low
+"""Convert 'hello' to integers""",strings_to_chars_to_int,very_low
+"""Mine the string 'this is a test'""",mine,very_low
+"""Create a thumbnail for the image at 'https://example.com/image.jpg'""",create_thumbnail,very_low
+"""Search for 'latest news on AI' using DuckDuckGo""",duckduckgo_search_results,very_low
+"""Find the text in the document named 'Company Policy'""",search_stored_documents_rag,very_low
+"""Download the HTML content from 'https://example.com'""",download_raw_html_from_url,very_low
+"""Extract text from PDF at 'https://example.com/report.pdf'""",extract_pdf,very_low
+"""Convert text 'Sample Text' to markdown""",convert_webpage_url_into_markdown,very_low
+"""Add 10 and 20 and then multiply the result by 5""",add|multiply,low
+"""Calculate 5 to the power of 3 then find the cube root of the result""",power|cbrt,low
+"""Find the factorial of 6 and then subtract 10""",factorial|subtract,low
+"""Divide 100 by 4 and then add 15""",divide|add,low
+"""Multiply 7 and 8 and then calculate the sine of the result""",multiply|sin,low
+"""Subtract 3 from 17 and then calculate the cosine of the result""",subtract|cos,low
+"""Calculate the tangent of 60 degrees and then find its factorial""",tan|factorial,low
+"""Find the remainder when 35 is divided by 8 and then add 20""",remainder|add,low
+"""Generate the first 5 Fibonacci numbers and then calculate their sum""",fibonacci_numbers|int_list_to_exponential_sum,low
+"""Convert 'abc' to integers and then calculate their sum""",strings_to_chars_to_int|int_list_to_exponential_sum,low
+"""Find the current price of Bitcoin using DuckDuckGo and display it""",duckduckgo_search_results,medium
+"""Get the weather forecast for London and summarise the key information""",duckduckgo_search_results,medium
+"""Search for 'history of the internet' and summarise the first 3 paragraphs""",duckduckgo_search_results,medium
+"""Find 'best restaurants in Rome' and list the top 5 with their ratings""",duckduckgo_search_results,medium
+"""Search for 'artificial intelligence applications' and list the main applications""",duckduckgo_search_results,medium
+"""Extract the abstract from the PDF at 'https://example.com/scientific_paper.pdf'""",extract_pdf,medium
+"""Find all email addresses on the webpage at 'https://example.com/contact'""",download_raw_html_from_url|mine,medium
+"""Get the table of contents from 'https://example.com/large_document.pdf'""",extract_pdf,medium
+"""Find all mentions of 'Project X' in the document named 'Internal Report'""",search_stored_documents_rag,medium
+"""Search for 'recipe for chocolate cake' and extract the ingredients""",duckduckgo_search_results|mine,medium
+"""Calculate the factorial of 10 and then find the sine of the result and display""",factorial|sin,medium
+"""Find 2 to the power of 8 and then calculate the cube root of the answer and display""",power|cbrt,medium
+"""Calculate the cosine of 60 degrees and then add 25 to it and display""",cos|add,medium
+"""Divide 100 by 7 and then multiply the result by 3 and display""",divide|multiply,medium
+"""Find the remainder when 47 is divided by 9 and then calculate the factorial of the remainder and display""",remainder|factorial,medium
+"""Calculate the tangent of 30 degrees and then find its square root and display""",tan|power,medium
+"""Subtract 12 from 50 and then calculate the logarithm of the answer and display""",subtract|power,medium
+"""Generate the first 8 Fibonacci numbers and then find their exponential sum and display""",fibonacci_numbers|int_list_to_exponential_sum,medium
+"""Convert the string 'data' into integers and then calculate their exponential sum and display""",strings_to_chars_to_int|int_list_to_exponential_sum,medium
+"""Find the sine of 45 degrees and then find the cosine of the result and display""",sin|cos,medium
+"""Find the top 3 trending news articles on BBC and summarize them in bullet points""",duckduckgo_search_results|convert_webpage_url_into_markdown,high
+"""Extract the table of contents from the PDF document at 'https://example.com/book.pdf' and format it as a nested list in markdown""",extract_pdf|convert_webpage_url_into_markdown,high
+"""Download the HTML from 'https://example.com/news' extract all URLs and create thumbnails for the first 5""",download_raw_html_from_url|mine|create_thumbnail,high
+"""Find the lyrics to the song 'Yesterday' by The Beatles using DuckDuckGo and format them in markdown""",duckduckgo_search_results|convert_webpage_url_into_markdown,high
+"""Extract all the image URLs from the webpage at 'https://example.com/gallery' and create thumbnails for them""",download_raw_html_from_url|mine|create_thumbnail,high
+"""Find the current exchange rate between USD and EUR using DuckDuckGo and calculate how many EUR you would get for 500 USD""",duckduckgo_search_results|multiply,high
+"""Get the current weather in Tokyo and London and compare the temperatures""",duckduckgo_search_results|subtract,high
+"""Extract the data tables from the PDF at 'https://example.com/financial_report.pdf' and convert them to markdown tables""",extract_pdf|convert_webpage_url_into_markdown,high
+"""Find the latest stock price for Google and Microsoft and calculate the percentage difference""",duckduckgo_search_results|divide,high
+"""Search for the definition of 'quantum computing' and the first paragraph from the Wikipedia page on it and format as markdown""",duckduckgo_search_results|convert_webpage_url_into_markdown,high
+"""Calculate 2 to the power of 10 then find the factorial of 5 and then add those answers together""",power|factorial|add,low
+"""Divide 144 by 12 then subtract 3 and then multiply that answer by 2""",divide|subtract|multiply,low
+"""Find the square root of 81 and then calculate the sine of that answer""",power|sin,low
+"""What is 5! plus 3! plus 2!""",factorial|factorial|factorial|add,low
+"""Convert 'abc' to integers then multiply them together""",strings_to_chars_to_int|int_list_to_exponential_sum,low
+"""What is 12 + 5 - 3 * 2""",add|subtract|multiply,low
+"""What is the square root of (4 + 5)""",add|power,low
+"""Calculate cos(0) + sin(90) - tan(45)""",cos|sin|tan|add|subtract,low
+"""Find the first 6 Fibonacci numbers and then multiply the 3rd and 5th numbers in the list""",fibonacci_numbers|multiply,low
+"""What is the remainder of (25 / 4) * 3""",remainder|multiply,low
+"""Search for 'population of France' and then find the square root of that number""",duckduckgo_search_results|power,medium
+"""Find 'list of countries by GDP' and then extract the first 10 countries""",duckduckgo_search_results|mine,medium
+"""Search 'who is the CEO of Tesla' and then find their age""",duckduckgo_search_results,medium
+"""What is the capital of Australia and what is its population?""",duckduckgo_search_results,medium
+"""Find the current date and time""",duckduckgo_search_results,medium
+"""Get the latest news headlines about the war in Ukraine""",duckduckgo_search_results,medium
+"""What are the symptoms of the common cold?""",duckduckgo_search_results,medium
+"""Find a recipe for spaghetti carbonara""",duckduckgo_search_results,medium
+"""What are the best ways to learn a new language?""",duckduckgo_search_results,medium
+"""Who won the Super Bowl last year?""",duckduckgo_search_results,medium
+"""Find the area of a circle with a radius of 7""",power|multiply,medium
+"""Find the volume of a cube with side length 5""",power,medium
+"""Convert 100 degrees Celsius to Fahrenheit""",multiply|add,medium
+"""Find the distance between New York and Los Angeles""",duckduckgo_search_results,medium
+"""What is the speed of light?""",duckduckgo_search_results,medium
+"""Find the atomic number of gold""",duckduckgo_search_results,medium
+"""What is the chemical formula for water?""",duckduckgo_search_results,medium
+"""Find the boiling point of ethanol""",duckduckgo_search_results,medium
+"""What is the largest planet in our solar system?""",duckduckgo_search_results,medium
+"""Who invented the telephone?""",duckduckgo_search_results,medium
+"""Download the HTML from 'https://example.com/article' extract all the links and create thumbnails for the first 3 links""",download_raw_html_from_url|mine|create_thumbnail,high
+"""Find the current stock price of Apple and calculate its factorial""",duckduckgo_search_results|factorial,high
+"""Extract all the tables from the PDF document at 'https://example.com/data.pdf' and convert them into a single markdown table""",extract_pdf|convert_webpage_url_into_markdown,high
+"""Find the weather in Paris and Rome then calculate the difference in temperature""",duckduckgo_search_results|subtract,high
+"""What are the first 10 fibonacci numbers and what is 2 to the power of the 7th fibonacci number in that sequence?""",fibonacci_numbers|power,high
+"""Search for 'Nobel prize winners in physics' and format the results as a markdown list""",duckduckgo_search_results|convert_webpage_url_into_markdown,high
+"""Extract the images from this webpage and create thumbnails: 'https://example.com/images'""",download_raw_html_from_url|mine|create_thumbnail,high
+"""Get the populations of USA and Canada and find out the remainder after dividing the larger number with the smaller number.""",duckduckgo_search_results|remainder,high
+"""Find the capital cities of France and Germany and convert them to integers using strings_to_chars_to_int and display.""",duckduckgo_search_results|strings_to_chars_to_int,high
+"""Get the current time in London and Tokyo and display the difference in hours.""",duckduckgo_search_results|subtract,high
+"""Find the value of Pi to 5 decimal places and Calculate area of circle with that radius.""",duckduckgo_search_results|power|multiply,medium
+"""What is the square root of 64?""",power,very_low

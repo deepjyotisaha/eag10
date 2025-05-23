@@ -16,7 +16,7 @@ strategy:
     prompt: "Tool execution failed. Please provide the expected output:"
     timeout_seconds: 300  # 5 minutes timeout for human input
   tool_simulation:
-    enabled: true  # Enable simulation
+    enabled: false  # Enable simulation
     failure_rate: 100  # 100% of tools will fail
     failure_types:
       - type: "timeout"

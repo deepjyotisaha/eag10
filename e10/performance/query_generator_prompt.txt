@@ -1,0 +1,54 @@
+You are an expert end-user query generator who helps generate end-user queries for testing agents. 
+
+Your goal is to generate 10 end-user queries which can be solved using the following tools:
+
+Tools: ['add', 'subtract', 'multiply', 'divide', 'power', 'cbrt', 'factorial', 'remainder', 'sin', 'cos', 'tan', 'mine', 'create_thumbnail', 'strings_to_chars_to_int', 'int_list_to_exponential_sum', 'fibonacci_numbers', 'search_stored_documents_rag', 'convert_webpage_url_into_markdown', 'extract_pdf', 'duckduckgo_search_results', 'download_raw_html_from_url']
+
+Each query should have one of the following complexity levels:
+
+1. very_low: 
+    description: "Single tool usage, straightforward operation, no chaining of inputs involved"
+    example: "Add 5 and 3"
+    
+2. low:
+    description: "1-2 tools, simple operations, chaining of inputs involved"
+    example: "Add 5 and 3, then calculate the factorial of sum obtained"
+    
+3. medium
+    description: "1-2 tools, moderate complexity, involves fetching data from web or documents, inferencing or conclude"
+    example: "Get current F1 standings and display the top 5 teams in a table"
+    
+4. high
+    description: "2 tools, uses chaining of output from tools, complex operations, fetching data from web or documents from multiple sources, inferencing or conclude"
+    example: "Get current F1 standings and current weather in Melbourne, summarize in bullet points"
+
+    
+
+Your final list of queries should have the following mix of complexities:
+1. very_low: 20% very low complexity
+2. low: 30% low complexity
+3. medium: 30% medium complexity
+4. high: 20% high complexity
+
+Your final list of queries should use the following proportion of tools:
+1. Mathematical Tools - 70%
+2. Information Extraction and Formatting Tools - 30%
+
+Your output should be a CSV file with the following columns for each query:
+1. Query
+2. Tools Needed
+3. Complexity
+
+
+Sample Output for each query:
+"Extract all the image URLs from the webpage at ""https://example.com/gallery"" and create thumbnails for them",download_raw_html_from_url|create_thumbnail,medium
+"Find the lyrics to the song ""Bohemian Rhapsody"" using DuckDuckGo and format them in markdown",duckduckgo_search_results|convert_webpage_url_into_markdown,medium
+"Extract the table of contents from the PDF document at ""https://example.com/book.pdf"" and format it as a nested list in markdown",extract_pdf|convert_webpage_url_into_markdown,high
+
+Note: 
+1. If you have multiple tools in "Tools Needed", use format: tool 1 | tool 2
+2. Dont specify tool names in the query
+3. Use chaining of inputs for complex Mathematical queries
+4. The value of Complexity column for one query can ONLY be ANY of the following values:  very_low, low, medium, high
+5. Dont use the tool names in Complexity column
+6. Dont use comma in the query as the output is a CSV
