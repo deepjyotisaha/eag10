@@ -25,7 +25,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Configuration
-NUM_QUERIES = 20  # Number of queries to process
+NUM_QUERIES = 100  # Number of queries to process
 SLEEP_TIME = 5    # Sleep time between queries in seconds
 INPUT_FILE = Path(__file__).parent / "test_queries_input.csv"
 OUTPUT_FILE = Path(__file__).parent / "test_queries_output.csv"
