@@ -16,9 +16,16 @@ class FailureType:
 class ToolSimulation:
     def __init__(self, config: dict):
         self.enabled = config.get("enabled", False)
+        self.failure_rate = config.get("failure_rate", 0)  # Default to 0% failure rate
         self.failure_types = [
             FailureType(**ft) for ft in config.get("failure_types", [])
         ]
+        
+    def should_fail(self) -> bool:
+        """Determine if the current tool execution should fail based on failure rate"""
+        if not self.enabled:
+            return False
+        return random.random() * 100 < self.failure_rate
         
     def get_failure(self) -> FailureType:
         """Get a random failure type based on probabilities"""
@@ -44,11 +51,14 @@ class ToolSimulation:
         return self.failure_types[-1]  # Fallback to last failure type
 
     def simulate_tool_execution(self, tool_name: str, tool_args: dict) -> dict:
-        """Simulate a tool execution with guaranteed failure when enabled"""
+        """Simulate a tool execution with probability-based failure when enabled"""
         if not self.enabled:
             return {"status": "success", "result": "Simulation disabled"}
             
-        # Always raise an exception when simulation is enabled
-        failure = self.get_failure()
-        logger.info(f"🔧 Simulating {failure.type} failure for tool {tool_name}")
-        raise Exception(f"Simulated {failure.type} error: {failure.message}")
+        # Check if this execution should fail based on failure rate
+        if self.should_fail():
+            failure = self.get_failure()
+            logger.info(f"🔧 Simulating {failure.type} failure for tool {tool_name}")
+            raise Exception(f"Simulated {failure.type} error: {failure.message}")
+            
+        return {"status": "success", "result": "Simulation succeeded"}

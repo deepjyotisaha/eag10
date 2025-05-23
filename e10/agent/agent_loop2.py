@@ -210,10 +210,11 @@ class AgentLoop:
             try:
                 # Add simulation check here
                 if self.tool_simulation.enabled:
-                    # Simulate tool failure
-                    failure = self.tool_simulation.get_failure()
-                    raise Exception(f"Simulated failure: {failure.message}")
-                    
+                    # Simulate tool failure based on failure rate
+                    if self.tool_simulation.should_fail():
+                        failure = self.tool_simulation.get_failure()
+                        raise Exception(f"Simulated failure: {failure.message}")
+                        
                 executor_response = await run_user_code(step.code.tool_arguments["code"], self.multi_mcp)
                 step.execution_result = executor_response
                 step.status = "completed"
