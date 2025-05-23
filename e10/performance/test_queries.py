@@ -16,6 +16,7 @@ sys.path.insert(0, str(root_dir))
 
 from agent.agent_loop2 import AgentLoop
 from mcp_servers.multiMCP import MultiMCP
+from memory.session_log import extract_session_state
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -46,28 +47,53 @@ class QueryTester:
         )
         
     async def execute_query(self, query: str, tools: str, complexity: str) -> Dict:
-        """Execute a single query using the agent"""
+        """
+        Execute a single query through the agent and capture the results.
+        
+        Args:
+            query: The query to execute
+            tools: Tools needed for the query
+            complexity: Complexity level of the query
+            
+        Returns:
+            Dict containing query results including plan, output, and tool usage
+        """
         try:
             # Run the query through the agent
             session = await self.agent_loop.run(query)
             
-            # Extract the final plan and output from session state
-            state = session.state
-            final_plan = state.get("final_plan", [])
-            if isinstance(final_plan, list):
-                final_plan = "\n".join(final_plan)  # Convert list to string if it's a list
-            output = state.get("final_answer", state.get("solution_summary", "No output generated"))
+            # Extract session state using the new function
+            session_state = extract_session_state(session)
 
-            logger.info(f"Final Plan: {final_plan}")
-            logger.info(f"Output: {output}")    
-            logger.info(f"Query: {query}")
+            logger.info(f"Session: {session}")
+            logger.info(f"Session State: {session_state}")
             
+            # Format the final plan - handle both list and string cases
+            final_plan = session_state["final_plan"]
+            if isinstance(final_plan, list):
+                final_plan = "\n".join(final_plan)
+            
+            # Get the final answer, falling back to solution_summary if needed
+            final_answer = session_state["final_answer"]
+            
+            # Log the tool usage for analysis
+            tool_usage = session_state["tool_usage"]
+            if tool_usage:
+                logger.info(f"Tool usage for query '{query}':")
+                for tool in tool_usage:
+                    logger.info(f"- {tool['tool_name']}: {tool['status']} (Step {tool['step_index']})")
+            
+            logger.info(f"Final Plan: {final_plan}")
+            logger.info(f"Final Answer: {final_answer}")    
+            logger.info(f"Tool Usage: {tool_usage}")
+
             return {
                 "query": query,
                 "tools": tools,
                 "complexity": complexity,
                 "final_plan": final_plan,
-                "output": output
+                "output": final_answer,
+                "tool_usage": tool_usage  # Include tool usage in the result
             }
             
         except Exception as e:
@@ -77,7 +103,8 @@ class QueryTester:
                 "tools": tools,
                 "complexity": complexity,
                 "final_plan": f"Error: {str(e)}",
-                "output": "Failed to execute query"
+                "output": "Failed to execute query",
+                "tool_usage": []  # Empty tool usage for failed queries
             }
 
 async def main():

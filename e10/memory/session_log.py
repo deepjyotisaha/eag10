@@ -1,7 +1,9 @@
 import json
 from pathlib import Path
 from datetime import datetime
+from config.log_config import setup_logging
 
+logger = setup_logging(__name__)
 
 def get_store_path(session_id: str, base_dir: str = "memory/session_logs") -> Path:
     """
@@ -67,12 +69,12 @@ def live_update_session(session_obj, base_dir: str = "memory/session_logs") -> N
 
 from typing import Dict, List, Optional, Tuple
 
-def extract_session_details(session: Dict) -> Dict:
+def extract_session_state(session) -> Dict:
     """
-    Extract key details from a session including final steps, plan, answer, and tool usage.
+    Extract key details from a session object by reading the session log file.
     
     Args:
-        session: The session dictionary loaded from a session log file
+        session: The session object from AgentSession
         
     Returns:
         Dict containing:
@@ -82,13 +84,36 @@ def extract_session_details(session: Dict) -> Dict:
         - tool_usage: List of tools used with their status
     """
     try:
-        # Get the state snapshot which contains final results
-        state = session.get("state_snapshot", {})
+        # Get session ID from the session object
+        session_id = session.session_id
         
-        # Extract final plan and steps
-        final_plan = state.get("final_plan", [])
-        final_steps = state.get("final_steps", [])
-        final_answer = state.get("final_answer", "")
+        # Get the session log file path using existing get_store_path
+        session_file = get_store_path(session_id)
+        
+        # Read the session file
+        if not session_file.exists():
+            raise FileNotFoundError(f"Session log file not found: {session_file}")
+            
+        with open(session_file, 'r') as f:
+            session_data = json.load(f)
+            
+        # Get the state snapshot which contains the final state
+        state_snapshot = session_data.get("state_snapshot", {})
+        if not state_snapshot:
+            return {
+                "final_plan": [],
+                "final_steps": [],
+                "final_answer": "",
+                "tool_usage": [],
+                "session_id": session_id,
+                "original_query": session_data.get("original_query", ""),
+                "timestamp": datetime.now().isoformat()
+            }
+            
+        # Extract data from state snapshot
+        final_plan = state_snapshot.get("final_plan", [])
+        final_steps = state_snapshot.get("final_steps", [])
+        final_answer = state_snapshot.get("final_answer", "")
         
         # Extract tool usage from steps
         tool_usage = []
@@ -103,23 +128,35 @@ def extract_session_details(session: Dict) -> Dict:
                         "tool_name": tool_name,
                         "status": status,
                         "step_index": step.get("index"),
-                        "description": step.get("description")
+                        "description": step.get("description"),
+                        "result": execution_result.get("result", ""),
+                        "error": execution_result.get("error", None),
+                        "execution_time": execution_result.get("execution_time", ""),
+                        "total_time": execution_result.get("total_time", "")
                     })
         
         return {
             "final_plan": final_plan,
             "final_steps": final_steps,
             "final_answer": final_answer,
-            "tool_usage": tool_usage
+            "tool_usage": tool_usage,
+            "session_id": session_id,
+            "original_query": session_data.get("original_query", ""),
+            "timestamp": datetime.now().isoformat(),
+            "confidence": state_snapshot.get("confidence", ""),
+            "reasoning_note": state_snapshot.get("reasoning_note", "")
         }
         
     except Exception as e:
-        print(f"Error extracting session details: {str(e)}")
+        print(f"Error extracting session state: {str(e)}")
         return {
             "final_plan": [],
             "final_steps": [],
             "final_answer": "",
-            "tool_usage": []
+            "tool_usage": [],
+            "session_id": getattr(session, 'session_id', 'unknown'),
+            "original_query": getattr(session, 'original_query', 'unknown'),
+            "timestamp": datetime.now().isoformat()
         }
 
 def get_tool_success_rate(tool_usage: List[Dict]) -> Dict[str, Tuple[int, int]]:
@@ -127,7 +164,7 @@ def get_tool_success_rate(tool_usage: List[Dict]) -> Dict[str, Tuple[int, int]]:
     Calculate success rate for each tool used in the session.
     
     Args:
-        tool_usage: List of tool usage dictionaries from extract_session_details
+        tool_usage: List of tool usage dictionaries from extract_session_state
         
     Returns:
         Dict mapping tool names to (success_count, total_attempts)
@@ -145,19 +182,33 @@ def get_tool_success_rate(tool_usage: List[Dict]) -> Dict[str, Tuple[int, int]]:
             
     return tool_stats
 
-# Example usage:
+# Example usage in test_queries.py:
 """
-session = load_session_from_file("path/to/session.json")
-details = extract_session_details(session)
-
-print("Final Plan:", details["final_plan"])
-print("Final Answer:", details["final_answer"])
-print("\nTool Usage:")
-for tool in details["tool_usage"]:
-    print(f"- {tool['tool_name']}: {tool['status']}")
-
-success_rates = get_tool_success_rate(details["tool_usage"])
-print("\nTool Success Rates:")
-for tool, (successes, total) in success_rates.items():
-    print(f"- {tool}: {successes}/{total} successful")
+async def execute_query(self, query: str, tools: str, complexity: str) -> Dict:
+    try:
+        # Run the query through the agent
+        session = await self.agent_loop.run(query)
+        
+        # Extract session state
+        session_state = extract_session_state(session)
+        
+        return {
+            "query": query,
+            "tools": tools,
+            "complexity": complexity,
+            "final_plan": "\n".join(session_state["final_plan"]) if isinstance(session_state["final_plan"], list) else session_state["final_plan"],
+            "output": session_state["final_answer"],
+            "tool_usage": session_state["tool_usage"]
+        }
+        
+    except Exception as e:
+        logger.error(f"Error executing query '{query}': {str(e)}")
+        return {
+            "query": query,
+            "tools": tools,
+            "complexity": complexity,
+            "final_plan": f"Error: {str(e)}",
+            "output": "Failed to execute query",
+            "tool_usage": []
+        }
 """

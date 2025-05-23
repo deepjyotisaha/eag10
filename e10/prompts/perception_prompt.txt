@@ -59,6 +59,7 @@ Keep descriptions short. Keep output tight and purpose-driven.
 If you see that in past a tool has failed, recommend not to use that tool anymore! VERY IMPORTANT to provide the NAME of the tool that failed.
 If you can just summarize or perform a job at which you're really good, and finish the job, then just do it! Do not wait for next steps. 
 Do not return explanations or markdown outside the ERORLL JSON. No additional explanation is needed.
+For mathematical operations, always get results from executing tools 
 
 ---
 

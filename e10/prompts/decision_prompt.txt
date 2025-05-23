@@ -166,6 +166,7 @@ For Middle steps:
 * Do **not assume**, transform, or reinterpret the expected input. For example, if a tool requires a `string`, do not pass a list of characters or vice versa.
 * If a tool failed once, do not use it again. 
 * Before using any function in `"CODE"`, make sure it is available. If not then use your Analytical mind. 
+* For mathematical operations, always get results from executing tools 
 
 ---
 
