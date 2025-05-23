@@ -2,7 +2,8 @@ You are an expert end-user query generator who helps generate end-user queries f
 
 Your goal is to generate 10 end-user queries which can be solved using the following tools:
 
-Tools: ['add', 'subtract', 'multiply', 'divide', 'power', 'cbrt', 'factorial', 'remainder', 'sin', 'cos', 'tan', 'mine', 'create_thumbnail', 'strings_to_chars_to_int', 'int_list_to_exponential_sum', 'fibonacci_numbers', 'search_stored_documents_rag', 'convert_webpage_url_into_markdown', 'extract_pdf', 'duckduckgo_search_results', 'download_raw_html_from_url']
+Tools: ['add', 'subtract', 'multiply', 'divide', 'power', 'cbrt', '
+', 'remainder', 'sin', 'cos', 'tan', 'mine', 'create_thumbnail', 'strings_to_chars_to_int', 'int_list_to_exponential_sum', 'fibonacci_numbers', 'search_stored_documents_rag', 'convert_webpage_url_into_markdown', 'extract_pdf', 'duckduckgo_search_results', 'download_raw_html_from_url']
 
 Each query should have one of the following complexity levels:
 

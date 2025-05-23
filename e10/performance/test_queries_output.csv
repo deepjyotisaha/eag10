@@ -1,5 +1,5 @@
-Query,Tools Needed,Complexity,Final Plan,Output
-"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using the available factorial tool.
-Step 1: Return the result.",
-"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using python's math library and round the result to the nearest integer.
-Step 1: Return the rounded cube root as the final answer.",The cube root of 125 is approximately 5.
+Query,Tools Needed,Complexity,Final Plan,Output,Tools Executed
+"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using a code block.
+Step 1: Return the result as the final answer.",The factorial of 7 is 5040.,calculate(error)
+"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using python's math library.
+Step 1: Return the calculated value as the final answer.","The cube root of 125 is approximately 5 (specifically, 4.999999999999999).","calculator(error), pow(success)"

@@ -6,6 +6,7 @@ import time
 import logging
 import asyncio
 import yaml
+import re
 from pathlib import Path
 from typing import List, Dict
 from collections import defaultdict
@@ -153,13 +154,33 @@ class QueryTester:
             # Log tool statistics for this query
             self.log_tool_stats(session_state["tool_usage"])
 
+            # Extract tools executed for this query
+            tools_executed = []
+            for step in session_state["final_steps"]:
+                if step.get("type") == "CODE":
+                    code = step.get("code", {})
+                    code_str = code.get("tool_arguments", {}).get("code", "")
+                
+                    # Extract tool name from the code string using regex
+                    tool_matches = re.findall(r'(\w+)\s*\(', code_str)
+                    if tool_matches:
+                        tool_name = tool_matches[0]  # Get the first function call
+                        status = step.get("execution_result", {}).get("status", "unknown")
+                        tools_executed.append(f"{tool_name}({status})")
+        
+            # Join all tools with commas
+            tools_executed_str = ", ".join(tools_executed) if tools_executed else "No tools executed"
+
+            logger.debug(f"Tools Executed: {tools_executed_str}")
+
             return {
                 "query": query,
                 "tools": tools,
                 "complexity": complexity,
                 "final_plan": final_plan,
                 "output": final_answer,
-                "tool_usage": tool_usage  # Include tool usage in the result
+                "tool_usage": tool_usage,  # Include tool usage in the result
+                "tools_executed": tools_executed_str  # Include tools executed in the result
             }
             
         except Exception as e:
@@ -170,7 +191,8 @@ class QueryTester:
                 "complexity": complexity,
                 "final_plan": f"Error: {str(e)}",
                 "output": "Failed to execute query",
-                "tool_usage": []  # Empty tool usage for failed queries
+                "tool_usage": [],  # Empty tool usage for failed queries
+                "tools_executed": "Error Occured"  # Include tools executed in the result
             }
 
 async def main():
@@ -181,7 +203,7 @@ async def main():
         
         # Create output file with headers (overwriting any existing file)
         with open(OUTPUT_FILE, 'w', newline='') as f:
-            writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output'])
+            writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output', 'Tools Executed'])
             writer.writeheader()
         
         # Process queries one at a time
@@ -202,13 +224,14 @@ async def main():
                 
                 # Write result immediately
                 with open(OUTPUT_FILE, 'a', newline='') as f:
-                    writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output'])
+                    writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output', 'Tools Executed'])
                     writer.writerow({
                         'Query': result['query'],
                         'Tools Needed': result['tools'],
                         'Complexity': result['complexity'],
                         'Final Plan': result['final_plan'],
-                        'Output': result['output']
+                        'Output': result['output'],
+                        'Tools Executed': result['tools_executed']
                     })
                 
                 # Sleep between queries
