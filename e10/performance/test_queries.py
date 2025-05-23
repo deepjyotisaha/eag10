@@ -8,6 +8,7 @@ import asyncio
 import yaml
 from pathlib import Path
 from typing import List, Dict
+from collections import defaultdict
 
 # Add the root directory to Python path
 import sys
@@ -28,6 +29,18 @@ SLEEP_TIME = 5    # Sleep time between queries in seconds
 INPUT_FILE = Path(__file__).parent / "test_queries_input.csv"
 OUTPUT_FILE = Path(__file__).parent / "test_queries_output.csv"
 
+class ToolStats:
+    def __init__(self):
+        self.total_calls = 0
+        self.success_calls = 0
+        self.error_calls = 0
+        
+    @property
+    def success_rate(self) -> float:
+        if self.total_calls == 0:
+            return 0.0
+        return (self.success_calls / self.total_calls) * 100
+
 class QueryTester:
     def __init__(self):
         """Initialize the query tester with agent and MCP"""
@@ -45,6 +58,56 @@ class QueryTester:
             multi_mcp=self.multi_mcp,
             strategy="exploratory"
         )
+        
+        # Initialize tool statistics
+        self.tool_stats = defaultdict(ToolStats)
+        
+    def log_tool_stats(self, tool_usage: List[Dict]) -> None:
+        """
+        Log tool usage statistics for a single query.
+        
+        Args:
+            tool_usage: List of tool usage dictionaries from extract_session_state
+        """
+        for tool in tool_usage:
+            tool_name = tool["tool_name"]
+            status = tool["status"]
+            
+            # Update statistics
+            self.tool_stats[tool_name].total_calls += 1
+            if status == "success":
+                self.tool_stats[tool_name].success_calls += 1
+            else:
+                self.tool_stats[tool_name].error_calls += 1
+    
+    def write_tool_performance_report(self) -> None:
+        """
+        Write tool performance statistics to a CSV file in the performance folder.
+        The file is overwritten each time the script runs.
+        """
+        # Create performance directory if it doesn't exist
+        performance_dir = Path("performance")
+        performance_dir.mkdir(exist_ok=True)
+        
+        # Set the output file path in the performance directory
+        output_file = performance_dir / "tool_performance_status.csv"
+        
+        # Write the file in 'w' mode to overwrite any existing content
+        with open(output_file, 'w', newline='') as f:
+            writer = csv.writer(f)
+            
+            # Write header
+            writer.writerow(["Tool Name", "Number of Times Invoked", "Success Rate (%)"])
+            
+            # Write data for each tool
+            for tool_name, stats in sorted(self.tool_stats.items()):
+                writer.writerow([
+                    tool_name,
+                    stats.total_calls,
+                    f"{stats.success_rate:.2f}"
+                ])
+        
+        print(f"✅ Tool performance report written to {output_file}")
         
     async def execute_query(self, query: str, tools: str, complexity: str) -> Dict:
         """
@@ -86,6 +149,9 @@ class QueryTester:
             logger.info(f"Final Plan: {final_plan}")
             logger.info(f"Final Answer: {final_answer}")    
             logger.info(f"Tool Usage: {tool_usage}")
+
+            # Log tool statistics for this query
+            self.log_tool_stats(session_state["tool_usage"])
 
             return {
                 "query": query,
@@ -149,6 +215,9 @@ async def main():
                 if i < NUM_QUERIES - 1:
                     logger.info(f"Sleeping for {SLEEP_TIME} seconds...")
                     await asyncio.sleep(SLEEP_TIME)
+        
+        # Write tool performance report
+        tester.write_tool_performance_report()
         
         logger.info(f"All queries processed. Results written to {OUTPUT_FILE}")
         
