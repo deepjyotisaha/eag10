@@ -1,19 +1,5 @@
 Query,Tools Needed,Complexity,Final Plan,Output
-"""Find the ASCII values of characters in INDIA and then return sum of exponentials of those values.""",strings_to_chars_to_int|int_list_to_exponential_sum,low,,The sum of the exponentials of the ASCII values of the characters in 'INDIA' is 7.599822246093079e+33.
-"""What is 7 factorial? Fetch fresh results using tools, dont use memory""",factorial,very_low,"Step 0: Calculate 7 factorial using the calculator tool.
-Step 1: Return the result.",7 factorial is 5040.
-"""Calculate the cube root of 125? Fetch fresh results using tools""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using the available math function.
-Step 1: Return the result.",The cube root of 125 is approximately 4.999999999999999.
-"""What is the cosine of 0? Fetch fresh results using tools""",cos,very_low,,The cosine of 0 is 1.
-"""What is 15 to the power of 3? Fetch fresh results using tools""",power,very_low,"Step 0: Calculate 15 to the power of 3 using a python code block.
-Step 1: Return the calculated result.",The result of 15 to the power of 3 is 3375.
-"""Divide 144 by 12? Fetch fresh results using tools""",divide,very_low,"Step 0: Calculate 144 divided by 12 using python directly.
-Step 1: Return the calculated result.",The result of 144 divided by 12 is 12.0.
-"""Multiply 23 and 17? Fetch fresh results using tools""",multiply,very_low,"Step 0: Calculate the product of 23 and 17.
-Step 1: Return the result.",The product of 23 and 17 is 391.
-"""Subtract 8 from 25? Fetch fresh results using tools""",subtract,very_low,"Step 0: Subtract 8 from 25 using a code block.
-Step 1: Return the result.",The result of subtracting 8 from 25 is 17.
-"""Add 12 and 34? Fetch fresh results using tools""",add,very_low,"Step 0: Add 12 and 34 using a python code block.
-Step 1: Return the result.",The sum of 12 and 34 is 46.
-"""What is the remainder when 26 is divided by 5? Fetch fresh results using tools""",remainder,very_low,"Step 0: Calculate the remainder when 26 is divided by 5 using Python code.
-Step 1: Output the calculated remainder as the final answer.",The remainder of 26 divided by 5 is 1.
+"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using the available tools.
+Step 1: Return the calculated result.",The value of 7 factorial is 5040.
+"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using the calculator tool.
+Step 1: Return the result.","The cube root of 125 is approximately 4.999999999999999, which can be rounded to 5."
