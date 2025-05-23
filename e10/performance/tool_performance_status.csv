@@ -1,4 +1,16 @@
 Tool Name,Number of Times Invoked,Success Rate (%)
-calculate,1,0.00
-calculator,1,0.00
+calculate,3,0.00
+calculator,4,0.00
+cos,1,100.00
+create_thumbnail,1,0.00
+division_remainder,1,0.00
+duckduckgo_search,2,0.00
+factorial,1,100.00
+fibonacci,1,100.00
+get,1,100.00
+ord,2,50.00
 pow,1,100.00
+search_stored_documents,1,0.00
+search_stored_documents_rag,2,0.00
+tan,1,100.00
+web_search,1,0.00

@@ -1,5 +1,41 @@
 Query,Tools Needed,Complexity,Final Plan,Output,Tools Executed
-"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using a code block.
-Step 1: Return the result as the final answer.",The factorial of 7 is 5040.,calculate(error)
-"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using python's math library.
-Step 1: Return the calculated value as the final answer.","The cube root of 125 is approximately 5 (specifically, 4.999999999999999).","calculator(error), pow(success)"
+"""What is 7 factorial?""",factorial,very_low,"Step 0: Calculate 7 factorial using python code.
+Step 1: Return the calculated value as the final answer.",7! = 5040,"calculate(error), factorial(success)"
+"""Calculate the cube root of 125""",cbrt,very_low,"Step 0: Calculate the cube root of 125 using the available calculator tool.
+Step 1: Present the result.",The cube root of 125 is approximately 5.,pow(success)
+"""What is the cosine of 0?""",cos,very_low,"Step 0: Calculate the cosine of 0 using the math library.
+Step 1: Return the calculated value as the final answer.",The cosine of 0 is 1.0.,"calculate(error), cos(success)"
+"""What is 15 to the power of 3?""",power,very_low,"Step 0: Calculate 15 to the power of 3 using a raw code block.
+Step 1: Return the calculated result.",The value of 15 to the power of 3 is 3375.,calculator(error)
+"""Divide 144 by 12""",divide,very_low,"Step 0: Calculate 144 divided by 12 directly.
+Step 1: Return the result.",,calculator(error)
+"""Multiply 23 and 17""",multiply,very_low,"Step 0: Multiply 23 and 17 using python.
+Step 1: Return the result.",The product of 23 and 17 is 391.,calculator(error)
+"""Subtract 8 from 25""",subtract,very_low,"Step 0: Calculate the result of 25 - 8 using Python.
+Step 1: Return the calculated result as the final answer.",,calculator(error)
+"""Add 12 and 34""",add,very_low,"Step 0: Add 12 and 34 using the available calculator tool.
+Step 1: Return the result.",,No tools executed
+"""What is the remainder when 26 is divided by 5?""",remainder,very_low,"Step 0: Calculate the remainder of 26 divided by 5 using Python's modulo operator.
+Step 1: Present the calculated remainder as the final answer.",The remainder of 26 divided by 5 is 1.,division_remainder(error)
+"""What is the sine of 90?""",sin,very_low,"Step 0: Calculate the sine of 90 degrees using the mcp tool.
+Step 1: Return the calculated value as the final answer.",,calculate(error)
+"""Find the tangent of 45 degrees""",tan,very_low,"Step 0: Calculate the tangent of 45 degrees using a calculator tool.
+Step 1: Return the result.",The tangent of 45 degrees is approximately 1.0.,tan(success)
+"""Generate the first 7 Fibonacci numbers""",fibonacci_numbers,very_low,"Step 0: Calculate the first 7 Fibonacci numbers using a Python code.
+Step 1: Return the calculated list of Fibonacci numbers as the final answer.","The first 7 Fibonacci numbers are: [0, 1, 1, 2, 3, 5, 8].",fibonacci(success)
+"""Convert 'hello' to integers""",strings_to_chars_to_int,very_low,"Step 0: Convert the string 'hello' to a list of integers representing their Unicode code points using a code block and import the necessary builtins.
+Step 1: Return the resulting list of integers.","The string 'hello' has been successfully converted to a list of integers representing their Unicode code points: [104, 101, 108, 108, 111].","ord(error), ord(success)"
+"""Mine the string 'this is a test'""",mine,very_low,"Step 0: Since the query is ambiguous, clarify the user's intent by asking what they want to extract from the string 'this is a test'.
+Step 1: Based on the user's clarification, use appropriate tools or code to extract the desired information from the string.
+Step 2: Present the extracted information to the user.",,No tools executed
+"""Create a thumbnail for the image at 'https://example.com/image.jpg'""",create_thumbnail,very_low,"Step 0: Since the 'image_processing' tool is not defined, I will respond that I am unable to create a thumbnail.
+Step 1: Conclude that I cannot create the thumbnail.",I am unable to create a thumbnail because the necessary image processing tool is not available.,create_thumbnail(error)
+"""Search for 'latest news on AI' using DuckDuckGo""",duckduckgo_search_results,very_low,Step 4: Maximum steps reached,Execution stopped after 3 steps. Please try a more specific query or break down your request into smaller parts.,"duckduckgo_search(error), web_search(error), duckduckgo_search(error)"
+"""Find the text in the document named 'Company Policy'""",search_stored_documents_rag,very_low,Step 4: Maximum steps reached,Execution stopped after 3 steps. Please try a more specific query or break down your request into smaller parts.,"search_stored_documents_rag(error), search_stored_documents(error), search_stored_documents_rag(error)"
+"""Download the HTML content from 'https://example.com'""",download_raw_html_from_url,very_low,"Step 0: Use the available tool to download the HTML content from the specified URL.
+Step 1: Return the downloaded HTML content.",,No tools executed
+"""Extract text from PDF at 'https://example.com/report.pdf'""",extract_pdf,very_low,"Step 0: Inform the user that the provided URL is invalid and the PDF cannot be downloaded.
+Step 1: Ask the user to provide a valid URL for the PDF.
+Step 2: If the user provides a valid URL, download the PDF and extract the text content.
+Step 3: Return the extracted text.",,get(success)
+"""Convert text 'Sample Text' to markdown""",convert_webpage_url_into_markdown,very_low,Error: PerceptionSnapshot.__init__() missing 1 required positional argument: 'last_tooluse_summary',Failed to execute query,Error Occured

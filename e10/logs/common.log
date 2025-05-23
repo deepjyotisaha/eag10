@@ -1,0 +1,1 @@
+2025-05-24 00:02:44,641 - ERROR - test_queries:execute_query:187 - Error executing query '"Convert text 'Sample Text' to markdown"': PerceptionSnapshot.__init__() missing 1 required positional argument: 'last_tooluse_summary'

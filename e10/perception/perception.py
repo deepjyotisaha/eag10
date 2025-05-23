@@ -101,7 +101,7 @@ class Perception:
 
         except Exception as e:
             # Optional: log to disk for inspection
-            import pdb; pdb.set_trace()
+            #import pdb; pdb.set_trace()
 
             logger.error("❌ EXCEPTION IN PERCEPTION:", e)
             return {
