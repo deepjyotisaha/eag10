@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Configuration
-NUM_QUERIES = 10  # Number of queries to process
+NUM_QUERIES = 2  # Number of queries to process
 SLEEP_TIME = 5    # Sleep time between queries in seconds
 INPUT_FILE = Path(__file__).parent / "test_queries_input.csv"
 OUTPUT_FILE = Path(__file__).parent / "test_queries_output.csv"
@@ -45,7 +45,7 @@ class QueryTester:
             strategy="exploratory"
         )
         
-    async def execute_query(self, query: str) -> Dict:
+    async def execute_query(self, query: str, tools: str, complexity: str) -> Dict:
         """Execute a single query using the agent"""
         try:
             # Run the query through the agent
@@ -57,6 +57,8 @@ class QueryTester:
             
             return {
                 "query": query,
+                "tools": tools,
+                "complexity": complexity,
                 "final_plan": final_plan,
                 "output": output
             }
@@ -65,6 +67,8 @@ class QueryTester:
             logger.error(f"Error executing query '{query}': {str(e)}")
             return {
                 "query": query,
+                "tools": tools,
+                "complexity": complexity,
                 "final_plan": f"Error: {str(e)}",
                 "output": "Failed to execute query"
             }
@@ -75,11 +79,10 @@ async def main():
         # Initialize query tester
         tester = QueryTester()
         
-        # Create output file with headers if it doesn't exist
-        if not OUTPUT_FILE.exists():
-            with open(OUTPUT_FILE, 'w', newline='') as f:
-                writer = csv.DictWriter(f, fieldnames=['Query', 'Final Plan', 'Output'])
-                writer.writeheader()
+        # Create output file with headers (overwriting any existing file)
+        with open(OUTPUT_FILE, 'w', newline='') as f:
+            writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output'])
+            writer.writeheader()
         
         # Process queries one at a time
         with open(INPUT_FILE, 'r') as f:
@@ -89,16 +92,21 @@ async def main():
                     break
                     
                 query = row['Query']
+                tools = row['Tools Needed']
+                complexity = row['Complexity']
+                
                 logger.info(f"Processing query {i+1}/{NUM_QUERIES}: {query}")
                 
                 # Execute query
-                result = await tester.execute_query(query)
+                result = await tester.execute_query(query, tools, complexity)
                 
                 # Write result immediately
                 with open(OUTPUT_FILE, 'a', newline='') as f:
-                    writer = csv.DictWriter(f, fieldnames=['Query', 'Final Plan', 'Output'])
+                    writer = csv.DictWriter(f, fieldnames=['Query', 'Tools Needed', 'Complexity', 'Final Plan', 'Output'])
                     writer.writerow({
                         'Query': result['query'],
+                        'Tools Needed': result['tools'],
+                        'Complexity': result['complexity'],
                         'Final Plan': result['final_plan'],
                         'Output': result['output']
                     })
