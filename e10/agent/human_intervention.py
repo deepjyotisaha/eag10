@@ -3,6 +3,11 @@
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Optional, Dict, Any
+from config.log_config import setup_logging
+from agent.utils import show_input_dialog
+from agent.exceptions import HumanInterventionError
+
+logger = setup_logging(__name__)
 
 @dataclass
 class HumanIntervention:
@@ -31,22 +36,75 @@ class HumanIntervention:
             "was_successful": self.was_successful,
             "next_step_decision": self.next_step_decision
         }
-    
-# agent/exceptions.py
 
-class HumanInterventionError(Exception):
-    """Custom exception for human intervention related errors.
+class HumanInterventionHandler:
+    """Handler class for managing human interventions in the agent workflow"""
     
-    This exception is raised when:
-    1. Human intervention is disabled but attempted
-    2. Timeout occurs while waiting for human input
-    3. Human input is cancelled
-    4. Any other error occurs during human intervention process
-    """
-    def __init__(self, message: str, error_type: str = "general"):
-        self.message = message
-        self.error_type = error_type
-        super().__init__(self.message)
+    def __init__(self, max_lifelines: int = 3):
+        self.max_lifelines = max_lifelines
 
-    def __str__(self):
-        return f"HumanInterventionError ({self.error_type}): {self.message}"
+    async def get_human_input(self, step, tool_name: str, tool_args: dict, error: str) -> HumanIntervention:
+        """Get input from human when tool fails, planning input needed, or clarification required"""
+        # Calculate remaining lifelines
+        remaining_lifelines = self.max_lifelines - step.attempts
+
+        # Determine the type of intervention needed
+        intervention_type = "tool_error"
+        if tool_name == "planning_input_request":
+            intervention_type = "planning"
+        elif tool_name == "clarification_request":
+            intervention_type = "clarification"
+
+        # Build the appropriate message based on intervention type
+        if intervention_type == "tool_error":
+            prompt = (
+                f"\n🤖 Tool Execution Failed - Human Intervention Required\n"
+                f"Step {step.index}: {step.description}\n"
+                f"Tool: {tool_name}\n"
+                f"Arguments: {tool_args}\n"
+                f"Error: {error}\n"
+                f"Attempt: {step.attempts + 1} of {self.max_lifelines}\n"
+                f"Lifelines remaining: {remaining_lifelines}\n"
+                f"Please provide the expected output for the tool execution:"
+            )
+        elif intervention_type == "planning":
+            prompt = (
+                f"\n🤖 Planning Input Required - Human Intervention\n"
+                f"Step {step.index}: {step.description}\n"
+                f"Current Plan: {tool_args.get('message', 'No plan details available')}\n"
+                f"Error: {error}\n"
+                f"Attempt: {step.attempts + 1} of {self.max_lifelines}\n"
+                f"Lifelines remaining: {remaining_lifelines}\n"
+                f"Please provide guidance for replanning this step:"
+            )
+        else:  # clarification
+            prompt = (
+                f"\n🤖 Clarification Required - Human Intervention\n"
+                f"Step {step.index}: {step.description}\n"
+                f"Context: {tool_args.get('message', 'No context available')}\n"
+                f"Attempt: {step.attempts + 1} of {self.max_lifelines}\n"
+                f"Lifelines remaining: {remaining_lifelines}\n"
+                f"Please provide clarification for this step:"
+            )
+
+        logger.info(prompt)
+        
+        try:
+            # Use the show_input_dialog function from main.py
+            human_input = await show_input_dialog(prompt)
+            
+            # Create and return the intervention record
+            return HumanIntervention(
+                timestamp=datetime.now(),
+                step_index=step.index,
+                tool_name=tool_name,
+                tool_arguments=tool_args,
+                error_message=error,
+                human_input=human_input,
+                attempt_number=step.attempts + 1,
+                lifelines_remaining=remaining_lifelines,
+                was_successful=True
+            )
+            
+        except Exception as e:
+            raise HumanInterventionError(f"Error getting human input: {str(e)}", "general")

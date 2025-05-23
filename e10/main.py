@@ -4,8 +4,8 @@ from mcp_servers.multiMCP import MultiMCP
 from agent.agent_loop2 import AgentLoop
 from agent.agentSession import Step
 from pprint import pprint
-from agent.human_intervention import HumanInterventionError
-from agent.utlis import show_input_dialog
+from agent.exceptions import HumanInterventionError
+from agent.utils import show_input_dialog
 
 BANNER = """
 ──────────────────────────────────────────────────────

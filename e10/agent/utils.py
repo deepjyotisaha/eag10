@@ -1,5 +1,5 @@
 import asyncio
-from agent.human_intervention import HumanInterventionError
+from agent.exceptions import HumanInterventionError
 
 async def show_input_dialog(prompt: str) -> str:
     """Show an input dialog in the CLI and get user input.

@@ -11,11 +11,13 @@ from memory.memory_search import MemorySearch
 from mcp_servers.multiMCP import MultiMCP
 from config.log_config import setup_logging
 from datetime import datetime
-from agent.human_intervention import HumanIntervention, HumanInterventionError
+from agent.human_intervention import HumanIntervention, HumanInterventionHandler
+from agent.exceptions import HumanInterventionError
 import asyncio
 from typing import Optional
 from .tool_simulation import ToolSimulation
-from .utlis import show_input_dialog  # Add this import at the top
+from .utils import show_input_dialog  # Add this import at the top
+
 
 logger = setup_logging(__name__)
 
@@ -40,6 +42,7 @@ class AgentLoop:
         self.step_retries = {}  # Track retries per step
         self.human_input_queue = asyncio.Queue()
         self.human_input_event = asyncio.Event()
+        self.human_intervention_handler = HumanInterventionHandler(max_lifelines=self.max_lifelines)
 
     async def run(self, query: str):
         session = AgentSession(
@@ -179,44 +182,8 @@ class AgentLoop:
         )
 
     async def get_human_input(self, step: Step, tool_name: str, tool_args: dict, error: str) -> HumanIntervention:
-        """Get input from human when tool fails"""
-        if not self.human_intervention["enabled"]:
-            raise HumanInterventionError("Human intervention is disabled", "disabled")
-
-        # Calculate remaining lifelines
-        remaining_lifelines = self.max_lifelines - step.attempts
-
-        prompt = (
-            f"\n🤖 Tool Execution Failed - Human Intervention Required\n"
-            f"Step {step.index}: {step.description}\n"
-            f"Tool: {tool_name}\n"
-            f"Arguments: {tool_args}\n"
-            f"Error: {error}\n"
-            f"Attempt: {step.attempts + 1} of {self.max_lifelines}\n"
-            f"Lifelines remaining: {remaining_lifelines}\n"
-            f"Please provide the expected output:"
-        )
-        logger.info(prompt)
-        
-        try:
-            # Use the show_input_dialog function from main.py
-            human_input = await show_input_dialog(prompt)
-            
-            # Create and return the intervention record
-            return HumanIntervention(
-                timestamp=datetime.now(),
-                step_index=step.index,
-                tool_name=tool_name,
-                tool_arguments=tool_args,
-                error_message=error,
-                human_input=human_input,
-                attempt_number=step.attempts + 1,
-                lifelines_remaining=remaining_lifelines,
-                was_successful=True
-            )
-            
-        except Exception as e:
-            raise HumanInterventionError(f"Error getting human input: {str(e)}", "general")
+        """Delegate to the human intervention handler"""
+        return await self.human_intervention_handler.get_human_input(step, tool_name, tool_args, error)
 
     async def execute_step(self, step, session, session_memory):
         # Check max steps
